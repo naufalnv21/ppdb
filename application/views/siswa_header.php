@@ -12,13 +12,13 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
-    <link rel="icon" href="<?php echo base_url(); ?>assets/template/front/theme/logo_ristek.jpg " type="image/png"/>
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url(); ?>assets/template/front/theme/favicon.ico" />
+    <link rel="icon" href="<?php echo base_url(); ?>assets/template/front/theme/logo_ristek.jpg" type="image/png"/>
+    <link rel="shortcut icon" type="image/png" href="<?php echo base_url(); ?>assets/template/front/theme/logo_ristek.jpg" />
     <!-- Generated: 2018-04-16 09:29:05 +0200 -->
     <title><?php echo $title ?> | <?php echo $subtitle ?>  </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
-    <script src="<?php echo base_url(); ?>assets/template/front/theme/assets/js/require.min.js"></script>
+    <script src="<?php echo base_url(); ?>theme/assets/js/require.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
     <script>
@@ -68,13 +68,13 @@
         <div class="header py-4">
           <div class="container">
             <div class="d-flex">
-              <a>
-                <img src="<?php echo base_url(); ?>assets/template/front/theme/demo/brand/logo_ristek.jpg" class="header-brand-img" alt="ristek">
+              <a class="header-brand" href="<?php echo base_url(); ?>theme/index.html">
+                <img src="<?php echo base_url(); ?>assets/template/front/theme/demo/brand/logo_ristek.jpg" class="header-brand-img" alt="tabler logo">
               </a>
               <div class="d-flex order-lg-2 ml-auto">
                 <div class="dropdown">
                   <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
-                    <span class="avatar" style="background-image: url(<?php echo base_url(); ?>assets/template/front/theme/demo/faces/female/25.jpg)"></span>
+                    <span class="avatar" style="background-image: url(<?php echo base_url(); ?>theme/demo/faces/female/25.jpg)"></span>
                     <span class="ml-2 d-none d-lg-block">
                       <span class="text-default">Jane Pearson</span>
                       <small class="text-muted d-block mt-1">Administrator</small>

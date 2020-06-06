@@ -15,7 +15,7 @@
             <a href="<?php echo site_url(); ?>" class="nav-link"><i class="fe fe-home"></i> Home</a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo site_url('formulir'); ?>" class="nav-link"><i class="fa fa-book"></i> Formulir PPDB</a>
+            <a href="<?php echo site_url(); ?>" class="nav-link"><i class="fa fa-book"></i> Formulir PPDB</a>
           </li>
           <li class="nav-item">
             <a href="<?php echo site_url(); ?>" class="nav-link"><i class="fa fa-users"></i> Hasil Seleksi</a>

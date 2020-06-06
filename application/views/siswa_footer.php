@@ -5,8 +5,8 @@
               <div class="row">
                 <div class="col-6 col-md-3">
                   <ul class="list-unstyled mb-0">
-                    <li><a href="https://www.facebook.com/pages/SMK-Ristek-Indramayu/412437719348116" class="fa fa-facebook-f">   SMK RISTEK INDRAMAYU</a>
-                    <li><a class="fa fa-whatsapp">+62</a></li>
+                    <li><a href="#">First link</a></li>
+                    <li><a href="#">Second link</a></li>
                   </ul>
                 </div>
                 <div class="col-6 col-md-3">

@@ -1,5 +1,5 @@
-<?php $this->load->view('frontend/header'); ?>
-<?php $this->load->view('frontend/menu'); ?>
+<?php $this->load->view('calon_siswa/header'); ?>
+<?php $this->load->view('calon_siswa/menu'); ?>
 
 <div class="my-3 my-md-5">
     <div class="container">
@@ -15,4 +15,4 @@
     </div>
 </div>
 
-<?php $this->load->view('frontend/footer'); ?>
+<?php $this->load->view('calon_siswa/footer'); ?>

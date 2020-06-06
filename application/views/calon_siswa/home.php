@@ -8,37 +8,37 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" alt="" height="450" src="<?php echo base_url()?>theme/demo/photos/aneta-ivanova-776-1500.jpg" data-holder-rendered="true">
+      <img class="d-block w-100" alt="" height="450" src="<?php echo base_url() ?>assets/template/front/theme/demo/photos/aneta-ivanova-776-1500.jpg" data-holder-rendered="true">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" alt="" height="450" src="<?php echo base_url() ?>theme/demo/photos/anthony-intraversato-257182-1500.jpg" data-holder-rendered="true">
+      <img class="d-block w-100" alt="" height="450" src="<?php echo base_url() ?>assets/template/front/theme/demo/photos/anthony-intraversato-257182-1500.jpg" data-holder-rendered="true">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" alt="" height="450" src="<?php echo base_url() ?>theme/demo/photos/artem-sapegin-229391-1500.jpg" data-holder-rendered="true">
+      <img class="d-block w-100" alt="" height="450" src="<?php echo base_url() ?>assets/template/front/theme/demo/photos/artem-sapegin-229391-1500.jpg" data-holder-rendered="true">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" alt="" height="450" src="<?php echo base_url() ?>theme/demo/photos/bobby-burch-145906-1500.jpg" data-holder-rendered="true">
+      <img class="d-block w-100" alt="" height="450" src="<?php echo base_url() ?>assets/template/front/theme/demo/photos/bobby-burch-145906-1500.jpg" data-holder-rendered="true">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" alt="" height="450" src="<?php echo base_url() ?>theme/demo/photos/casey-horner-339165-1500.jpg" data-holder-rendered="true">
+      <img class="d-block w-100" alt="" height="450" src="<?php echo base_url() ?>assets/template/front/theme/demo/photos/casey-horner-339165-1500.jpg" data-holder-rendered="true">
     </div>
   </div>
 </div>
 
-<h2 style="margin-top: 45px;" class="text-center">Selamat Datang di PPDB SMK Pekalongan</h2>
+<h2 style="margin-top: 45px;" class="text-center">Selamat Datang di PPDB SMK RISTEK Indramayu</h2>
 <p class="text-center">
-  Situs ini dipersiapkan sebagai pengganti pusat informasi dan pengolahan seleksi data siswa peserta PPDB Prov. Jawa Tengah periode 2018 / 2019 secara online real time process untuk pelaksanaan PPDB Online.
+  Situs ini dipersiapkan sebagai pengganti pusat informasi dan pengolahan seleksi data siswa peserta didik baru
 </p>
 
 <div class="row">
   <div class="col-md-6">
     <div class="card">
       <div class="card-header">
-        <h3 class="card-title">Info & Kontak SMK Pekalongan</h3>
+        <h3 class="card-title">Info & Kontak SMK Ristek Indramayu</h3>
       </div>
       <div class="card-body">
         Jl. Pemuda No. 134, Sekayu, Semarang Tengah, Kota Semarang, 50614 PROVINSI JAWA TENGAH
-        <a href="<?php echo site_url() ?>"><img src="<?php echo base_url()?>theme/assets/images/adv-helpdesk-2018.png"></a>
+        <a href="<?php echo site_url() ?>"><img src="<?php echo base_url() ?>assets/template/front/theme/assets/images/adv-helpdesk-2018.png"></a>
       </div>
     </div>
   </div>
@@ -49,7 +49,7 @@
       </div>
       <div class="card-body">
         <p>
-          <img style="float: left;" src="<?php echo base_url()?>theme/assets/images/download.jpeg">
+          <img style="float: left;" src="<?php echo base_url() ?>assets/template/front/theme/assets/images/download.jpeg">
           <i>Assalamu’alaikum Wr. Wb.</i> 
 
           <p>Konsisten memberikan pelayanan publik terbaik di seluruh lini kehidupan masyarakat telah, sedang dan terus kita lakukan di Jawa Tengah. Termasuk bagaimana kita dapat terus menjaga kualitas layanan Penerimaan Peserta Didik Baru (PPDB), khususnya untuk SMA dan SMK Negeri yang dilakukan secara online.
