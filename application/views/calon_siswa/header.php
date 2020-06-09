@@ -13,7 +13,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <link rel="icon" href="<?php echo base_url(); ?>assets/template/front/theme/logo_ristek.jpg " type="image/png"/>
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url(); ?>assets/template/front/theme/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url(); ?>assets/template/front/theme/logo_ristek.jpg" />
     <!-- Generated: 2018-04-16 09:29:05 +0200 -->
     <title><?php echo $title ?> | <?php echo $subtitle ?>  </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
