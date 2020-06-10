@@ -37,7 +37,7 @@
         <h3 class="card-title">Info & Kontak SMK Ristek Indramayu</h3>
       </div>
       <div class="card-body">
-        Jl. Pemuda No. 134, Sekayu, Semarang Tengah, Kota Semarang, 50614 PROVINSI JAWA TENGAH
+        Jl. Balai Desa, Pamayahan, Kec. Lohbener, Kabupaten Indramayu, Jawa Barat 45252
         <a href="<?php echo site_url() ?>"><img src="<?php echo base_url() ?>assets/template/front/theme/assets/images/adv-helpdesk-2018.png"></a>
       </div>
     </div>

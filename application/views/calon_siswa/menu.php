@@ -18,7 +18,7 @@
             <a href="<?php echo site_url('C_formulir'); ?>" class="nav-link"><i class="fa fa-book"></i> Formulir PPDB</a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo site_url(); ?>" class="nav-link"><i class="fa fa-users"></i> Hasil Seleksi</a>
+            <a href="<?php echo site_url(); ?>" class="nav-link"><i class="fa fa-users"></i>Guru</a>
           </li>
           <li class="nav-item">
             <a href="<?php echo site_url(); ?>" class="nav-link"><i class="fa fa-print"></i> Cetak Formulir</a>

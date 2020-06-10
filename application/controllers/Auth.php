@@ -29,10 +29,10 @@ class Auth extends CI_Controller
 			if(password_verify($password, $user['password_users'])) {
 				$data = [
 						'username' => $user['username'],
-						// 'role' => $user['role']
+						
 					];
 					$this->session->set_userdata($data);
-				redirect('C_dashboard');
+				redirect('admin/operator');
 			}else{
 				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Wrong password!<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
