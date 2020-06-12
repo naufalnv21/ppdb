@@ -42,12 +42,10 @@
             </a>
           </li>
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="<?php echo base_url('admin/Guru') ?>" class="nav-link">
               <i class="nav-icon fa fa-graduation-cap"></i>
               <p>
                 Data Guru
-                <!-- <i class="fas fa-angle-left right"></i> -->
-                <!-- <span class="badge badge-info right">6</span> -->
               </p>
             </a>
             

@@ -32,7 +32,7 @@ class Auth extends CI_Controller
 						
 					];
 					$this->session->set_userdata($data);
-				redirect('admin/operator');
+				redirect('admin/Operator');
 			}else{
 				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Wrong password!<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
