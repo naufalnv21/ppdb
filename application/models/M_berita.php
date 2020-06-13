@@ -1,22 +1,35 @@
 <?php
 if (! defined('BASEPATH')) exit ('No direct script access allowed');
 
-/**
- * 
- */
+
 class M_berita extends CI_Model
 {
-	
-	public function get($id_berita)
+
+	public function __construct()
 	{
-
-		$query = $this->db->query("SELECT * FROM tb_berita ORDER BY id_berita DESC");
-			if ($query->num_rows() > 0) {
-				return $query->result();
-			}else {
-				return array();
-			}
-
-		return $result;
+		parent::__construct();
+		$this->load->database();
 	}
+	
+	public function input($data)
+	{
+		$this->db->insert('tb_berita', $data);
+	}
+
+	public function tampil()
+	{
+		$this->db->select('*');
+		$this->db->from('tb_berita');
+		$result = $this->db->get();
+		return $result->result();
+	}
+
+	public function beritaId($where)
+	{
+		$this->db->from('tb_berita');
+		$this->db->where('id_berita', $where);
+		$result = $this->db->get();
+		return $result->result();
+	}
+
 }

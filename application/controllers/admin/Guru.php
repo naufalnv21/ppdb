@@ -34,7 +34,7 @@ class Guru extends CI_Controller
         // load library upload
         $this->load->library('upload', $config);
         if (!$this->upload->do_upload('foto_guru')) {
-        	redirect('user/V_guru');
+        	
         } else {
             $result = $this->upload->data();
             $result1 =$result['file_name'];
@@ -46,9 +46,42 @@ class Guru extends CI_Controller
 			'email_guru' => $email_guru,
 			'alamat_guru' => $alamat_guru,
 			'foto_guru' => $result1
-		);
+		);	
 		$this->M_guru->input($data);
+		redirect('admin/Guru');
         }	
 
+	}
+
+	public function hapus($id)
+	{
+		// if (!isset($id_guru)) show_404();
+
+		// if($this->M_guru->hapus($id_guru)){
+		// 	redirect(site_url('admin/guru'));
+		// }
+		// $id_guru = $this->input->post('id_guru');
+		// $this->M_guru->hapus($id_guru);
+		// $this->index();
+		$this->M_guru->hapus($id);
+		redirect('admin/Guru');
+
+	}
+
+	public function edit()
+	{
+		$nama_guru = $this->input->post('nama_guru');
+		$nip_guru = $this->input->post('nip_guru');
+		$email_guru = $this->input->post('email_guru');
+		$alamat_guru = $this->input->post('alamat_guru');
+
+		$data = array(
+			'nama_guru' => $nama_guru,
+			'nip_guru' => $nip_guru,
+			'email_guru' => $email_guru,
+			'alamat_guru' => $alamat_guru
+		);
+		$this->M_guru->update('tb_guru', $data, $id_guru);
+		$this->index();
 	}
 }

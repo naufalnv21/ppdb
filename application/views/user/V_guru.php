@@ -40,7 +40,6 @@
               <td>
                 <img src="<?php echo base_url('upload/guru/'.$guru->foto_guru) ?>"class = "img img-responsive img-thumbnail " width = "60">
               </td>
-              <td onclick="javascript: return confirm('Anda yakin edit?')"><?php echo anchor('admin/guru/hapus/'.$guru->id_guru, '<div class="btn btn-danger btn-sm" ><i class="fa fa-edit"></i></div>' ) ?>
               <td onclick="javascript: return confirm('Anda yakin hapus?')"><?php echo anchor('admin/guru/hapus/'.$guru->id_guru, '<div class="btn btn-danger btn-sm" ><i class="fa fa-trash"></i></div>' ) ?>
               </td>
             </tr>

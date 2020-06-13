@@ -20,4 +20,23 @@ class Berita extends CI_Controller
 		$this->load->view('templates/footer', $data);
 		$this->load->view('templates/sidebar', $data);
 	}
+
+	public function tambahBerita()
+	{
+		
+		$tgl_berita = $this->input->post('tgl_berita');
+		$isi_berita = $this->input->post('isi_berita');
+		$penulis_berita = $this->input->post('penulis_berita');
+		$status_berita = $this->input->post('status_berita');
+
+		$data = array(
+			
+			'tgl_berita' => $tgl_berita,
+			'isi_berita' => $isi_berita,
+			'penulis_berita' => $penulis_berita,
+			'status_berita' => $status_berita
+		);
+		$this->M_berita->input($data);
+		redirect('admin/Berita');
+	}
 }
