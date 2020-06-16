@@ -1,4 +1,4 @@
-<?php
+9<?php
 defined('BASEPATH') OR exit ('No direct script access allowed');
 
 
@@ -32,7 +32,7 @@ class Auth extends CI_Controller
 						
 					];
 					$this->session->set_userdata($data);
-				redirect('admin/Operator');
+				redirect('admin/Admin');
 			}else{
 				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Wrong password!<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">&times;</span>

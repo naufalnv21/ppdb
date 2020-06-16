@@ -9,6 +9,7 @@ class Guru extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('M_guru');
+		$this->load->helper('url');
 	}
 
 	public function index()
@@ -25,8 +26,13 @@ class Guru extends CI_Controller
 	{
 		
 		$nama_guru = $this->input->post('nama_guru');
-		$nip_guru = $this->input->post('nip_guru');
+		$ttl_guru = $this->input->post('ttl_guru');
+		$nuptk_guru = $this->input->post('nuptk_guru');
+		$jk_guru = $this->input->post('jk_guru');
 		$email_guru = $this->input->post('email_guru');
+		$tmt_guru = $this->input->post('tmt_guru');
+		$ijazah_guru = $this->input->post('ijazah_guru');
+		$mapel_guru = $this->input->post('mapel_guru');
 		$alamat_guru = $this->input->post('alamat_guru');
 		// $foto_guru = $this->input->post('foto_guru');
 		$config['upload_path'] = './upload/guru/';
@@ -40,10 +46,15 @@ class Guru extends CI_Controller
             $result1 =$result['file_name'];
             
             $data = array(
-			
+				
 			'nama_guru' => $nama_guru,
-			'nip_guru' => $nip_guru,
+			'ttl_guru' => $ttl_guru,
+			'nuptk_guru' => $nuptk_guru,
+			'jk_guru' => $jk_guru,
 			'email_guru' => $email_guru,
+			'tmt_guru' => $tmt_guru,
+			'ijazah_guru' => $ijazah_guru,
+			'mapel_guru' => $mapel_guru,
 			'alamat_guru' => $alamat_guru,
 			'foto_guru' => $result1
 		);	
@@ -71,13 +82,13 @@ class Guru extends CI_Controller
 	public function edit()
 	{
 		$nama_guru = $this->input->post('nama_guru');
-		$nip_guru = $this->input->post('nip_guru');
+		$nuptk_guru = $this->input->post('nuptk_guru');
 		$email_guru = $this->input->post('email_guru');
 		$alamat_guru = $this->input->post('alamat_guru');
 
 		$data = array(
 			'nama_guru' => $nama_guru,
-			'nip_guru' => $nip_guru,
+			'nuptk_guru' => $nuptk_guru,
 			'email_guru' => $email_guru,
 			'alamat_guru' => $alamat_guru
 		);
