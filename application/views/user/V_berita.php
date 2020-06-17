@@ -36,8 +36,9 @@
               <td><?php echo $berita->isi_berita?> </td>
               <td><?php echo $berita->penulis_berita?> </td>
               <td><?php echo $berita->status_berita?> </td>
-              
-              <td onclick="javascript: return confirm('Anda yakin hapus?')"><?php echo anchor('admin/berita/hapus/'.$berita->id_berita, '<div class="btn btn-danger btn-sm" ><i class="fa fa-trash"></i></div>' ) ?>
+
+              <td><?php echo anchor('admin/Berita/edit/'.$berita->id_berita,'<div class="btn btn-primary btn-sm" ><i class="fa fa-edit"></i></div>')?></td>
+              <td onclick="javascript: return confirm('Anda yakin hapus?')"><?php echo anchor('admin/Berita/hapus/'.$berita->id_berita, '<div class="btn btn-danger btn-sm" ><i class="fa fa-trash"></i></div>' ) ?>
               </td>
             </tr>
           <?php } ?>
@@ -59,19 +60,19 @@
         <form method="post" action="<?php echo base_url(). 'admin/berita/tambahBerita';?>">
           <div class="form-group">
             <label>Tanggal </label>
-            <input type="text" name="tgl_berita" placeholder="Isi Tanggal" class="form-control">
+            <input type="text" name="tgl_berita" placeholder="Tahun Bulan Tanggal Sekarang" class="form-control" required="required">
           </div>
           <div class="form-group">
             <label>Berita </label>
-            <input type="text" name="isi_berita" placeholder="Tuliskan Berita" class="form-control">
+            <input type="text" name="isi_berita" placeholder="Tuliskan Berita" class="form-control" required="required">
           </div>
           <div class="form-group">
             <label>Penulis </label>
-            <input type="text" name="penulis_berita" placeholder="Penulis" class="form-control">
+            <input type="text" name="penulis_berita" placeholder="Penulis" class="form-control" required="required">
           </div>
           <div class="form-group">
             <label>Status </label>
-            <input type="text" name="status_berita" placeholder="Status" class="form-control">
+            <input type="text" name="status_berita" placeholder="Status" class="form-control" required="required">
           </div>
               <button type="reset" class="btn btn-danger" data-dismiss="modal">Reset</button>
               <button type="submit" class="btn btn-primary">Simpan</button>

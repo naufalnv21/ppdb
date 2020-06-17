@@ -32,4 +32,16 @@ class M_berita extends CI_Model
 		return $result->result();
 	}
 
+	public function hapus($id)
+	{
+		$this->db->where('id_berita', $id);
+		$this->db->delete('tb_berita');
+	}
+
+	public function update($data)
+	{
+		$this->db->where('id_berita', $id_berita);
+		$this->db->update('tb_berita', $data);
+	}
+
 }

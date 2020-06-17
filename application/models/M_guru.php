@@ -39,10 +39,10 @@ class M_guru extends CI_Model
 		$this->db->delete('tb_guru');	
 	}
 
-	public function update($tb_guru, $data, $where)
+	public function update($data)
 	{
-		$this->db->where('id_guru', $where);
-		$this->db->update($tb_guru, $data);
+		$this->db->where('id_guru', $id_guru);
+		$this->db->update('tb_guru', $data);
 	}
 
 	

@@ -50,6 +50,7 @@
               <td>
                 <img src="<?php echo base_url('upload/guru/'.$guru->foto_guru) ?>"class ="img img-responsive img-thumbnail " width = "60">
               </td>
+              <td><?php echo anchor('admin/Guru/edit/'.$guru->id_guru,'<div class="btn btn-primary btn-sm" ><i class="fa fa-edit"></i></div>')?></td>
               <td onclick="javascript: return confirm('Anda yakin hapus?')"><?php echo anchor('admin/Guru/hapus/'.$guru->id_guru, '<div class="btn btn-danger btn-sm" ><i class="fa fa-trash"></i></div>' ) ?>
               </td>
             </tr>
@@ -73,39 +74,39 @@
         <form method="post" action="<?php echo base_url(). 'admin/Guru/tambahGuru';?>" enctype="multipart/form-data">
           <div class="form-group">
             <label>Nama </label>
-            <input type="text" name="nama_guru" placeholder="isikan nama" class="form-control">
+            <input type="text" name="nama_guru" placeholder="isikan nama" class="form-control" required="required">
           </div>
           <div class="form-group">
             <label>Tempat Tanggal Lahir </label>
-            <input type="text" name="ttl_guru" placeholder="Indramayu 21 Mei 1999" class="form-control">
+            <input type="text" name="ttl_guru" placeholder="Indramayu 21 Mei 1999" class="form-control" required="required">
           </div>
           <div class="form-group">
             <label>NUPTK </label>
-            <input type="text" name="nuptk_guru" placeholder="123456789" class="form-control">
+            <input type="text" name="nuptk_guru" placeholder="123456789" class="form-control" required="required">
           </div>
           <div class="form-group">
             <label>Jenis Kelamin </label>
-            <input type="text" name="jk_guru" placeholder="P/L" class="form-control">
+            <input type="text" name="jk_guru" placeholder="P/L" class="form-control" required="required">
           </div>
           <div class="form-group">
             <label>Email Guru </label>
-            <input type="text" name="email_guru" placeholder="isikan email" class="form-control">
+            <input type="text" name="email_guru" placeholder="isikan email" class="form-control" required="required">
           </div>
           <div class="form-group">
             <label>Tamatan </label>
-            <input type="text" name="tmt_guru" placeholder="Contoh 2016-2017" class="form-control">
+            <input type="text" name="tmt_guru" placeholder="Contoh 2016-2017" class="form-control" required="required">
           </div>
           <div class="form-group">
             <label>Ijazah </label>
-            <input type="text" name="ijazah_guru" placeholder="Contoh S1" class="form-control">
+            <input type="text" name="ijazah_guru" placeholder="Contoh S1" class="form-control" required="required">
           </div>
           <div class="form-group">
             <label>Mata Pelajaran </label>
-            <input type="text" name="mapel_guru" placeholder="Ex MTK" class="form-control">
+            <input type="text" name="mapel_guru" placeholder="Ex MTK" class="form-control" required="required">
           </div>
           <div class="form-group">
             <label>Alamat </label>
-            <input type="text" name="alamat_guru" placeholder="isikan alamat" class="form-control">
+            <input type="text" name="alamat_guru" placeholder="isikan alamat" class="form-control" required="required">
           </div>
           <div>
             <label>Foto</label>
