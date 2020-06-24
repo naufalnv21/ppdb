@@ -25,8 +25,7 @@
               <th>Jenis Kelamin</th>
               <th>Tamatan</th>
               <th>Ijazah</th>
-              <th>Mapel</th>
-              <th>password</th>
+              <th>Jabatan</th>
               <th>telepon</th>
               <th>level</th>
               <th>alamat</th>
@@ -38,6 +37,7 @@
           <?php
           $no = 1;
           foreach ($data_operator  as $operator) {
+            if ($operator->level_users==2) {
             ?>
             <tr>
               <td><?php echo $no++?> </td>
@@ -48,7 +48,6 @@
               <td><?php echo $operator->tmt_users ?></td>
               <td><?php echo $operator->ijazah_users ?></td>
               <td><?php echo $operator->mapel_users ?></td>
-              <td><?php echo $operator->password_users?> </td>
               <td><?php echo $operator->telp_users?> </td>
               <td><?php echo $operator->level_users?> </td>
               <td><?php echo $operator->alamat_users?> </td>
@@ -59,7 +58,8 @@
               <td onclick="javascript: return confirm('Anda yakin hapus?')"><?php echo anchor('admin/operator/hapus/'.$operator->id_users, '<div class="btn btn-danger btn-sm" ><i class="fa fa-trash"></i></div>' ) ?>
               </td>
             </tr>
-          <?php } ?>
+
+          <?php }} ?>
         </table>
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->

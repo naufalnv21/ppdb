@@ -16,10 +16,24 @@ class Admin extends CI_Controller
 		$data['user'] = $this->db->get_where('tb_users', ['username' => $this->session->userdata('username')])->row_array();
 		$data['data_admin'] = $this->db->get('tb_users')->result();
 		
-		$this->load->view('user/V_admin', $data);
 		$this->load->view('templates/header', $data);
-		$this->load->view('templates/footer', $data);
+		$this->load->view('templates/navbar', $data);
 		$this->load->view('templates/sidebar', $data);
+		$this->load->view('user/V_admin', $data);
+		$this->load->view('templates/footer', $data);
+		
+	}
+
+	public function operator()
+	{
+		$data['user'] = $this->db->get_where('tb_users', ['username' => $this->session->userdata('username')])->row_array();
+		$data['data_operator'] = $this->db->get('tb_users')->result();
+
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/navbar', $data);
+		$this->load->view('templates/sidebar', $data);
+		$this->load->view('user/V_operator', $data);
+		$this->load->view('templates/footer', $data);
 		
 	}
 

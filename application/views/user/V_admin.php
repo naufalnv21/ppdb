@@ -3,10 +3,9 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
 
-    <div class="content-header">
-
+    <section class="content-header">
+       <div class="container-fluid">
         <div class="row mb-2">
-
           <div class="col-sm-6">
             <h1 class="m-0 text-dark">Dashboard</h1>
           </div><!-- /.col -->
@@ -15,7 +14,14 @@
             <ol class="breadcrumb float-sm-right">
             </ol>
           </div><!-- /.col -->
-                <div class="container-fluid">
+        </div>
+      </div>
+    </section>
+
+    <section  class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="card-body">
           <table id="example2" class="table table-bordered table-striped">
           <tr>
               <th>no</th>
@@ -25,8 +31,8 @@
               <th>Jenis Kelamin</th>
               <th>Tamatan</th>
               <th>Ijazah</th>
-              <th>Mapel</th>
-              <th>password</th>
+              <th>Jabatan</th>
+              
               <th>telepon</th>
               <th>level</th>
               <th>alamat</th>
@@ -38,6 +44,7 @@
           <?php
           $no = 1;
           foreach ($data_admin  as $admin) {
+            // if ($admin->level_users==1) {
             ?>
             <tr>
               <td><?php echo $no++?> </td>
@@ -48,7 +55,7 @@
               <td><?php echo $admin->tmt_users ?></td>
               <td><?php echo $admin->ijazah_users ?></td>
               <td><?php echo $admin->mapel_users ?></td>
-              <td><?php echo $admin->password_users?> </td>
+              
               <td><?php echo $admin->telp_users?> </td>
               <td><?php echo $admin->level_users?> </td>
               <td><?php echo $admin->alamat_users?> </td>
@@ -63,8 +70,5 @@
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
-    <!-- /.content-header -->
-
-   
-    <!-- /.content -->
-  </div>
+      </section>
+    </div>

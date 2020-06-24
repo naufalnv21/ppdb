@@ -42,7 +42,7 @@
           </div>
           <div>
             <label>Foto</label>
-            <input type="file" name="foto_guru" placeholder="Pilih foto" class="form-control">
+            <input type="file" name="foto_guru" placeholder="Pilih foto" class="form-control" required="required">
           </div>
               <button type="reset" class="btn btn-danger" data-dismiss="modal">Reset</button>
               <button type="submit" class="btn btn-primary">Simpan</button>

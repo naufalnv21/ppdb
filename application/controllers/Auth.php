@@ -1,4 +1,4 @@
-9<?php
+<?php
 defined('BASEPATH') OR exit ('No direct script access allowed');
 
 
@@ -65,6 +65,8 @@ class Auth extends CI_Controller
 					redirect('Auth');
 				}
 			}
+		}else{
+			redirect('Auth');
 		}
 		// $user = $this->M_admin->get($username);
 		// if(empty($user)){
@@ -102,9 +104,10 @@ class Auth extends CI_Controller
 
 	public function dashboard()
 	{
-		$this->load->view('dashboard');
 		$this->load->view('templates/header');
-		$this->load->view('templates/footer');
+		$this->load->view('templates/navbar');
 		$this->load->view('templates/sidebar');
+		$this->load->view('dashboard');
+		$this->load->view('templates/footer', $data);
 	}
 }
