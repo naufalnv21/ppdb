@@ -3,76 +3,53 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
 
-    <section class="content-header">
-       <div class="container-fluid">
+    <div class="content-header">
+
         <div class="row mb-2">
+
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Dashboard</h1>
+            <h1 class="m-0 text-dark">Siswa</h1>
+            
           </div><!-- /.col -->
 
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
             </ol>
           </div><!-- /.col -->
-        </div>
-      </div>
-    </section>
-
-    <section  class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="card-body">
+          <div class="container-fluid">
           <table id="example2" class="table table-bordered table-striped">
           <tr>
               <th>no</th>
               <th>Nama</th>
               <th>Jenis Kelamin</th>
-              <th>Tempat Lahir</th>
-              <th>Agama</th>
-              <th>Umur</th>
-              <th>Asal Sekolah</th>
-              <th>No Ijazah</th>
-              <th>Nama Orang Tua</th>
-              <th>Pekerjaan Orang Tua</th>
+              <th>Kelas</th>
+              <th>Jurusan</th>
               <th>Alamat</th>
-              <th>Nilai B.Indo</th>
-              <th>Nilai MTK</th>
-              <th>Nilai Ipa</th>
-              <th>Nilai B.Ing</th>
-              <th>Jumlah Nilai</th>
-              <th>Nilai Rata-Rata</th>
-              <th>Prestasi</th>
-              <th>Keterangan Prestasi</th>
-              <th>File SKHUN</th>
-              <th>File Ijazah</th>
-              <th colspan="2">Aksi</th>
+              <th>Foto</th>
           </tr>
-          
-            
-            
-            <!-- <tr>
+          <tr>
+            <?php
+          $no =1;
+          foreach ($data_siswa as $siswa) {
+            ?>
+            <tr>
               <td><?php echo $no++?> </td>
-              <td><?php echo $admin->username ?></td>
-              <td><?php echo $admin->ttl_users ?></td>
-              <td><?php echo $admin->nuptk_users ?></td>
-              <td><?php echo $admin->jk_users ?></td>
-              <td><?php echo $admin->tmt_users ?></td>
-              <td><?php echo $admin->ijazah_users ?></td>
-              <td><?php echo $admin->mapel_users ?></td>
-              
-              <td><?php echo $admin->telp_users?> </td>
-              <td><?php echo $admin->level_users?> </td>
-              <td><?php echo $admin->alamat_users?> </td>
-              <td><?php echo $admin->email_users?> </td>
-              <td><?php echo $admin->created_at?> </td>
-              <td><?php echo $admin->updated_at?> </td>
-              <td onclick="javascript: return confirm('Anda yakin hapus?')"><?php echo anchor('admin/operator/hapus/'.$admin->id_users, '<div class="btn btn-danger btn-sm" ><i class="fa fa-trash"></i></div>' ) ?>
+              <td><?php echo $siswa->nama_siswa ?></td>
+              <td><?php echo $siswa->jk_siswa ?></td>
+              <td><?php echo $siswa->kelas_siswa ?></td>
+              <td><?php echo $siswa->jurusan_siswa ?></td>
+              <td><?php echo $siswa->alamat_siswa ?></td>
+              <td>
+                <img src="<?php echo base_url('upload/siswa/'.$siswa->foto_siswa) ?>" class="img img-responsive img-thumbnail" width="60">
               </td>
-            </tr> -->
-        
+              
+            </tr>
+          <?php } ?>
+          </tr>
         </table>
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
-      </section>
-    </div>
+    <!-- /.content-header -->
+
+   </div>

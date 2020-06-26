@@ -7,7 +7,7 @@
        <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Data Pengguna</h1>
+            <h1 class="m-0 text-dark">Pendaftar</h1>
           </div><!-- /.col -->
 
           <div class="col-sm-6">
@@ -25,28 +25,37 @@
           <table id="example2" class="table table-bordered table-striped">
           <tr>
               <th>no</th>
-              <th>username</th>
-              <th>Tempat Tanggal Lahir</th>
-              <th>Nuptk</th>
+              <th>Nomor Induk Kependudukan</th>
+              <th>Nama Lengkap</th>
               <th>Jenis Kelamin</th>
-              <th>Tamatan</th>
-              <th>Ijazah</th>
-              <th>Jabatan</th>
-              
-              <th>telepon</th>
-              <th>level</th>
-              <th>alamat</th>
-              <th>email</th>
-              <th>created</th>
-              <th>updated</th>
+              <th>Tempat Tanggal Lahir</th>
+              <th>Jalan/Blok</th>
+              <th>Desa/Kelurahan</th>
+              <th>RT/RW</th>
+              <th>Kecamatan</th>
+              <th>Kabupaten</th>
+              <th>Telp/HP</th>
+              <th>Asal Sekolah</th>
+              <th>Nomor Ijazah</th>
+              <th>Jurusan Yang Di Pilih</th>
+              <th>Nama Ayah</th>
+              <th>Nama Ibu</th>
+              <th>Pekerjaan Orang Tua</th>
+              <th>Pendapatan Per Bulan</th>
+              <th>Jalan/Blok</th>
+              <th>Desa/Kelurahan</th>
+              <th>RT/RW</th>
+              <th>Kecamatan</th>
+              <th>Kabupaten</th>
+              <th>Telp/HP</th>
+              <th>File SKHUN</th>
+              <th>File Ijazah</th>
               <th colspan="2">Aksi</th>
           </tr>
-          <?php
-          $no = 1;
-          foreach ($data_admin  as $admin) {
-            // if ($admin->level_users==1) {
-            ?>
-            <tr>
+          
+            
+            
+            <!-- <tr>
               <td><?php echo $no++?> </td>
               <td><?php echo $admin->username ?></td>
               <td><?php echo $admin->ttl_users ?></td>
@@ -64,8 +73,8 @@
               <td><?php echo $admin->updated_at?> </td>
               <td onclick="javascript: return confirm('Anda yakin hapus?')"><?php echo anchor('admin/operator/hapus/'.$admin->id_users, '<div class="btn btn-danger btn-sm" ><i class="fa fa-trash"></i></div>' ) ?>
               </td>
-            </tr>
-          <?php } ?>
+            </tr> -->
+        
         </table>
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->

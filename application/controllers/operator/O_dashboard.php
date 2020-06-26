@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit ('No direct script access allowed');
 
 
-class C_dashboard extends CI_Controller
+class O_dashboard extends CI_Controller
 {
 	public function __construct()
 	{
@@ -21,10 +21,10 @@ class C_dashboard extends CI_Controller
 			'pegawai'=>$this->M_dashboard->tampil(),
 			'siswa'=>$this->M_dashboard->tampilSiswa(),
 		];
-		$this->load->view('templates/header', $data);
-		$this->load->view('templates/navbar', $data);
-		$this->load->view('templates/sidebar', $data);
-		$this->load->view('dashboard', $data2);
-		$this->load->view('templates/footer', $data);
+		$this->load->view('operator/header', $data);
+		$this->load->view('operator/navbar', $data);
+		$this->load->view('operator/sidebar', $data);
+		$this->load->view('operator/O_dashboard', $data2);
+		$this->load->view('operator/footer', $data);
 	}
 }

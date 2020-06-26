@@ -8,7 +8,7 @@
         <div class="row mb-2">
 
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Dashboard</h1>
+            <h1 class="m-0 text-dark">Operator</h1>
           </div><!-- /.col -->
 
           <div class="col-sm-6">
@@ -54,8 +54,8 @@
               <td><?php echo $operator->email_users?> </td>
               <td><?php echo $operator->created_at?> </td>
               <td><?php echo $operator->updated_at?> </td>
-              <td><?php echo anchor('admin/Operator/edit/'.$operator->id_users,'<div class="btn btn-primary btn-sm" ><i class="fa fa-edit"></i></div>')?></td>
-              <td onclick="javascript: return confirm('Anda yakin hapus?')"><?php echo anchor('admin/operator/hapus/'.$operator->id_users, '<div class="btn btn-danger btn-sm" ><i class="fa fa-trash"></i></div>' ) ?>
+              <td><?php echo anchor('operaot/O_operator/edit/'.$operator->id_users,'<div class="btn btn-primary btn-sm" ><i class="fa fa-edit"></i></div>')?></td>
+              <td onclick="javascript: return confirm('Anda yakin hapus?')"><?php echo anchor('operator/O_operator/hapus/'.$operator->id_users, '<div class="btn btn-danger btn-sm" ><i class="fa fa-trash"></i></div>' ) ?>
               </td>
             </tr>
 

@@ -56,7 +56,7 @@ class Auth extends CI_Controller
 					if ($user['level_users'] == 1){
 						redirect('admin/admin');
 					}else{
-						redirect('admin/operator');
+						redirect('operator/O_operator');
 					}
 				}else{
 					$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Wrong Passwrod!<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -109,5 +109,14 @@ class Auth extends CI_Controller
 		$this->load->view('templates/sidebar');
 		$this->load->view('dashboard');
 		$this->load->view('templates/footer', $data);
+	}
+
+	public function O_dashboard()
+	{
+		$this->load->view('operator/header');
+		$this->load->view('operator/navbar');
+		$this->load->view('operator/sidebar');
+		$this->load->view('operator/O_dashboard');
+		$this->load->view('operator/footer', $data);
 	}
 }

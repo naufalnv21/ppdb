@@ -42,15 +42,15 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo base_url('admin/Siswa'); ?>" class="nav-link">
+            <a href="<?php echo base_url('admin/Pendaftar'); ?>" class="nav-link">
               <i class="nav-icon fa fa-address-book"></i>
               <p>
-                Data Calon Siswa
+                Data Pendaftar
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo base_url(''); ?>" class="nav-link">
+            <a href="<?php echo base_url('admin/Siswa'); ?>" class="nav-link">
               <i class="nav-icon fa fa-address-book"></i>
               <p>
                 Data Siswa
@@ -74,6 +74,7 @@
               </p>
             </a>
           </li>
+          <li class="nav-header">USER</li>
           <li class="nav-item">
             <a href="<?php echo base_url('admin/Admin');?>" class="nav-link ">
               <i class="nav-icon fa fa-user-circle"></i>

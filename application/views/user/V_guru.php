@@ -8,8 +8,8 @@
         <div class="row mb-2">
 
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Dashboard</h1>
-            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"></a><i class="fa fa-plus"></i> Tambah Data Guru</button></a>
+            <h1 class="m-0 text-dark">Pegawai</h1>
+            <!-- <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"></a><i class="fa fa-plus"></i> Tambah Data Guru</button></a> -->
           </div><!-- /.col -->
               
           <div class="col-sm-6">
@@ -30,7 +30,7 @@
               <th>mata pelajaran</th>
               <th>Alamat</th>
               <th>Foto</th>
-              <th colspan="2">Aksi</th>
+              <!-- <th colspan="2">Aksi</th> -->
           </tr>
            <?php
           $no = 1;
@@ -50,9 +50,9 @@
               <td>
                 <img src="<?php echo base_url('upload/guru/'.$guru->foto_guru) ?>"class ="img img-responsive img-thumbnail " width = "60">
               </td>
-              <td><?php echo anchor('admin/Guru/edit/'.$guru->id_guru,'<div class="btn btn-primary btn-sm" ><i class="fa fa-edit"></i></div>')?></td>
+              <!-- <td><?php echo anchor('admin/Guru/edit/'.$guru->id_guru,'<div class="btn btn-primary btn-sm" ><i class="fa fa-edit"></i></div>')?></td>
               <td onclick="javascript: return confirm('Anda yakin hapus?')"><?php echo anchor('admin/Guru/hapus/'.$guru->id_guru, '<div class="btn btn-danger btn-sm" ><i class="fa fa-trash"></i></div>' ) ?>
-              </td>
+              </td> -->
             </tr>
           <?php } ?>
         </table>

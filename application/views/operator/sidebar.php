@@ -24,7 +24,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="<?php echo base_url('C_dashboard'); ?>" class="nav-link">
+            <a href="<?php echo base_url('operator/O_dashboard'); ?>" class="nav-link">
               <i class="nav-icon fa fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -33,7 +33,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="<?php echo base_url('admin/Operator');?>" class="nav-link ">
+            <a href="<?php echo base_url('operator/O_operator');?>" class="nav-link ">
               <i class="nav-icon fa fa-user-circle"></i>
               <p>
                 Data Operator
@@ -42,15 +42,15 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo base_url('admin/Siswa'); ?>" class="nav-link">
+            <a href="<?php echo base_url('operator/O_pendaftar'); ?>" class="nav-link">
               <i class="nav-icon fa fa-address-book"></i>
               <p>
-                Data Calon Siswa
+                Data Pendaftar
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo base_url(''); ?>" class="nav-link">
+            <a href="<?php echo base_url('operator/O_siswa'); ?>" class="nav-link">
               <i class="nav-icon fa fa-address-book"></i>
               <p>
                 Data Siswa
@@ -58,7 +58,7 @@
             </a>
           </li>
           <li class="nav-item has-treeview">
-            <a href="<?php echo base_url('admin/Guru'); ?>" class="nav-link">
+            <a href="<?php echo base_url('operator/O_guru'); ?>" class="nav-link">
               <i class="nav-icon fa fa-graduation-cap"></i>
               <p>
                 Data Pegawai
@@ -67,7 +67,7 @@
             
           </li>
           <li class="nav-item has-treeview">
-            <a href="<?php echo base_url('admin/Berita');?>" class="nav-link">
+            <a href="<?php echo base_url('operator/O_berita');?>" class="nav-link">
               <i class="far fas fa-bullhorn nav-icon"></i>
               <p>
                 Berita

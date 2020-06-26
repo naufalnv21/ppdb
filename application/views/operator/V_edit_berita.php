@@ -2,7 +2,7 @@
   <section class="content">
     
 
-    <form method="post" action="<?php echo base_url(). 'admin/Berita/prosesEdit';?>" enctype="multipart/form-data">
+    <form method="post" action="<?php echo base_url(). 'operator/O_berita/prosesEdit';?>" enctype="multipart/form-data">
           <div class="form-group">
             <label>Tanggal </label>
             <input type="text" name="tgl_berita" placeholder="Tahun Bulan Tanggal Sekarang" class="form-control" required="required">
