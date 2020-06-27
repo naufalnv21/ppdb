@@ -21,16 +21,16 @@
             <a href="<?php echo site_url(); ?>" class="nav-link"><i class="fa fa-users"></i>Pegawai</a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo site_url(); ?>" class="nav-link"><i class="fa fa-print"></i> Berita</a>
-          </li>
-          <li class="nav-item">
-            <a href="<?php echo site_url(); ?>" class="nav-link"><i class="fa fa-download"></i> Download Formulir</a>
+            <a href="<?php echo site_url(); ?>" class="nav-link"><i class="fa-newspaper-o "></i> Berita</a>
           </li>
           <li class="nav-item">
             <a href="<?php echo site_url(); ?>" class="nav-link"><i class="fa fa-users"></i> Profile Smk Ristek </a>
           </li>
           <li class="nav-item">
             <a href="<?php echo site_url(); ?>" class="nav-link"><i class="fa fa-users"></i> Fasilitas</a>
+          </li>
+          <li class="nav-item">
+            <a href="<?php echo site_url(); ?>" class="nav-link"><i class="fa fa-download"></i> Download Formulir</a>
           </li>
           <!-- <li class="nav-item dropdown">
             <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fa fa-cogs"></i>Pengaturan</a>

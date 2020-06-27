@@ -1,5 +1,4 @@
-
-  <!-- Content Wrapper. Contains page content -->
+<!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
 
@@ -11,8 +10,7 @@
           </div><!-- /.col -->
 
           <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-            </ol>
+            <ol class="breadcrumb float-sm-right"></ol>
           </div><!-- /.col -->
         </div>
       </div>
@@ -54,7 +52,7 @@
           </tr>
           
             
-            
+          
             <!-- <tr>
               <td><?php echo $no++?> </td>
               <td><?php echo $admin->username ?></td>
