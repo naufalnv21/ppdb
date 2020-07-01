@@ -40,38 +40,48 @@
               <th>Nama Ibu</th>
               <th>Pekerjaan Orang Tua</th>
               <th>Pendapatan Per Bulan</th>
+              <th>Pendidikan Terakhir</th>
               <th>Jalan/Blok</th>
               <th>Desa/Kelurahan</th>
               <th>RT/RW</th>
               <th>Kecamatan</th>
               <th>Kabupaten</th>
               <th>Telp/HP</th>
-              <th>File SKHUN</th>
+              <th>File Kartu Keluarga</th>
+              <th>Foto Akte</th>
+              <th>Foto KTP Orang Tua</th>
               <th>File Ijazah</th>
+              <th>File SKHUN</th>
+              
               <th colspan="2">Aksi</th>
           </tr>
-          
-            
-          
-            <!-- <tr>
+          <!-- <?php
+          $no = 1;
+          foreach ($data_operator  as $operator) {
+            if ($operator->level_users==2) {
+            ?> 
+            <tr>
               <td><?php echo $no++?> </td>
-              <td><?php echo $admin->username ?></td>
-              <td><?php echo $admin->ttl_users ?></td>
-              <td><?php echo $admin->nuptk_users ?></td>
-              <td><?php echo $admin->jk_users ?></td>
-              <td><?php echo $admin->tmt_users ?></td>
-              <td><?php echo $admin->ijazah_users ?></td>
-              <td><?php echo $admin->mapel_users ?></td>
-              
-              <td><?php echo $admin->telp_users?> </td>
-              <td><?php echo $admin->level_users?> </td>
-              <td><?php echo $admin->alamat_users?> </td>
-              <td><?php echo $admin->email_users?> </td>
-              <td><?php echo $admin->created_at?> </td>
-              <td><?php echo $admin->updated_at?> </td>
-              <td onclick="javascript: return confirm('Anda yakin hapus?')"><?php echo anchor('admin/operator/hapus/'.$admin->id_users, '<div class="btn btn-danger btn-sm" ><i class="fa fa-trash"></i></div>' ) ?>
+              <td><?php echo $pendaftar->username ?></td>
+              <td><?php echo $pendaftar->ttl_users ?></td>
+              <td><?php echo $pendaftar->nuptk_users ?></td>
+              <td><?php echo $pendaftar->jk_users ?></td>
+              <td><?php echo $pendaftar->tmt_users ?></td>
+              <td><?php echo $pendaftar->ijazah_users ?></td>
+              <td><?php echo $pendaftar->mapel_users ?></td>
+              <td><?php echo $pendaftar->telp_users?> </td>
+              <td><?php echo $pendaftar->level_users?> </td>
+              <td><?php echo $pendaftar->alamat_users?> </td>
+              <td><?php echo $pendaftar->email_users?> </td>
+              <td><?php echo $pendaftar->created_at?> </td>
+              <td><?php echo $pendaftar->updated_at?> </td>
+               <td><?php echo anchor('operaot/O_operator/edit/'.$operator->id_users,'<div class="btn btn-primary btn-sm" ><i class="fa fa-edit"></i></div>')?></td>
+              <td onclick="javascript: return confirm('Anda yakin hapus?')"><?php echo anchor('operator/O_operator/hapus/'.$operator->id_users, '<div class="btn btn-danger btn-sm" ><i class="fa fa-trash"></i></div>' ) ?> 
               </td>
-            </tr> -->
+            </tr>
+
+          <?php }} ?>  -->
+
         
         </table>
         </div><!-- /.row -->

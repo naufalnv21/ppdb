@@ -7,9 +7,9 @@
         </div> -->
     </div>
     <div class="card-body">
-        <h4 style="border-bottom: 1px dotted #212121">Data Asal Sekolah</h4>
+        <!-- <h4 style="border-bottom: 1px dotted #212121">Data Asal Sekolah</h4> -->
         <div class="row">
-            <div class="col-md-6">
+            <!-- <div class="col-md-6">
                 <div class="form-group">
                   <label class="form-label">Asal Sekolah<span class="form-required">*</span></label>
                   <input type="text" name="asal_sekolah" class="form-control" required />
@@ -20,10 +20,18 @@
                   <label class="form-label">Tahun Lulus<span class="form-required">*</span></label>
                   <input type="text" name="tahun_lulus" class="form-control" required />
                 </div>
-            </div>
+            </div> -->
         </div>
         <br>
         <h4 style="border-bottom: 1px dotted #212121">Data Siswa</h4>
+        <div class="form-group">
+          <label class="form-label">Nomor Induk Kependudukan (NIK)<span class="form-required">*</span></label>
+          <input type="text" name="nik" class="form-control" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Nomor SKHUN<span class="form-required">*</span></label>
+          <input type="text" name="skhun" placeholder="9 Digit terakhir tanpa tanda titik (.)" class="form-control" required />
+        </div>
         <div class="row">
             <div class="col-md-8">
                 <div class="form-group">
@@ -48,30 +56,8 @@
             </div>
         </div>
         <div class="form-group">
-          <label class="form-label">Nomor SKHUN<span class="form-required">*</span></label>
-          <input type="text" name="skhun" placeholder="9 Digit terakhir tanpa tanda titik (.)" class="form-control" required />
-        </div>
-        <div class="form-group">
-          <label class="form-label">Nomor Induk Kependudukan (NIK)<span class="form-required">*</span></label>
-          <input type="text" name="nik" class="form-control" required />
-        </div>
-        <div class="form-group">
-          <label class="form-label">Nomor Ijazah<span class="form-required">*</span></label>
+          <label class="form-label">Tempat Tanggil Lahir<span class="form-required">*</span></label>
           <input type="text" name="nisn" class="form-control" required />
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                  <label class="form-label">Tempat Tanggal Lahir<span class="form-required">*</span></label>
-                  <input type="text" name="tmpt_lahir" class="form-control" required />
-                </div>
-            </div>
-            <!-- <div class="col-md-6">
-                <div class="form-group">
-                  <label class="form-label">Tanggal Lahir<span class="form-required">*</span></label>
-                  <input type="date" name="tgl_lahir" class="form-control" required />
-                </div>
-            </div> -->
         </div>
         <div class="form-group">
           <label class="form-label">Alamat Jalan/Blok<span class="form-required">*</span></label>
@@ -96,6 +82,55 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
+                  <label class="form-label">No Hp<span class="form-required">*</span></label>
+                  <input type="text" name="no_hp" placeholder="08xxxxxx" class="form-control" required />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+                  <label class="form-label">Asal Sekolah<span class="form-required">*</span></label>
+                  <input type="text" name="asal_sekolah" class="form-control" required />
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+                <label class="form-label">Nomor Ijazah<span class="form-required">*</span></label>
+                    <input type="text" name="nisn" class="form-control" required />
+            </div>
+          </div>
+        </div>  
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+                <label class="form-label">Tahun Lulus<span class="form-required">*</span></label>
+                    <input type="text" name="nisn" class="form-control" required />
+            </div>
+          </div>
+        </div>
+        <h4 style="border-bottom: 1px dotted #212121; margin-top: 50px;">Pilih Jurusan</h4>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-label">Pilihan 1<span class="form-required">*</span></label>
+                    <select class="form-control" name="pil1" required>
+                      <option value="MULTIMEDIA">MULTIMEDIA</option>
+                      <option value="PERBANKAN">PERBANKAN</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-label">Pilihan 2<span class="form-required">*</span></label>
+                    <select class="form-control" name="pil2" required>
+                        <option value="MULTIMEDIA">MULTIMEDIA</option>
+                        <option value="PERBANKAN">PERBANKAN</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
                     <label class="form-label">Agama<span class="form-required">*</span></label>
                     <select class="form-control" name="agama" required>
                         <option value="islam">ISLAM</option>
@@ -116,15 +151,11 @@
                     </select>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                  <label class="form-label">No Hp<span class="form-required">*</span></label>
-                  <input type="text" name="no_hp" placeholder="08xxxxxx" class="form-control" required />
-                </div>
-            </div>
-        </div>
+        </div> -->
+        <!-- <div class="form-group">
+          <label class="form-label">Asal Sekolah<span class="form-required">*</span></label>
+          <textarea name="no_ijazah" rows="2" class="form-control" required></textarea>
+        </div> -->
         <h4 style="border-bottom: 1px dotted #212121">Data Orang Tua</h4>
         <div class="row">
             <div class="col-md-6">
@@ -246,27 +277,6 @@
         <div class="form-group">
           <label class="form-label">Foto/Scan SKHUN <span class="form-required">*</span></label>
           <input type="file" name="foto_skhun" class="form-control"  required />
-        </div>
-        <h4 style="border-bottom: 1px dotted #212121; margin-top: 50px;">Pilih Jurusan</h4>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label class="form-label">Pilihan 1<span class="form-required">*</span></label>
-                    <select class="form-control" name="pil1" required>
-                      <option value="MULTIMEDIA">MULTIMEDIA</option>
-                      <option value="PERBANKAN">PERBANKAN</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label class="form-label">Pilihan 2<span class="form-required">*</span></label>
-                    <select class="form-control" name="pil2" required>
-                        <option value="MULTIMEDIA">MULTIMEDIA</option>
-                        <option value="PERBANKAN">PERBANKAN</option>
-                    </select>
-                </div>
-            </div>
         </div>
         <!-- <h4 style="border-bottom: 1px dotted #212121; margin-top: 50px;">Nilai UN</h4> -->
         <!-- <div class="row">

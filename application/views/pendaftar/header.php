@@ -12,8 +12,8 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
-    <link rel="icon" href="<?php echo base_url(); ?>assets/template/front/theme/logo_ristek.jpg" type="image/png"/>
-    <link rel="shortcut icon" type="image/png" href="<?php echo base_url(); ?>assets/template/front/theme/logo_ristek.jpg" />
+    <link rel="icon" href="<?php echo base_url(); ?>assets/template/front/theme/logo_ristek.jpg " type="image/png"/>
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url(); ?>assets/template/front/theme/logo_ristek.jpg" />
     <!-- Generated: 2018-04-16 09:29:05 +0200 -->
     <title><?php echo $title ?> | <?php echo $subtitle ?>  </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -68,18 +68,29 @@
         <div class="header py-4">
           <div class="container">
             <div class="d-flex">
-              <a class="header-brand" href="<?php echo base_url(); ?>theme/index.html">
-                <img src="<?php echo base_url(); ?>assets/template/front/theme/demo/brand/logo_ristek.jpg" class="header-brand-img" alt="tabler logo">
+              <img src="<?php echo base_url(); ?>assets/template/front/theme/demo/brand/logo_ristek.jpg" class="header-brand-img" alt="ristek">
+              <center>
+              <a class="brand-text font-weight-light"> 
+                  <h2>SELAMAT DATANG DI SMK RISTEK INDRAMAYU</h2>
+                </center>
+
+                <!-- <span class="brand-text font-weight-light">SELAMAT DATANG DI SMK RISTEK INDRAMAYU</span> -->
               </a>
+              </center>
               <div class="d-flex order-lg-2 ml-auto">
                 <div class="dropdown">
                   <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
-                    <span class="avatar" style="background-image: url(<?php echo base_url(); ?>theme/demo/faces/female/25.jpg)"></span>
+                    <!-- <span class="avatar" style="background-image: url(<?php echo base_url(); ?>assets/template/front/theme/demo/faces/female/25.jpg)"></span> -->
                     <span class="ml-2 d-none d-lg-block">
-                      <span class="text-default">Jane Pearson</span>
-                      <small class="text-muted d-block mt-1">Administrator</small>
+                      <span class="text-default">Masuk</span>
+                      <!-- <small class="text-muted d-block mt-1">Administrator</small> -->
                     </span>
                   </a>
+                  <!-- <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
+                    <span class="ml-2 d-none d-lg-block">
+                      <span class="text-default">Register</span>
+                    </span>
+                  </a> -->
                   <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                     <a class="dropdown-item" href="#">
                       <i class="dropdown-icon fe fe-user"></i> Profil
@@ -95,6 +106,40 @@
                       <i class="dropdown-icon fe fe-log-out"></i> Keluar
                     </a>
                   </div>
+                </div>
+              </div>
+
+
+
+              <div class="d-flex order-lg-2 ml-auto">
+                <div >
+                  <a href="<?php echo base_url('pendaftar/C_register'); ?>" >
+                    <!-- <span class="avatar" style="background-image: url(<?php echo base_url(); ?>assets/template/front/theme/demo/faces/female/25.jpg)"></span> -->
+                    <span class="ml-2 d-none d-lg-block">
+                      <span class="text-default">Register</span>
+                      <!-- <small class="text-muted d-block mt-1">Administrator</small> -->
+                    </span>
+                  </a>
+                  <!-- <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
+                    <span class="ml-2 d-none d-lg-block">
+                      <span class="text-default">Register</span>
+                    </span>
+                  </a> -->
+                  <!-- <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                    <a class="dropdown-item" href="#">
+                      <i class="dropdown-icon fe fe-user"></i> Profil
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <i class="dropdown-icon fe fe-settings"></i> Pengaturan
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">
+                      <i class="dropdown-icon fe fe-help-circle"></i> Butuh Bantuan?
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <i class="dropdown-icon fe fe-log-out"></i> Keluar
+                    </a>
+                  </div> -->
                 </div>
               </div>
               <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">

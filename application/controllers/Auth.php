@@ -18,7 +18,7 @@ class Auth extends CI_Controller
 			redirect('admin/admin');
 		}
 		if ($this->session->userdata('level_users') == 2){
-			redirect('admin/operator');
+			redirect('operator/O_operator');
 		}
 
 		$this->form_validation->set_rules('username', 'Username', 'required|trim|valid_username');

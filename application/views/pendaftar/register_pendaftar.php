@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
@@ -23,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
     <script>
       requirejs.config({
-          baseUrl: '<?php echo base_url();?>theme/',
+          baseUrl: '<?php echo base_url();?>assets/template/front/theme/',
 
           paths: {
             'jquery': 'https://code.jquery.com/jquery-3.3.1',
@@ -62,44 +61,31 @@
     <!-- Input Mask Plugin -->
     <script src="<?php echo base_url(); ?>assets/template/front/theme/assets/plugins/input-mask/plugin.js"></script>
   </head>
-  <body class="">
-    <div class="page">
-      <div class="page-main">
-        <div class="header py-4">
-          <div class="container">
-            <div class="d-flex">
-              <a>
-                <img src="<?php echo base_url(); ?>assets/template/front/theme/demo/brand/logo_ristek.jpg" class="header-brand-img" alt="ristek">
-              </a>
-              <div class="d-flex order-lg-2 ml-auto">
-                <div class="dropdown">
-                  <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
-                    <span class="avatar" style="background-image: url(<?php echo base_url(); ?>assets/template/front/theme/demo/faces/female/25.jpg)"></span>
-                    <span class="ml-2 d-none d-lg-block">
-                      <span class="text-default">Jane Pearson</span>
-                      <small class="text-muted d-block mt-1">Administrator</small>
-                    </span>
-                  </a>
-                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                    <a class="dropdown-item" href="#">
-                      <i class="dropdown-icon fe fe-user"></i> Profil
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      <i class="dropdown-icon fe fe-settings"></i> Pengaturan
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">
-                      <i class="dropdown-icon fe fe-help-circle"></i> Butuh Bantuan?
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      <i class="dropdown-icon fe fe-log-out"></i> Keluar
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
-                <span class="header-toggler-icon"></span>
-              </a>
+<body>
+  <center>
+  <div class="col-md-3 col-sm-10">
+      <div class="panel panel-primary">
+     <form action="<?php echo base_url('pendaftar/C_register/register'); ?>" method="POST">  
+        <div class="panel-heading"><h3 style="color:#000000;"><b><center> Registrasi Akun</center></b></h3></div>
+        <div class="panel-body">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Nama" name="nama_register">
             </div>
-          </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Username" name="username_register">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Nomor HP" name="telp_register">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="Password" name="password_register">
+            </div>
         </div>
+      <div class="panel-footer" style="text-align: right;"><input type="submit" class="btn btn-primary btn-lg"  value="Register" name="submit"></div>
+      </form>
+      </div><!--panel-->
+    </div>
+    </center>
+
+</body>
+</html> 

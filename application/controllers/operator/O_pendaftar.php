@@ -15,4 +15,6 @@ class O_pendaftar extends CI_Controller
 		$this->load->view('operator/footer', $data);
 		
 	}
+
+	
 }

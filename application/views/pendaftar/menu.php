@@ -15,13 +15,13 @@
             <a href="<?php echo site_url(); ?>" class="nav-link"><i class="fe fe-home"></i> Home</a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo site_url('C_formulir'); ?>" class="nav-link"><i class="fa fa-book"></i> Formulir PPDB</a>
+            <a href="<?php echo site_url(); ?>" class="nav-link"><i class="fe fe-home"></i> Berita</a>
+          </li>
+          <li class="nav-item">
+            <a href="<?php echo site_url('pendaftar/C_formulir'); ?>" class="nav-link"><i class="fa fa-book"></i> Formulir PPDB</a>
           </li>
           <li class="nav-item">
             <a href="<?php echo site_url(); ?>" class="nav-link"><i class="fa fa-users"></i>Pegawai</a>
-          </li>
-          <li class="nav-item">
-            <a href="<?php echo site_url(); ?>" class="nav-link"><i class="fa-newspaper-o "></i> Berita</a>
           </li>
           <li class="nav-item">
             <a href="<?php echo site_url(); ?>" class="nav-link"><i class="fa fa-users"></i> Profile Smk Ristek </a>
