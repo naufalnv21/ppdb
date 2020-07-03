@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
@@ -62,49 +61,25 @@
     <!-- Input Mask Plugin -->
     <script src="<?php echo base_url(); ?>assets/template/front/theme/assets/plugins/input-mask/plugin.js"></script>
   </head>
-  <body class="">
-    <div class="page">
-      <div class="page-main">
-        <div class="header py-4">
-          <div class="container">
-            <div class="d-flex">
-              <img src="<?php echo base_url(); ?>assets/template/front/theme/demo/brand/logo_ristek.jpg" class="header-brand-img" alt="ristek">
-              <center>
-              <a class="brand-text font-weight-light"> 
-                  <h2>SELAMAT DATANG DI SMK RISTEK INDRAMAYU</h2>
-                </center>
-
-                <!-- <span class="brand-text font-weight-light">SELAMAT DATANG DI SMK RISTEK INDRAMAYU</span> -->
-              </a>
-              </center>
-              <div class="d-flex order-lg-2 ml-auto">
-                <div >
-                  <a href="<?php echo base_url('pendaftar/C_login'); ?>" >
-                    <!-- <span class="avatar" style="background-image: url(<?php echo base_url(); ?>assets/template/front/theme/demo/faces/female/25.jpg)"></span> -->
-                    <span class="ml-2 d-none d-lg-block">
-                      <span class="text-default">Login</span>
-                      <!-- <small class="text-muted d-block mt-1">Administrator</small> -->
-                    </span>
-                  </a>
-                </div>
-              </div>
-
-
-
-              <div class="d-flex order-lg-2 ml-auto">
-                <div >
-                  <a href="<?php echo base_url('pendaftar/C_register'); ?>" >
-                    <!-- <span class="avatar" style="background-image: url(<?php echo base_url(); ?>assets/template/front/theme/demo/faces/female/25.jpg)"></span> -->
-                    <span class="ml-2 d-none d-lg-block">
-                      <span class="text-default">Register</span>
-                      <!-- <small class="text-muted d-block mt-1">Administrator</small> -->
-                    </span>
-                  </a>
-                </div>
-              </div>
-              <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
-                <span class="header-toggler-icon"></span>
-              </a>
+<body>
+  <center>
+  <div class="col-md-3 col-sm-10">
+      <div class="panel panel-primary">
+     <form action="<?php echo base_url('pendaftar/C_login/login'); ?>" method="post">  
+        <div class="panel-heading"><h3 style="color:#000000;"><b><center> Login Akun</center></b></h3></div>
+        <div class="panel-body">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Username" name="username_register">
             </div>
-          </div>
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="Password" name="password_register">
+            </div>
         </div>
+      <div class="panel-footer" style="text-align: right;"><input type="submit" class="btn btn-primary btn-lg"  value="login" name="submit"></div>
+      </form>
+      </div><!--panel-->
+    </div>
+    </center>
+
+</body>
+</html> 

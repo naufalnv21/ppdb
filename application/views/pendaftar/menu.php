@@ -12,25 +12,25 @@
       <div class="col-lg order-lg-first">
         <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
           <li class="nav-item">
-            <a href="<?php echo site_url(); ?>" class="nav-link"><i class="fe fe-home"></i> Home</a>
+            <a href="<?php echo site_url('pendaftar/C_calon_siswa'); ?>" class="nav-link"><i class="fe fe-home"></i> Home</a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo site_url(); ?>" class="nav-link"><i class="fe fe-home"></i> Berita</a>
+            <a href="<?php echo site_url('pendaftar/berita'); ?>" class="nav-link"><i class="fe fe-home"></i> Berita</a>
           </li>
           <li class="nav-item">
             <a href="<?php echo site_url('pendaftar/C_formulir'); ?>" class="nav-link"><i class="fa fa-book"></i> Formulir PPDB</a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo site_url(); ?>" class="nav-link"><i class="fa fa-users"></i>Pegawai</a>
+            <a href="<?php echo site_url('pendaftar/pegawai'); ?>" class="nav-link"><i class="fa fa-users"></i>Pegawai</a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo site_url(); ?>" class="nav-link"><i class="fa fa-users"></i> Profile Smk Ristek </a>
+            <a href="<?php echo site_url('pendaftar/profil_smk'); ?>" class="nav-link"><i class="fa fa-users"></i> Profile Smk Ristek </a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo site_url(); ?>" class="nav-link"><i class="fa fa-users"></i> Fasilitas</a>
+            <a href="<?php echo site_url('pendaftar/fasilitas_pendaftar'); ?>" class="nav-link"><i class="fa fa-users"></i> Fasilitas</a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo site_url(); ?>" class="nav-link"><i class="fa fa-download"></i> Download Formulir</a>
+            <a href="<?php echo site_url('pendaftar/download_pendaftar'); ?>" class="nav-link"><i class="fa fa-download"></i> Download Formulir</a>
           </li>
           <!-- <li class="nav-item dropdown">
             <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fa fa-cogs"></i>Pengaturan</a>

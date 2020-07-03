@@ -79,4 +79,9 @@ class Admin extends CI_Controller
 		redirect('admin/Admin');
 
 	}
+
+	public function logout(){
+		$this->session->session_destroy();
+		redirect('Auth');
+	}
 }

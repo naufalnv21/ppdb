@@ -40,6 +40,6 @@ class C_register extends CI_Controller
 			'password_register' => $password_register
 		);
 		$this->M_register->input($data);
-		redirect('pendaftar/C_register');
+		redirect('pendaftar/home');
 	}
 }
