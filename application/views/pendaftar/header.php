@@ -77,6 +77,20 @@
                 <!-- <span class="brand-text font-weight-light">SELAMAT DATANG DI SMK RISTEK INDRAMAYU</span> -->
               </a>
               </center>
+              <?php if ($this->session->userdata('username_register')) { ?>
+                <div class="d-flex order-lg-2 ml-auto">
+                <div class="pull-right">
+                  <a class="d-block" style="color:#000000;">HAI, <?= $user['nama_register']; ?></a>
+                  <a href="<?php echo base_url('pendaftar/C_login/logout'); ?>" class="btn btn-default btn-flat">Logout</a>
+                    <!-- <span class="avatar" style="background-image: url(<?php echo base_url(); ?>assets/template/front/theme/demo/faces/female/25.jpg)"></span> -->
+                      
+                    
+                      <!-- <small class="text-muted d-block mt-1">Administrator</small> -->
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <?php }else{ ?>
               <div class="d-flex order-lg-2 ml-auto">
                 <div >
                   <a href="<?php echo base_url('pendaftar/C_login'); ?>" >
@@ -89,8 +103,6 @@
                 </div>
               </div>
 
-
-
               <div class="d-flex order-lg-2 ml-auto">
                 <div >
                   <a href="<?php echo base_url('pendaftar/C_register'); ?>" >
@@ -102,6 +114,7 @@
                   </a>
                 </div>
               </div>
+            <?php } ?>
               <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
                 <span class="header-toggler-icon"></span>
               </a>

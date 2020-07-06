@@ -41,7 +41,16 @@ class Guru extends CI_Controller
         // load library upload
         $this->load->library('upload', $config);
         if (!$this->upload->do_upload('foto_guru')) {
-        	
+        	'nama_guru' => $nama_guru,
+			'ttl_guru' => $ttl_guru,
+			'nuptk_guru' => $nuptk_guru,
+			'jk_guru' => $jk_guru,
+			'email_guru' => $email_guru,
+			'tmt_guru' => $tmt_guru,
+			'ijazah_guru' => $ijazah_guru,
+			'mapel_guru' => $mapel_guru,
+			'alamat_guru' => $alamat_guru,
+			'foto_guru' => 'kosong'
         } else {
             $result = $this->upload->data();
             $result1 =$result['file_name'];

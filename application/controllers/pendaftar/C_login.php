@@ -17,7 +17,7 @@ class C_login extends CI_Controller
 
 	public function index()
 	{
-		if($this->session->userdata('authenticated'))
+		
 		$data['title'] = 'Dashboard';
 		$data['subtitle'] = 'SMK RISTEK INDRAMAYU';
 		$data['content'] = 'pendaftar/home';
@@ -41,17 +41,23 @@ class C_login extends CI_Controller
 		}else{
 			if($password_register == $tb_register->password_register){
 				$session = array(
-					'authenticated'=>true,
+					
 					'username_register'=>$tb_register->username_register,
 					'nama_register'=>$tb_register->nama_register
 				);
 
 				$this->session->set_userdata($session);
-				redirect('pendaftar/login_pendaftar');
+				redirect('pendaftar/C_calon_siswa');
 			}else{
 				$this->session->set_flashdata('message', 'Password Salah');
 				redirect('pendaftar/C_login');
 			}
 		}
+	}
+
+	public function logout()
+	{
+		$this->session->sess_destroy();
+		redirect('pendaftar/C_calon_siswa');
 	}
 }

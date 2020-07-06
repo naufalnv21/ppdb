@@ -8,16 +8,16 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" alt="" height="450" src="<?php echo base_url() ?>assets/template/front/theme/demo/photos/aneta-ivanova-776-1500.jpg" data-holder-rendered="true">
+      <img class="d-block w-100" alt="" height="450" src="<?php echo base_url() ?>assets/template/front/theme/demo/photos/ruang_belajar.jpg" data-holder-rendered="true">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" alt="" height="450" src="<?php echo base_url() ?>assets/template/front/theme/demo/photos/anthony-intraversato-257182-1500.jpg" data-holder-rendered="true">
+      <img class="d-block w-100" alt="" height="450" src="<?php echo base_url() ?>assets/template/front/theme/demo/photos/halaman2.jpg" data-holder-rendered="true">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" alt="" height="450" src="<?php echo base_url() ?>assets/template/front/theme/demo/photos/artem-sapegin-229391-1500.jpg" data-holder-rendered="true">
+      <img class="d-block w-100" alt="" height="450" src="<?php echo base_url() ?>assets/template/front/theme/demo/photos/halaman3.jpg" data-holder-rendered="true">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" alt="" height="450" src="<?php echo base_url() ?>assets/template/front/theme/demo/photos/bobby-burch-145906-1500.jpg" data-holder-rendered="true">
+      <img class="d-block w-100" alt="" height="450" src="<?php echo base_url() ?>assets/template/front/theme/demo/photos/praktikum.jpg" data-holder-rendered="true">
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" alt="" height="450" src="<?php echo base_url() ?>assets/template/front/theme/demo/photos/casey-horner-339165-1500.jpg" data-holder-rendered="true">
