@@ -15,8 +15,8 @@ class C_calon_siswa extends CI_Controller {
 		$this->load->view('pendaftar/menu', $data); 
 		$this->load->view('pendaftar/template', $data);
 		$this->load->view('pendaftar/footer', $data);
-		
-	
 	}
+
+	
 
 }
