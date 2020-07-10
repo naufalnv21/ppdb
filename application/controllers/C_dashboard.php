@@ -20,6 +20,7 @@ class C_dashboard extends CI_Controller
 		$data2['dashboard'] = [
 			'pegawai'=>$this->M_dashboard->tampil(),
 			'siswa'=>$this->M_dashboard->tampilSiswa(),
+			'pendaftar'=>$this->M_dashboard->tampilPendaftar(),
 		];
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/navbar', $data);

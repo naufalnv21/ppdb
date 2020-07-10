@@ -37,7 +37,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>53<sup style="font-size: 20px">%</sup></h3>
+                <h3><?php echo count($dashboard['pendaftar']); ?></h3>
 
                 <p>Data Pendaftar</p>
               </div>

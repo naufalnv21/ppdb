@@ -30,4 +30,12 @@ class M_dashboard extends CI_Model
 		$result = $this->db->get();
 		return $result->result();
 	}
+
+	public function tampilPendaftar()
+	{
+		$this->db->select('*');
+		$this->db->from('tb_pendaftar');
+		$result = $this->db->get();
+		return $result->result();
+	}
 }

@@ -91,13 +91,15 @@
         </div>
         <h4 style="border-bottom: 1px dotted #212121; margin-top: 50px;">Pilih Jurusan</h4>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="form-group">
-                    <label class="form-label">Pilihan <span class="form-required">*</span></label>
-                    <select class="form-control" name="id_jurusan" required>
-                      <option value="MULTIMEDIA">MULTIMEDIA</option>
-                      <option value="PERBANKAN">PERBANKAN</option>
-                    </select>
+                  <label class="form-label">Jurusan<span class="form-required">*</span></label>
+                    <div class="custom-controls-stacked">
+                      <label class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" name="id_jurusan" value="Multimedia">
+                        <span class="custom-control-label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Multimedia</span>
+                      </label>
+                    </div>
                 </div>
             </div>
             <!-- <div class="col-md-6">
@@ -134,9 +136,9 @@
                 <div class="form-group">
                     <label class="form-label">Pendapatan Per Bulan<span class="form-required">*</span></label>
                     <select class="form-control" name="ppn_orang_tua_pendaftar" required>
-                        <option value="islam">Rp.500 rb - Rp.1 Jt</option>
-                        <option value="katholik">Rp.1 Jt - Rp.2 Jt</option>
-                        <option value="protestan">Di Atas Rp.2 Jt</option>
+                        <option value="Rp.500 rb - Rp.1 Jt">Rp.500 rb - Rp.1 Jt</option>
+                        <option value="Rp.1 Jt - Rp.2 Jt">Rp.1 Jt - Rp.2 Jt</option>
+                        <option value="Di Atas Rp.2 Jt">Di Atas Rp.2 Jt</option>
                     </select>
                 </div>
             </div>
@@ -184,23 +186,23 @@
         </div>
         <div class="form-group">
           <label class="form-label">Foto/Scan Kartu Keluarga <span class="form-required">*</span></label>
-          <input type="file" name="file_kk_pendaftar" class="form-control" required />
+          <input type="file" name="file_kk_pendaftar" class="form-control"  required multiple />
         </div>
         <div class="form-group">
           <label class="form-label">Foto/Scan Akte <span class="form-required">*</span></label>
-          <input type="file" name="file_akte_pendaftar" class="form-control" required= />
+          <input type="file" name="file_akte_pendaftar" class="form-control" required multiple />
         </div>
         <div class="form-group">
           <label class="form-label">Foto/Scan KTP Orang Tua <span class="form-required">*</span></label>
-          <input type="file" name="file_ktp_orang_tua_pendaftar" class="form-control" required />
+          <input type="file" name="file_ktp_orang_tua_pendaftar" class="form-control" required multiple />
         </div>
         <div class="form-group">
           <label class="form-label">Foto/Scan Ijazah <span class="form-required">*</span></label>
-          <input type="file" name="file_ijazah_pendaftar" class="form-control" required />
+          <input type="file" name="file_ijazah_pendaftar" class="form-control" required multiple />
         </div>
         <div class="form-group">
           <label class="form-label">Foto/Scan SKHUN <span class="form-required">*</span></label>
-          <input type="file" name="file_skhun_pendaftar" class="form-control"  required />
+          <input type="file" name="file_skhun_pendaftar" class="form-control"  required multiple />
         </div>
     </div>
     <div class="card-footer">

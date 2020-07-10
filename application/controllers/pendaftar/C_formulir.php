@@ -27,6 +27,7 @@ class C_formulir extends CI_Controller
 	}
 	public function insertFormulir()
 	{
+		$id_jurusan = $this->input->post('id_jurusan');
 		$nik_pendaftar = $this->input->post('nik_pendaftar');
 		$skhun_pendaftar = $this->input->post('skhun_pendaftar');
 		$nama_pendaftar = $this->input->post('nama_pendaftar');
@@ -52,73 +53,89 @@ class C_formulir extends CI_Controller
 		$almt_kec_orang_tua_pendaftar = $this->input->post('almt_kec_orang_tua_pendaftar');
 		$almt_kab_orang_tua_pendaftar = $this->input->post('almt_kab_orang_tua_pendaftar');
 		$telp_hp_orang_tua_pendaftar = $this->input->post('telp_hp_orang_tua_pendaftar');
+
 		$config['upload_path'] = './upload/pendaftar/kk/';
         $config['allowed_types'] = 'gif|jpg|png';
+        $config['file_name']            = $this->input->post('nik_pendaftar');
+    	$config['overwrite']			= true;
+    	$config['max_size']             = 1024; // 1MB
+    	// $config['max_width']            = 1024;
+    	// $config['max_height']           = 768;
         // load library upload
-        $this->load->library('upload', $config);
-        if (!$this->upload->do_upload('foto_kk')) {
+        
+    	$this->load->library('upload', $config,'kkupload');	
+        $this->kkupload->initialize($config,'kkupload');
+        $this->kkupload->do_upload('file_kk_pendaftar');
+        $result1 = $this->kkupload->data();
 
-
-
-        } else {
-        	$result = $this->upload->data();
-            $result1 =$result['file_name'];
-        }
+        //BATES
 
         $config['upload_path'] = './upload/pendaftar/akte/';
         $config['allowed_types'] = 'gif|jpg|png';
+        $config['file_name']            = $this->input->post('nik_pendaftar');
+    	$config['overwrite']			= true;
+    	$config['max_size']             = 1024; // 1MB
+    	// $config['max_width']            = 1024;
+    	// $config['max_height']           = 768;
         // load library upload
-        $this->load->library('upload', $config);
-        if (!$this->upload->do_upload('foto_akte')) {
+        
+    	$this->load->library('upload', $config,'akteupload');	
+        $this->akteupload->initialize($config,'akteupload');
+        $this->akteupload->do_upload('file_akte_pendaftar' );
+        $result2 = $this->akteupload->data();
 
-
-
-        } else {
-        	$result = $this->upload->data();
-            $result2 =$result['file_name'];
-        }  
+        //BATES
 
         $config['upload_path'] = './upload/pendaftar/ktp_orangtua/';
         $config['allowed_types'] = 'gif|jpg|png';
+        $config['file_name']            = $this->input->post('nik_pendaftar');
+    	$config['overwrite']			= true;
+    	$config['max_size']             = 1024; // 1MB
+    	// $config['max_width']            = 1024;
+    	// $config['max_height']           = 768;
         // load library upload
-        $this->load->library('upload', $config);
-        if (!$this->upload->do_upload('foto_ktp')) {
+        
+    	$this->load->library('upload', $config,'ktpupload');	
+        $this->ktpupload->initialize($config,'ktpupload');
+        $this->ktpupload->do_upload('file_ktp_orang_tua_pendaftar');
+        $result3 = $this->ktpupload->data();
 
 
-
-        } else {
-        	$result = $this->upload->data();
-            $result3 =$result['file_name'];
-        } 
-
+        //BATES
         $config['upload_path'] = './upload/pendaftar/ijazah/';
         $config['allowed_types'] = 'gif|jpg|png';
+        $config['file_name']            = $this->input->post('nik_pendaftar');
+    	$config['overwrite']			= true;
+    	$config['max_size']             = 1024; // 1MB
+    	// $config['max_width']            = 1024;
+    	// $config['max_height']           = 768;
         // load library upload
-        $this->load->library('upload', $config);
-        if (!$this->upload->do_upload('foto_ijazah')) {
+        
+    	$this->load->library('upload', $config,'ijazahupload');	
+        $this->ijazahupload->initialize($config,'ijazahupload');
+        $this->ijazahupload->do_upload('file_ijazah_pendaftar' );
+        $result4 = $this->ijazahupload->data();
 
 
-
-        } else {
-        	$result = $this->upload->data();
-            $result4 =$result['file_name'];
-        } 
-
+        //BATES
         $config['upload_path'] = './upload/pendaftar/skhun/';
         $config['allowed_types'] = 'gif|jpg|png';
+        $config['file_name']            = $this->input->post('nik_pendaftar');
+    	$config['overwrite']			= true;
+    	$config['max_size']             = 1024; // 1MB
+    	// $config['max_width']            = 1024;
+    	// $config['max_height']           = 768;
         // load library upload
-        $this->load->library('upload', $config);
-        if (!$this->upload->do_upload('foto_skhun')) {
-
-
-
-        } else {
-        	$result = $this->upload->data();
-            $result5 =$result['file_name'];
-        }
-        $id_jurusan = $this->input->post('id_jurusan'); 
+        
+    	$this->load->library('upload', $config,'skhunupload');	
+        $this->skhunupload->initialize($config,'skhunupload');
+        $this->skhunupload->do_upload('file_skhun_pendaftar' );
+        $result5 = $this->skhunupload->data();	
+		//bates
+         
 
 		$data = array(
+			'id_jurusan' => $id_jurusan,
 			'nik_pendaftar' => $nik_pendaftar,
 			'skhun_pendaftar' => $skhun_pendaftar,
 			'nama_pendaftar' => $nama_pendaftar,
@@ -144,12 +161,12 @@ class C_formulir extends CI_Controller
 			'almt_kec_orang_tua_pendaftar' => $almt_kec_orang_tua_pendaftar,
 			'almt_kab_orang_tua_pendaftar' => $almt_kab_orang_tua_pendaftar,
 			'telp_hp_orang_tua_pendaftar' => $telp_hp_orang_tua_pendaftar,
-			'foto_kk' => $result1,
-			'foto_akte' => $result2,
-			'foto_ktp' => $result3,
-			'foto_ijazah' => $result4,
-			'foto_skhun' => $result5,
-			'id_jurusan' => $id_jurusan
+			'file_kk_pendaftar' => $result1['file_name'],
+			'file_akte_pendaftar' => $result2['file_name'],
+			'file_ktp_orang_tua_pendaftar' => $result3['file_name'],
+			'file_ijazah_pendaftar' => $result4['file_name'],
+			'file_skhun_pendaftar' => $result5['file_name']
+			
 		);
 		$this->M_formulir->input($data);
 		redirect('pendaftar/C_calon_siswa');
