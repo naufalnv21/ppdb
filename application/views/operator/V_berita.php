@@ -23,7 +23,7 @@
               <th>Tanggal</th>
               <th>Berita</th>
               <th>Penulis</th>
-              <th>Status</th>
+              <th>Foto</th>
               <th colspan="2">Aksi</th>
           </tr>
            <?php
@@ -34,9 +34,10 @@
               <td><?php echo $no++?> </td>
               <td><?php echo $berita->tgl_berita ?></td>
               <td><?php echo $berita->isi_berita?> </td>
-              <td><?php echo $berita->penulis_berita?> </td>
-              <td><?php echo $berita->status_berita?> </td>
-
+              <td><?php echo $berita->penulis_berita?> </td>              
+              <td>
+                <img src="<?php echo base_url('upload/berita/'.$berita->foto_berita) ?>"class ="img img-responsive img-thumbnail " width = "60">
+              </td>
               <td><?php echo anchor('operator/O_berita/edit/'.$berita->id_berita,'<div class="btn btn-primary btn-sm" ><i class="fa fa-edit"></i></div>')?></td>
               <td onclick="javascript: return confirm('Anda yakin hapus?')"><?php echo anchor('operator/O_berita/hapus/'.$berita->id_berita, '<div class="btn btn-danger btn-sm" ><i class="fa fa-trash"></i></div>' ) ?>
               </td>
@@ -57,7 +58,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form method="post" action="<?php echo base_url(). 'operator/O_berita/tambahBerita';?>">
+        <form method="post" action="<?php echo base_url(). 'operator/O_berita/tambahBerita';?>" enctype="multipart/form-data">
           <div class="form-group">
             <label>Tanggal </label>
             <input type="text" name="tgl_berita" placeholder="Tahun Bulan Tanggal Sekarang" class="form-control" required="required">
@@ -67,12 +68,15 @@
             <input type="text" name="isi_berita" placeholder="Tuliskan Berita" class="form-control" required="required">
           </div>
           <div class="form-group">
-            <label>Penulis </label>
-            <input type="text" name="penulis_berita" placeholder="Penulis" class="form-control" required="required">
+            <label>Penulis</label>
+            <!-- <input type="text" name="ijazah_guru" placeholder="Contoh S1" class="form-control" required="required"> -->
+            <select class="form-control" name="penulis_berita" required="required">
+              <option value="Operator">Operator</option>
+            </select>
           </div>
-          <div class="form-group">
-            <label>Status </label>
-            <input type="text" name="status_berita" placeholder="Status" class="form-control" required="required">
+          <div>
+            <label>Foto</label>
+            <input type="file" name="foto_berita" placeholder="Pilih foto" class="form-control">
           </div>
               <button type="reset" class="btn btn-danger" data-dismiss="modal">Reset</button>
               <button type="submit" class="btn btn-primary">Simpan</button>

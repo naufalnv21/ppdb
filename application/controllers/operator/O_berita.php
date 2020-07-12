@@ -28,18 +28,65 @@ class O_berita extends CI_Controller
 		$tgl_berita = $this->input->post('tgl_berita');
 		$isi_berita = $this->input->post('isi_berita');
 		$penulis_berita = $this->input->post('penulis_berita');
-		$status_berita = $this->input->post('status_berita');
-
-		$data = array(
-			
+		// $foto_guru = $this->input->post('foto_guru');
+		$config['upload_path'] = './upload/berita/';
+        $config['allowed_types'] = 'gif|jpg|png';
+        // load library upload
+        $this->load->library('upload', $config);
+        if (!$this->upload->do_upload('foto_berita')) {	
+        	$data = array(
+        		'tgl_berita' => $tgl_berita,
+        		'isi_berita' => $isi_berita,
+        		'penulis_berita' => $penulis_berita,
+        		'foto_berita' => 'kosong'
+        	);
+        	$this->M_berita->input($data);
+        	redirect('operator/O_berita');
+        } else {
+            $result = $this->upload->data();
+            $result1 =$result['file_name'];
+            
+            $data = array(
+				
 			'tgl_berita' => $tgl_berita,
 			'isi_berita' => $isi_berita,
 			'penulis_berita' => $penulis_berita,
-			'status_berita' => $status_berita
-		);
+			'foto_berita' => $result1
+		);	
 		$this->M_berita->input($data);
 		redirect('operator/O_berita');
+        }
 	}
+
+	// public function tambahBerita()
+	// {
+
+	// 	$tgl_berita = $this->input->post('tgl_berita');
+	// 	$isi_berita = $this->input->post('isi_berita');
+	// 	$penulis_berita = $this->input->post('penulis_berita');
+	// 	$id_berita = $this->input->post('id_berita');
+	// 	$config['upload_path'] = './upload/berita/';
+ //        $config['allowed_types'] = 'gif|jpg|png';
+ //        // load library upload
+ //        $this->load->library('upload', $config);
+ //        if (!$this->upload->do_upload('foto_berita')) {
+        	
+ //        } else {
+ //            $result = $this->upload->data();
+ //            $result1 =$result['file_name'];
+            
+ //            $data = array(
+				
+	// 		'tgl_berita' => $tgl_berita,
+	// 		'isi_berita' => $isi_berita,
+	// 		'penulis_berita' => $penulis_berita,
+	// 		'id_berita' => $id_berita,
+	// 		'foto_berita' => $result1
+	// 	);
+	// 	$this->M_berita->input($data);
+	// 	redirect('operator/O_berita');
+	// 	}
+	// }
 
 	public function hapus($id)
 	{
@@ -62,19 +109,28 @@ class O_berita extends CI_Controller
 		$tgl_berita = $this->input->post('tgl_berita');
 		$isi_berita = $this->input->post('isi_berita');
 		$penulis_berita = $this->input->post('penulis_berita');
-		$status_berita = $this->input->post('status_berita');
 		$id_berita = $this->input->post('id_berita');
+		$config['upload_path'] = './upload/berita/';
+        $config['allowed_types'] = 'gif|jpg|png';
+        // load library upload
+        $this->load->library('upload', $config);
+        if (!$this->upload->do_upload('foto_berita')) {
+        	
+        } else {
+            $result = $this->upload->data();
+            $result1 =$result['file_name'];
 
 		$data = array(
 			
 			'tgl_berita' => $tgl_berita,
 			'isi_berita' => $isi_berita,
 			'penulis_berita' => $penulis_berita,
-			'status_berita' => $status_berita,
+			'foto_berita' => $result1
 		);
 		$this->db->where('id_berita', $id_berita);
         $this->db->update('tb_berita', $data);
 		redirect('operator/O_berita');
+		}
 	}
 
 	public function editForm()

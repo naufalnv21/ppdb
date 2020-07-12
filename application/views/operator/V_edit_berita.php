@@ -5,7 +5,7 @@
     <form method="post" action="<?php echo base_url(). 'operator/O_berita/prosesEdit';?>" enctype="multipart/form-data">
           <div class="form-group">
             <label>Tanggal </label>
-            <input type="text" name="tgl_berita" placeholder="Tahun Bulan Tanggal Sekarang" class="form-control" required="required">
+            <input type="text" name="tgl_berita" placeholder="Tahun Bulan Tanggal Sekarang" class="form-control" required="required" value="<?= $berita['tgl_berita']; ?>"  readonly>
           </div>
           <div class="form-group">
             <label>Berita </label>
@@ -16,9 +16,9 @@
             <label>Penulis </label>
             <input type="text" name="penulis_berita" placeholder="Penulis" class="form-control" required="required">
           </div>
-          <div class="form-group">
-            <label>Status</label>
-            <input type="text" name="status_berita" placeholder="Status" class="form-control" required="required">
+          <div>
+            <label>Foto</label>
+            <input type="file" name="foto_berita" placeholder="Pilih foto" class="form-control" >
           </div>
               <button type="reset" class="btn btn-danger" data-dismiss="modal">Reset</button>
               <button type="submit" class="btn btn-primary">Simpan</button>

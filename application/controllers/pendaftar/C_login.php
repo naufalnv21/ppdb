@@ -49,7 +49,10 @@ class C_login extends CI_Controller
 				$this->session->set_userdata($session);
 				redirect('pendaftar/C_calon_siswa');
 			}else{
-				$this->session->set_flashdata('message', 'Password Salah');
+				// $this->session->set_flashdata('message', 'Password Salah');
+				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Wrong Passwrod!<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button></div>');
 				redirect('pendaftar/C_login');
 			}
 		}

@@ -38,7 +38,7 @@ class O_siswa extends CI_Controller
         $config['allowed_types'] = 'gif|jpg|png';
         // load library upload
         $this->load->library('upload', $config);
-        if (!$this->upload->do_upload('foto_siswa')) {
+        if (!$this->upload->do_upload('foto_siswa')) {	
         	
         } else {
             $result = $this->upload->data();

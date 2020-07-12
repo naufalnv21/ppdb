@@ -21,7 +21,7 @@
             <a href="<?php echo site_url('pendaftar/C_formulir'); ?>" class="nav-link"><i class="fa fa-book"></i> Formulir PPDB</a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo site_url('pendaftar/pegawai'); ?>" class="nav-link"><i class="fa fa-users"></i>Pegawai</a>
+            <a href="<?php echo site_url('pendaftar/C_pegawai'); ?>" class="nav-link"><i class="fa fa-users"></i>Pegawai</a>
           </li>
           <li class="nav-item">
             <a href="<?php echo site_url('pendaftar/profil_smk'); ?>" class="nav-link"><i class="fa fa-users"></i> Profile Smk Ristek </a>
