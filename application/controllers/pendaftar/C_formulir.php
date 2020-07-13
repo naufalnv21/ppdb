@@ -176,8 +176,17 @@ class C_formulir extends CI_Controller
     		'file_skhun_pendaftar' => $result5['file_name']
 
     	);
-    		$this->M_formulir->input($data);
-    		redirect('pendaftar/C_calon_siswa');
+    		$simpan = $this->M_formulir->input($data);
+            if ($simpan) {
+                // $this->session->set_flashdata($alert);
+                echo $this->session->flashdata('simpan');
+                redirect('pendaftar/C_calon_siswa');
+            } else {
+                // $this->session->set_flashdata($alert);
+                echo $this->session->flashdata('login dahulu!');                
+                redirect('pendaftar/C_calon_siswa');
+            }
+    		
     	}
 
     }

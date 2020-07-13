@@ -92,7 +92,7 @@ class Auth extends CI_Controller
 	public function logout(){
 		$this->session->unset_userdata('username');
 		$this->session->unset_userdata('level_users');
-		$this->session->session_destroy();
+		
 
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">you have been logged out!<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 			<span aria-hidden="true">&times;</span>

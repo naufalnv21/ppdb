@@ -38,4 +38,11 @@ class M_dashboard extends CI_Model
 		$result = $this->db->get();
 		return $result->result();
 	}
+	public function tampilJurusan()
+	{
+		$this->db->select('*');
+		$this->db->from('tb_jurusan');
+		$result = $this->db->get();
+		return $result->result();
+	}
 }

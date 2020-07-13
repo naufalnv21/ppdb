@@ -65,16 +65,15 @@
       <div class="container post">
           <div class="row">
             <?php 
-              foreach($data_guru as $key => $value){
+              foreach($data_berita as $key => $value){
                 echo "<div class='col-md-4'>
               <div class='card mb-4 box-shadow'>
-                <img class='card-img-top' src='".base_url('upload/guru/').$value->foto_guru."' alt='Card image cap' width='200px' height='200px'>
+                <img class='card-img-top' src='".base_url('upload/berita/').$value->foto_berita."' alt='Card image cap' width='200px' height='200px'>
                 <div class='card-body'>
-                  <p class='card-text'>$value->nama_guru</p>
-                  <p class='card-text'>$value->jk_guru</p>
-                  <p class='card-text'>NUPTK = $value->nuptk_guru</p>
-                  <p class='card-text'>Mengajar $value->mapel_guru</p>
-                  <p class='card-text'>Lulusan $value->ijazah_guru</p>
+                  <p class='card-text'>$value->tgl_berita</p>
+                  <p class='card-text'>$value->isi_berita</p>
+                  <p class='card-text'>By $value->penulis_berita</p>
+                  
                   <div class='d-flex justify-content-between align-items-center'>
                     <div class='btn-group'>
                     </div>
@@ -88,6 +87,5 @@
  
             
         </div>
-  </body>
 
-  </html>
+  </body>

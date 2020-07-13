@@ -32,6 +32,7 @@
             </a>
           </li>
 
+          <li class="nav-header">DATA</li>
           <li class="nav-item">
             <a href="<?php echo base_url('admin/Operator');?>" class="nav-link ">
               <i class="nav-icon fa fa-user-circle"></i>
@@ -64,8 +65,16 @@
                 Data Pegawai
               </p>
             </a>
-            
           </li>
+          <li class="nav-item has-treeview">
+            <a href="<?php echo base_url('admin/Jurusan'); ?>" class="nav-link">
+              <i class="nav-icon fas fa-folder-open"></i>
+            <p>
+              Data Jurusan
+            </p>
+            </a>
+          </li>
+          <li class="nav-header">EVENT</li>
           <li class="nav-item has-treeview">
             <a href="<?php echo base_url('admin/Berita');?>" class="nav-link">
               <i class="far fas fa-bullhorn nav-icon"></i>
@@ -73,6 +82,16 @@
                 Berita
               </p>
             </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="<?php echo base_url('admin/Profil'); ?>" class="nav-link">
+              <i class="far  fas fa-university nav-icon"></i>
+              <p>
+                Profile SMK RISTEK
+              </p>
+            </a>
+          </li>
+            
           </li>
           <li class="nav-header">USER</li>
           <li class="nav-item">

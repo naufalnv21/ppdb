@@ -27,7 +27,7 @@
                 <p>Data Pegawai</p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="fas fa-users"></i>
               </div>
               <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
             </div>
@@ -70,7 +70,7 @@
               <div class="inner">
                 <h3>65</h3>
 
-                <p>Unique Visitors</p>
+                <p>Berita</p>
               </div>
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>
@@ -79,17 +79,24 @@
             </div>
           </div>
           <!-- ./col -->
+
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger">
+              <div class="inner">
+                <h3><?php echo count($dashboard['jurusan']); ?></h3>
+
+                <p>Jumlah Jurusan</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-university"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
         </div>
         <!-- /.row -->
         <!-- Main row -->
-        <div class="row">
-          <!-- Left col -->
-          
-          <!-- /.Left col -->
-          <!-- right col (We are only adding the ID to make the widgets sortable)-->
-          
-          <!-- right col -->
-        </div>
         <!-- /.row (main row) -->
       </div><!-- /.container-fluid -->
     </section>

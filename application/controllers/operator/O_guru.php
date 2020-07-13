@@ -37,7 +37,8 @@ class O_guru extends CI_Controller
 		$alamat_guru = $this->input->post('alamat_guru');
 		// $foto_guru = $this->input->post('foto_guru');
 		$config['upload_path'] = './upload/guru/';
-        $config['allowed_types'] = 'gif|jpg|png';
+        $config['allowed_types'] = 'pdf|img|jpg|png';
+        
         // load library upload
         $this->load->library('upload', $config);
         if (!$this->upload->do_upload('foto_guru')) {

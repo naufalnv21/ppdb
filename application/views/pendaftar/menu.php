@@ -15,7 +15,7 @@
             <a href="<?php echo site_url('pendaftar/C_calon_siswa'); ?>" class="nav-link"><i class="fe fe-home"></i> Home</a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo site_url('pendaftar/berita'); ?>" class="nav-link"><i class="fe fe-home"></i> Berita</a>
+            <a href="<?php echo site_url('pendaftar/C_berita'); ?>" class="nav-link"><i class="fe fe-home"></i> Berita</a>
           </li>
           <li class="nav-item">
             <a href="<?php echo site_url('pendaftar/C_formulir'); ?>" class="nav-link"><i class="fa fa-book"></i> Formulir PPDB</a>
@@ -23,8 +23,14 @@
           <li class="nav-item">
             <a href="<?php echo site_url('pendaftar/C_pegawai'); ?>" class="nav-link"><i class="fa fa-users"></i>Pegawai</a>
           </li>
-          <li class="nav-item">
-            <a href="<?php echo site_url('pendaftar/profil_smk'); ?>" class="nav-link"><i class="fa fa-users"></i> Profile Smk Ristek </a>
+ 
+          <li class="nav-item dropdown">
+            <a  class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-users"></i> Profile Smk Ristek </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Smk Ristek Indramayu</a>
+                  <a class="dropdown-item" href="#">Multimedia</a>
+                  <a class="dropdown-item" href="#">Perbankan</a>
+              </div>
           </li>
           <li class="nav-item">
             <a href="<?php echo site_url('pendaftar/fasilitas_pendaftar'); ?>" class="nav-link"><i class="fa fa-users"></i> Fasilitas</a>
