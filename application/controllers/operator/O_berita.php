@@ -24,7 +24,7 @@ class O_berita extends CI_Controller
 
 	public function tambahBerita()
 	{
-		
+		$id_berita = $this->input->post('id_berita');
 		$tgl_berita = $this->input->post('tgl_berita');
 		$isi_berita = $this->input->post('isi_berita');
 		$penulis_berita = $this->input->post('penulis_berita');
@@ -35,6 +35,7 @@ class O_berita extends CI_Controller
         $this->load->library('upload', $config);
         if (!$this->upload->do_upload('foto_berita')) {	
         	$data = array(
+        		'id_berita' => $id_berita,
         		'tgl_berita' => $tgl_berita,
         		'isi_berita' => $isi_berita,
         		'penulis_berita' => $penulis_berita,
@@ -47,7 +48,8 @@ class O_berita extends CI_Controller
             $result1 =$result['file_name'];
             
             $data = array(
-				
+			
+			'id_berita' => $id_berita,		
 			'tgl_berita' => $tgl_berita,
 			'isi_berita' => $isi_berita,
 			'penulis_berita' => $penulis_berita,

@@ -68,12 +68,12 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>65</h3>
+                <h3><?php echo count($dashboard['berita']); ?></h3>
 
                 <p>Berita</p>
               </div>
               <div class="icon">
-                <i class="ion ion-pie-graph"></i>
+                <i class="fa fa-bullhorn"></i>
               </div>
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -84,9 +84,9 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3><?php echo count($dashboard['jurusan']); ?></h3>
+                <h3><?php echo count($dashboard['multimedia']); ?></h3>
 
-                <p>Jumlah Jurusan</p>
+                <p>Jumlah Multimedia</p>
               </div>
               <div class="icon">
                 <i class="fas fa-university"></i>

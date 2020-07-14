@@ -23,7 +23,7 @@
               <th>Tanggal</th>
               <th>Berita</th>
               <th>Penulis</th>
-              <th>Status</th>
+              <th>Foto</th>
               <!-- <th colspan="2">Aksi</th> -->
           </tr>
            <?php
@@ -35,7 +35,9 @@
               <td><?php echo $berita->tgl_berita ?></td>
               <td><?php echo $berita->isi_berita?> </td>
               <td><?php echo $berita->penulis_berita?> </td>
-              <td><?php echo $berita->status_berita?> </td>
+             <td>
+                <img src="<?php echo base_url('upload/berita/'.$berita->foto_berita) ?>"class ="img img-responsive img-thumbnail " width = "60">
+              </td>
 
               <!-- <td><?php echo anchor('admin/Berita/edit/'.$berita->id_berita,'<div class="btn btn-primary btn-sm" ><i class="fa fa-edit"></i></div>')?></td>
               <td onclick="javascript: return confirm('Anda yakin hapus?')"><?php echo anchor('admin/Berita/hapus/'.$berita->id_berita, '<div class="btn btn-danger btn-sm" ><i class="fa fa-trash"></i></div>' ) ?>

@@ -63,7 +63,7 @@ class C_formulir extends CI_Controller
     		redirect('pendaftar/C_formulir');    	
     	} else {
     		$config['upload_path'] = './upload/pendaftar/kk/';
-		$config['allowed_types'] = 'gif|jpg|png';
+		$config['allowed_types'] = 'pdf|img|doc|docx|jpg|png';
 		$config['file_name']            = $this->input->post('nik_pendaftar');
 		$config['overwrite']			= true;
     	$config['max_size']             = 1024; // 1MB
@@ -79,7 +79,7 @@ class C_formulir extends CI_Controller
         //BATES
 
     	$config['upload_path'] = './upload/pendaftar/akte/';
-    	$config['allowed_types'] = 'gif|jpg|png';
+    	$config['allowed_types'] = 'pdf|img|doc|docx|jpg|png';
     	$config['file_name']            = $this->input->post('nik_pendaftar');
     	$config['overwrite']			= true;
     	$config['max_size']             = 1024; // 1MB
@@ -95,7 +95,7 @@ class C_formulir extends CI_Controller
         //BATES
 
     	$config['upload_path'] = './upload/pendaftar/ktp_orangtua/';
-    	$config['allowed_types'] = 'gif|jpg|png';
+    	$config['allowed_types'] = 'pdf|img|doc|docx|jpg|png';
     	$config['file_name']            = $this->input->post('nik_pendaftar');
     	$config['overwrite']			= true;
     	$config['max_size']             = 1024; // 1MB
@@ -111,7 +111,7 @@ class C_formulir extends CI_Controller
 
         //BATES
     	$config['upload_path'] = './upload/pendaftar/ijazah/';
-    	$config['allowed_types'] = 'gif|jpg|png';
+    	$config['allowed_types'] = 'pdf|img|doc|docx|jpg|png';
     	$config['file_name']            = $this->input->post('nik_pendaftar');
     	$config['overwrite']			= true;
     	$config['max_size']             = 1024; // 1MB
@@ -127,7 +127,7 @@ class C_formulir extends CI_Controller
 
         //BATES
     	$config['upload_path'] = './upload/pendaftar/skhun/';
-    	$config['allowed_types'] = 'gif|jpg|png';
+    	$config['allowed_types'] = 'pdf|img|doc|docx|jpg|png';
     	$config['file_name']            = $this->input->post('nik_pendaftar');
     	$config['overwrite']			= true;
     	$config['max_size']             = 1024; // 1MB
@@ -140,6 +140,18 @@ class C_formulir extends CI_Controller
     	$this->skhunupload->do_upload('file_skhun_pendaftar' );
     	$result5 = $this->skhunupload->data();	
 		//bates
+
+        $config['upload_path'] = './upload/pendaftar/sktm/';
+        $config['allowed_types'] = 'pdf|img|doc|docx|jpg|png';
+        $config['file_name'] = $this->input->post('nik_pendaftar');
+        $config['overwrite'] = true;
+        $config['max_size'] = 1024;
+
+
+        $this->load->library('upload', $config,'sktmupload');
+        $this->sktmupload->initialize($config,'sktmupload');
+        $this->sktmupload->do_upload('file_sktm_pendaftar');
+        $result6 = $this->sktmupload->data();
 
 
     	$data = array(
@@ -173,7 +185,8 @@ class C_formulir extends CI_Controller
     		'file_akte_pendaftar' => $result2['file_name'],
     		'file_ktp_orang_tua_pendaftar' => $result3['file_name'],
     		'file_ijazah_pendaftar' => $result4['file_name'],
-    		'file_skhun_pendaftar' => $result5['file_name']
+    		'file_skhun_pendaftar' => $result5['file_name'],
+            'file_sktm_pendaftar' => $result6['file_name']
 
     	);
     		$simpan = $this->M_formulir->input($data);

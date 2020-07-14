@@ -21,7 +21,8 @@ class O_dashboard extends CI_Controller
 			'pegawai'=>$this->M_dashboard->tampil(),
 			'siswa'=>$this->M_dashboard->tampilSiswa(),
 			'pendaftar'=>$this->M_dashboard->tampilPendaftar(),
-			'jurusan' =>$this->M_dashboard->tampilJurusan(),
+			'multimedia' =>$this->M_dashboard->tampilMultimedia(),
+			'berita' =>$this->M_dashboard->tampilBerita(),
 		];
 		$this->load->view('operator/header', $data);
 		$this->load->view('operator/navbar', $data);

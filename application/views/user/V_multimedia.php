@@ -22,19 +22,23 @@
               <th>no</th>
               <th>Nama Jurusan</th>
               <th>Jumlah Siswa</th>
+              <th>Motto Jurusan</th>
+              <th>Ketua Jurusan</th>
               <th>Logo Jurusan</th>
               
           </tr>
             <?php
           $no = 1;
-          foreach ($data_jurusan as $jurusan) {
+          foreach ($data_multimedia as $multimedia) {
             ?>
             <tr>
               <td><?php echo $no++?> </td>
-              <td><?php echo $jurusan->nama_jurusan ?></td>
-              <td><?php echo $jurusan->jml_siswa_jurusan?> </td>
+              <td><?php echo $multimedia->nama_multimedia ?></td>
+              <td><?php echo $multimedia->jml_siswa_multimedia?> </td>
+              <td><?php echo $multimedia->motto_multimedia?></td>
+              <td><?php echo $multimedia->ketua_multimedia?></td>
               <td>
-                <img src="<?php echo base_url('upload/jurusan/'.$jurusan->logo_jurusan) ?>"class ="img img-responsive img-thumbnail " width = "60">
+                <img src="<?php echo base_url('upload/multimedia/'.$multimedia->logo_multimedia) ?>"class ="img img-responsive img-thumbnail " width = "60">
               </td>
               <!-- <td><?php echo anchor('operator/O_jurusan/edit/'.$jurusan->id_jurusan,'<div class="btn btn-primary btn-sm" ><i class="fa fa-edit"></i></div>')?></td>
               <td onclick="javascript: return confirm('Anda yakin hapus?')"><?php echo anchor('operator/O_jurusan/hapus/'.$jurusan->id_jurusan, '<div class="btn btn-danger btn-sm" ><i class="fa fa-trash"></i></div>' ) ?> -->

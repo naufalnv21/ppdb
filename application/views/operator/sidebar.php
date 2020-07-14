@@ -66,13 +66,28 @@
               </p>
             </a>
           </li>
-           <li class="nav-item has-treeview">
-            <a href="<?php echo base_url('operator/O_jurusan'); ?>" class="nav-link">
-              <i class="nav-icon fas fa-folder-open"></i>
-            <p>
-              Data Jurusan
-            </p>
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link">
+              <i class="fas fa-folder"></i>
+              <p>
+                Data Jurusan
+                <i class="right fas fa-angle-right"></i>
+              </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo base_url('operator/O_multimedia'); ?>" class="nav-link">
+                  <i class="nav-icon fas fa-folder-open"></i>
+                  <p>Jurusan Multimedia</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-folder-open"></i>
+                  <p>Jurusan Perbankan</p>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="nav-header">EVENT</li>
           <li class="nav-item has-treeview">
@@ -84,7 +99,7 @@
             </a>
           </li>
           <li class="nav-item has-treeview">
-            <a href="<?php echo base_url('operator/O_profil'); ?>" class="nav-link">
+            <a href="<?php echo base_url('operator/O_profile'); ?>" class="nav-link">
               <i class="far  fas fa-university nav-icon"></i>
               <p>
                 Profile SMK RISTEK 

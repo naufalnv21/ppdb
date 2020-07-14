@@ -25,10 +25,10 @@
           </li>
  
           <li class="nav-item dropdown">
-            <a  class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-users"></i> Profile Smk Ristek </a>
+            <a  class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-users"></i> Profile </a>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Smk Ristek Indramayu</a>
-                  <a class="dropdown-item" href="#">Multimedia</a>
+                  <a class="dropdown-item" href="<?php echo site_url('pendaftar/C_profile'); ?>">Smk Ristek Indramayu</a>
+                  <a class="dropdown-item" href="<?php echo site_url('pendaftar/C_multimedia'); ?>">Multimedia</a>
                   <a class="dropdown-item" href="#">Perbankan</a>
               </div>
           </li>

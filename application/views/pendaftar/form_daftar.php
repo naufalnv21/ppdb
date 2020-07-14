@@ -204,6 +204,10 @@
           <label class="form-label">Foto/Scan SKHUN <span class="form-required">*</span></label>
           <input type="file" name="file_skhun_pendaftar" class="form-control"  required multiple />
         </div>
+        <div class="form-group">
+          <label class="form-label">Foto/Scan SKTM <span class="form-required">*</label>
+            <input type="file" name="file_sktm_pendaftar" class="form-control" required multiple />
+        </div>
     </div>
     <div class="card-footer">
           <div class="btn-list">
