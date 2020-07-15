@@ -23,6 +23,7 @@ class C_dashboard extends CI_Controller
 			'pendaftar'=>$this->M_dashboard->tampilPendaftar(),
 			'multimedia'=>$this->M_dashboard->tampilMultimedia(),
 			'berita' =>$this->M_dashboard->tampilBerita(),
+			'perbank' =>$this->M_dashboard->tampilPerbank(),
 		];
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/navbar', $data);

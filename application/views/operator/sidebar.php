@@ -82,7 +82,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="<?php echo base_url('operator/O_perbank'); ?>" class="nav-link">
                   <i class="nav-icon fas fa-folder-open"></i>
                   <p>Jurusan Perbankan</p>
                 </a>

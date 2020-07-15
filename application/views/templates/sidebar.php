@@ -82,7 +82,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="<?php echo base_url('admin/Perbank'); ?>" class="nav-link">
                   <i class="nav-icon fas fa-folder-open"></i>
                   <p>Jurusan Perbankan</p>
                 </a>
@@ -99,7 +99,7 @@
             </a>
           </li>
           <li class="nav-item has-treeview">
-            <a href="<?php echo base_url('admin/Profil'); ?>" class="nav-link">
+            <a href="<?php echo base_url('admin/Profile'); ?>" class="nav-link">
               <i class="far  fas fa-university nav-icon"></i>
               <p>
                 Profile SMK RISTEK

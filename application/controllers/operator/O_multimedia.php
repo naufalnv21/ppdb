@@ -29,6 +29,7 @@ class O_multimedia extends CI_Controller
 		$nama_multimedia = $this->input->post('nama_multimedia');
 		$jml_siswa_multimedia = $this->input->post('jml_siswa_multimedia');
 		$motto_multimedia = $this->input->post('motto_multimedia');
+		$acara_multimedia = $this->input->post('acara_multimedia');
 		$ketua_multimedia = $this->input->post('ketua_multimedia');
 
 		$config['upload_path'] = './upload/multimedia/';
@@ -41,6 +42,7 @@ class O_multimedia extends CI_Controller
 			'nama_multimedia' => $nama_multimedia,
 			'jml_siswa_multimedia' => $jml_siswa_multimedia,
 			'motto_multimedia' => $motto_multimedia,
+			'acara_multimedia' => $acara_multimedia,
 			'ketua_multimedia' => $ketua_multimedia,
 			'logo_multimedia' => 'kosong'
 		);	
@@ -55,6 +57,7 @@ class O_multimedia extends CI_Controller
 			'nama_multimedia' => $nama_multimedia,
 			'jml_siswa_multimedia' => $jml_siswa_multimedia,
 			'motto_multimedia' => $motto_multimedia,
+			'acara_multimedia' => $acara_multimedia,
 			'ketua_multimedia' => $ketua_multimedia,
 			'logo_multimedia' => $result1
 		);	
@@ -84,6 +87,7 @@ class O_multimedia extends CI_Controller
 		$nama_multimedia = $this->input->post('nama_multimedia');
 		$jml_siswa_multimedia = $this->input->post('jml_siswa_multimedia');
 		$motto_multimedia = $this->input->post('motto_multimedia');
+		$acara_multimedia = $this->input->post('acara_multimedia');
 		$ketua_multimedia = $this->input->post('ketua_multimedia');
 		$id_multimedia = $this->input->post('id_multimedia');
 		$config['upload_path'] = './upload/multimedia/';
@@ -95,6 +99,9 @@ class O_multimedia extends CI_Controller
 				
 			'nama_multimedia' => $nama_multimedia,
 			'jml_siswa_multimedia' => $jml_siswa_multimedia,
+			'motto_multimedia' => $motto_multimedia,
+			'acara_multimedia' => $acara_multimedia,
+			'ketua_multimedia' => $ketua_multimedia,
 			'id_multimedia' => $id_multimedia,
 			'logo_jurusan' => 'kosong'
 		);	
@@ -110,6 +117,7 @@ class O_multimedia extends CI_Controller
 			'nama_multimedia' => $nama_multimedia,
 			'jml_siswa_multimedia' => $jml_siswa_multimedia,
 			'motto_multimedia' => $motto_multimedia,
+			'acara_multimedia' => $acara_multimedia,
 			'ketua_multimedia' => $ketua_multimedia,
 			'id_multimedia' => $id_multimedia,
 			'logo_multimedia' => $result1

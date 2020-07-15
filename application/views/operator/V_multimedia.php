@@ -23,6 +23,7 @@
               <th>Nama Jurusan</th>
               <th>Jumlah Siswa</th>
               <th>Motto Jurusan</th>
+              <th>Acara Multimedia</th>
               <th>Ketua Jurusan</th>
               <th>Logo Jurusan</th>
               <th colspan="2">Aksi</th>
@@ -36,6 +37,7 @@
               <td><?php echo $multimedia->nama_multimedia ?></td>
               <td><?php echo $multimedia->jml_siswa_multimedia?> </td>
               <td><?php echo $multimedia->motto_multimedia?></td>
+              <td><?php echo $multimedia->acara_multimedia?></td>
               <td><?php echo $multimedia->ketua_multimedia ?></td>
               <td>
                 <img src="<?php echo base_url('upload/multimedia/'.$multimedia->logo_multimedia) ?>"class ="img img-responsive img-thumbnail " width = "60">
@@ -72,6 +74,10 @@
           <div class="form-group">
             <label>Motto Multimedia</label>
             <input type="text" name="motto_multimedia" placeholder="Mott Multimedia" class="form-control" required="required">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Acara Multimedia</label>
+              <textarea name="acara_multimedia" rows="2" class="form-control" required></textarea>
           </div>
           <div class="form-group">
             <label>Ketua Jurusan</label>

@@ -82,6 +82,7 @@ class O_profile extends CI_Controller
 	{
 		$nama_profile = $this->input->post('nama_profile');
 		$tentang_profile = $this->input->post('tentang_profile');
+		// var_dump($tentang_profile); exit();
 		$by_profile = $this->input->post('by_profile');
 		$id_profile = $this->input->post('id_profile');
 		$config['upload_path'] = './upload/profile/';
@@ -91,6 +92,7 @@ class O_profile extends CI_Controller
         if (!$this->upload->do_upload('foto_profile')) {
         	
         } else {
+        	// var_dump($id_profile); exit();
             $result = $this->upload->data();
             $result1 =$result['file_name'];
 
@@ -99,6 +101,7 @@ class O_profile extends CI_Controller
 			'nama_profile' => $nama_profile,
 			'tentang_profile' => $tentang_profile,
 			'by_profile' => $by_profile,
+			'id_profile' => $id_profile,
 			'foto_profile' => $result1
 		);
 		$this->db->where('id_profile', $id_profile);

@@ -20,7 +20,12 @@
       <img class="d-block w-100" alt="" height="450" src="<?php echo base_url() ?>assets/template/front/theme/demo/photos/praktikum.jpg" data-holder-rendered="true">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" alt="" height="450" src="<?php echo base_url() ?>assets/template/front/theme/demo/photos/casey-horner-339165-1500.jpg" data-holder-rendered="true">
+      <center>
+      <video controls alt="" height="450" preload="none">
+        <source src="<?php echo base_url() ?>assets/template/front/theme/demo/photos/ppdb_ristek2020.mp4" type="video/mp4">
+      </video>
+      </center>
+      <!-- <img class="d-block w-100" alt="" height="450" src="<?php echo base_url() ?>assets/template/front/theme/demo/photos/casey-horner-339165-1500.jpg" data-holder-rendered="true"> -->
     </div>
   </div>
 </div>

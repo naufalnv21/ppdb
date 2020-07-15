@@ -84,12 +84,24 @@
               <div class="inner">
                 <h3><?php echo count($dashboard['multimedia']); ?></h3>
 
-                <p>Data Multimedia</p>
+                <p>Jurusan Multimedia</p>
               </div>
               <div class="icon">
                 <i class="fas fa-university"></i>
               </div>
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <div class="small-box bg-danger">
+              <div class="inner">
+                <h3><?php echo count($dashboard['perbank']);?></h3>
+                <p>Jurusan Perbankan</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-university"></i>
+              </div>
             </div>
           </div>
           <!-- ./col -->

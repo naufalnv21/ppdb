@@ -29,7 +29,7 @@
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <a class="dropdown-item" href="<?php echo site_url('pendaftar/C_profile'); ?>">Smk Ristek Indramayu</a>
                   <a class="dropdown-item" href="<?php echo site_url('pendaftar/C_multimedia'); ?>">Multimedia</a>
-                  <a class="dropdown-item" href="#">Perbankan</a>
+                  <a class="dropdown-item" href="<?php echo site_url('pendaftar/C_perbank'); ?>">Perbankan</a>
               </div>
           </li>
           <li class="nav-item">

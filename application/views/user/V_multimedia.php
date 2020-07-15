@@ -8,7 +8,7 @@
         <div class="row mb-2">
 
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Jurusan</h1>
+            <h1 class="m-0 text-dark">Multimedia</h1>
             
           </div><!-- /.col -->
 
@@ -23,6 +23,7 @@
               <th>Nama Jurusan</th>
               <th>Jumlah Siswa</th>
               <th>Motto Jurusan</th>
+              <th>Acara Jurusan</th>
               <th>Ketua Jurusan</th>
               <th>Logo Jurusan</th>
               
@@ -36,6 +37,7 @@
               <td><?php echo $multimedia->nama_multimedia ?></td>
               <td><?php echo $multimedia->jml_siswa_multimedia?> </td>
               <td><?php echo $multimedia->motto_multimedia?></td>
+              <td><?php echo $multimedia->acara_multimedia?></td>
               <td><?php echo $multimedia->ketua_multimedia?></td>
               <td>
                 <img src="<?php echo base_url('upload/multimedia/'.$multimedia->logo_multimedia) ?>"class ="img img-responsive img-thumbnail " width = "60">

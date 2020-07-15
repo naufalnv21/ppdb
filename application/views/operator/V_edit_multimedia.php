@@ -15,11 +15,15 @@
           </div>
           <div class="form-group">
             <label>Motto Jurusan</label>
-            <input type="text" name="motto_multimedia" placeholder="Motto Jurusan" class="form-control" required="required" >
+            <input type="text" name="motto_multimedia" placeholder="Motto Jurusan" class="form-control" required="required" value="<?= $multimedia['motto_multimedia']; ?>">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Acara Multimedia</label>
+              <textarea name="acara_multimedia" rows="2" class="form-control" required><?= $multimedia['acara_multimedia']; ?></textarea>
           </div>
           <div class="form-group">
             <label>Ketua Jurusan</label>
-            <input type="text" name="ketua_multimedia" placeholder="Ketua Jurusan" class="form-control" required="required">
+            <input type="text" name="ketua_multimedia" placeholder="Ketua Jurusan" class="form-control" required="required" value="<?= $multimedia['ketua_multimedia']; ?>">
           </div>
           <div>
             <label>Logo</label>

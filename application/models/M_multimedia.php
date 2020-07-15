@@ -26,7 +26,7 @@ class M_multimedia extends CI_Model
 		$result = $this->db->get();
 		return $result->result();
 	}
-	public function jurusanId($where)
+	public function multimediaId($where)
 	{
 		$this->db->from('tb_multimedia');
 		$this->db->where('id_multimedia', $where);

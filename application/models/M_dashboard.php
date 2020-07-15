@@ -52,4 +52,12 @@ class M_dashboard extends CI_Model
 		$result = $this->db->get();
 		return $result->result();
 	}
+
+	public function tampilPerbank()
+	{
+		$this->db->select('*');
+		$this->db->from('tb_perbank');
+		$result = $this->db->get();
+		return $result->result();
+	}
 }

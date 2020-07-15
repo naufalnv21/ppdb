@@ -71,9 +71,10 @@
               <div class='card mb-4 box-shadow'>
                 <img class='card-img-top' src='".base_url('upload/multimedia/').$value->logo_multimedia."' alt='Card image cap' width='200px' height='200px'>
                 <div class='card-body'>
-                  <p class='card-text'>$value->nama_multimedia</p>
+                  <p class='card-text'>Jurusan $value->nama_multimedia</p>
                   <p class='card-text'>Jumlah Siswa $value->jml_siswa_multimedia</p>
                   <p class='card-text'>Motto Jurusan $value->motto_multimedia</p>
+                  <p class='card-text'>Acara Jurusan $value->acara_multimedia</p>
                   <p class='card-text'>By Ketua Jurusan $value->ketua_multimedia</p>
                   
                   <div class='d-flex justify-content-between align-items-center'>
