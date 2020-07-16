@@ -89,6 +89,14 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item has-treeview">
+            <a href="<?php echo base_url('operator/O_fasilitas'); ?>" class="nav-link">
+              <i class="fas fa-folder"></i>
+              <p>
+                Data Fasilitas
+              </p>
+            </a>
+          </li>
           <li class="nav-header">EVENT</li>
           <li class="nav-item has-treeview">
             <a href="<?php echo base_url('operator/O_berita');?>" class="nav-link">

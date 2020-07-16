@@ -63,6 +63,9 @@
   </head>
   <body>
       <div class="container post">
+        <div class="card-header">
+                <h3 class="card-title">PEGAWAI</h3>
+            </div>
           <div class="row">
             <?php 
               foreach($data_guru as $key => $value){

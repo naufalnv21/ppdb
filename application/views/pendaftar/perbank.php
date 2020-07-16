@@ -64,6 +64,9 @@
 
   <body>
      <div class="container post">
+      <div class="card-header">
+                <h3 class="card-title">JURUSAN PERBANKAN</h3>
+            </div>
           <div class="row">
             <?php 
               foreach($data_perbank as $key => $value){

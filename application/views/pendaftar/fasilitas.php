@@ -61,22 +61,24 @@
     <!-- Input Mask Plugin -->
     <script src="<?php echo base_url(); ?>assets/template/front/theme/assets/plugins/input-mask/plugin.js"></script>
   </head>
+
+
   <body>
-      <div class="container post">
-        <div class="card-header">
-                <h3 class="card-title">BERITA</h3>
+    <div class="container post">
+      <div class="card-header">
+                <h3 class="card-title">FASILITAS SMK RISTEK INDRAMAYU</h3>
             </div>
           <div class="row">
-            
             <?php 
-              foreach($data_berita as $key => $value){
+              foreach($data_fasilitas as $key => $value){
                 echo "<div class='col-md-4'>
               <div class='card mb-4 box-shadow'>
-                <img class='card-img-top' src='".base_url('upload/berita/').$value->foto_berita."' alt='Card image cap' width='200px' height='200px'>
+                <img class='card-img-top' src='".base_url('upload/fasilitas/').$value->foto_fasilitas."' alt='Card image cap' width='200px' height='200px'>
                 <div class='card-body'>
-                  <p class='card-text'>$value->tgl_berita</p>
-                  <p class='card-text'>$value->isi_berita</p>
-                  <p class='card-text'>By $value->penulis_berita</p>
+                  <p class='card-text'>Nama $value->nama_fasilitas</p>
+                  <p class='card-text'>Deskripsi $value->deskripsi_fasilitas</p>
+                  <p class='card-text'>By $value->by_fasilitas</p>
+                  
                   
                   <div class='d-flex justify-content-between align-items-center'>
                     <div class='btn-group'>
@@ -86,10 +88,7 @@
               </div>
             </div>";
             }
-            ?>
-            
- 
-            
+            ?>    
         </div>
 
   </body>

@@ -64,9 +64,13 @@
             <input type="text" name="nama_profile" placeholder="Profile" class="form-control" required="required">
           </div>
           <div class="form-group">
+            <label class="form-label">Tentang</label>
+              <textarea name="tentang_profile" rows="2" placeholder="Isi Tentang/Perihal" class="form-control" required></textarea>
+          </div>
+          <!-- <div class="form-group">
             <label>Tantang </label>
             <input type="text" name="tentang_profile" placeholder="Tuliskan Tentang" class="form-control" required="required">
-          </div>
+          </div> -->
           <div class="form-group">
             <label>by</label>
             <!-- <input type="text" name="ijazah_guru" placeholder="Contoh S1" class="form-control" required="required"> -->

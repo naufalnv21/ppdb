@@ -61,11 +61,11 @@
         <form method="post" action="<?php echo base_url(). 'operator/O_berita/tambahBerita';?>" enctype="multipart/form-data">
           <div class="form-group">
             <label>Tanggal </label>
-            <input type="text" name="tgl_berita" placeholder="Tahun Bulan Tanggal Sekarang" class="form-control" required="required">
+            <input type="date" name="tgl_berita" placeholder="Tahun Bulan Tanggal Sekarang" class="form-control" required="required">
           </div>
           <div class="form-group">
-            <label>Berita </label>
-            <input type="text" name="isi_berita" placeholder="Tuliskan Berita" class="form-control" required="required">
+            <label class="form-label">Berita</label>
+              <textarea name="isi_berita" rows="2" class="form-control" required></textarea>
           </div>
           <div class="form-group">
             <label>Penulis</label>

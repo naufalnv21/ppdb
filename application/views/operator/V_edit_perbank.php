@@ -19,11 +19,7 @@
             <label class="form-label">Acara Perbankan</label>
               <textarea name="acara_perbank" rows="2" class="form-control"><?= $perbank['acara_perbank']; ?></textarea>
           </div>
-          <!-- <div class="form-group">
-            <input type="hidden" name="id_perbank" value="<?= $perbank['id_perbank'];?>">
-            <label class="form-label">Acara Perbankan</label>
-              <textarea name="acara_perbank" rows="2" class="form-control" value="<?= $perbank['acara_perbank']; ?>" required></textarea>
-          </div> -->
+          
           <div class="form-group">
             <label>Ketua Jurusan</label>
             <input type="text" name="ketua_perbank" placeholder="Ketua Jurusan" class="form-control" required="required" value="<?= $perbank['ketua_perbank']; ?>">

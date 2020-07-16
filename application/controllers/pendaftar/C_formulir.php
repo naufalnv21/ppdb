@@ -14,8 +14,9 @@ class C_formulir extends CI_Controller
 	public function index()
 	{
 		$data['title'] = 'Formulir Pendaftaran';
-		$data['subtitle'] = 'Pendaftaran Baru';
+		$data['subtitle'] = 'Pendaftaran SMK RISTEK INDRAMAYU';
 		$data['content'] = 'pendaftar/form_daftar';
+        
 
 		$data['user'] = $this->db->get_where('tb_register', ['nama_register' => $this->session->userdata('nama_register')])->row_array();
 

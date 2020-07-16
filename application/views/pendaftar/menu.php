@@ -33,7 +33,7 @@
               </div>
           </li>
           <li class="nav-item">
-            <a href="<?php echo site_url('pendaftar/fasilitas_pendaftar'); ?>" class="nav-link"><i class="fa fa-users"></i> Fasilitas</a>
+            <a href="<?php echo site_url('pendaftar/C_fasilitas'); ?>" class="nav-link"><i class="fa fa-users"></i> Fasilitas</a>
           </li>
           <li class="nav-item">
             <a href="<?php echo site_url('pendaftar/download_pendaftar'); ?>" class="nav-link"><i class="fa fa-download"></i> Download Formulir</a>

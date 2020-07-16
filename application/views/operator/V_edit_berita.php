@@ -5,12 +5,13 @@
     <form method="post" action="<?php echo base_url(). 'operator/O_berita/prosesEdit';?>" enctype="multipart/form-data">
           <div class="form-group">
             <label>Tanggal </label>
-            <input type="text" name="tgl_berita" placeholder="Tahun Bulan Tanggal Sekarang" class="form-control" required="required" value="<?= $berita['tgl_berita']; ?>"  readonly>
-          </div>
-          <div class="form-group">
-            <label>Berita </label>
             <input type="hidden" name="id_berita" value="<?= $berita['id_berita'];?>">
-            <input type="text" name="isi_berita" placeholder="Isi Berita" class="form-control" required="required" value="<?= $berita['isi_berita']; ?>">
+            <input type="date" name="tgl_berita" placeholder="Tahun Bulan Tanggal Sekarang" class="form-control" required="required" value="<?= $berita['tgl_berita']; ?>">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Berita</label>
+              <textarea name="isi_berita" rows="2" class="form-control"><?= $berita['isi_berita']; ?></textarea>
           </div>
           <div class="form-group">
             <label>Penulis </label>
