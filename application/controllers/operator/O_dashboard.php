@@ -24,6 +24,7 @@ class O_dashboard extends CI_Controller
 			'multimedia' =>$this->M_dashboard->tampilMultimedia(),
 			'berita' =>$this->M_dashboard->tampilBerita(),
 			'perbank' =>$this->M_dashboard->tampilPerbank(),
+			'fasilitas' =>$this->M_dashboard->tampilFasilitas(),
 		];
 		$this->load->view('operator/header', $data);
 		$this->load->view('operator/navbar', $data);

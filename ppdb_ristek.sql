@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 15 Jul 2020 pada 15.12
+-- Waktu pembuatan: 16 Jul 2020 pada 15.14
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.2.28
 
@@ -43,7 +43,8 @@ CREATE TABLE `tb_berita` (
 INSERT INTO `tb_berita` (`id_berita`, `tgl_berita`, `isi_berita`, `penulis_berita`, `foto_berita`) VALUES
 (3, '2020-07-17', 'Berita Tentang Penerimaan Peserta Didik Baru (PPDB) di SMK Ristek Indramayu dibuka mulai tanggal 13 Juli 2020 ', 'Operator', 'logo_ristek.jpg'),
 (7, '2020-06-17', 'Wisuda angkatan ke 3 SMK Ristek Indramayu di adakan pada tanggal 19 November 2019 di Halaman Sekolah Ristek Indramayu', 'Operator', 'logo_ristek1.jpg'),
-(18, '2020-07-17', 'Logo Ristek Updated', 'Operator', 'logo_ristek4.jpg');
+(18, '2020-07-17', 'Logo Ristek Updated', 'Operator', 'logo_ristek4.jpg'),
+(20, '2020-07-15', 'Acara Syukuran V2', 'Operator', '89404946_1698431253632836_7672029093625331712_o2.jpg');
 
 -- --------------------------------------------------------
 
@@ -57,6 +58,28 @@ CREATE TABLE `tb_daftar_ulang` (
   `tgl_daftar_ulang` date NOT NULL,
   `ket_daftar_ulang` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_fasilitas`
+--
+
+CREATE TABLE `tb_fasilitas` (
+  `id_fasilitas` int(11) NOT NULL,
+  `nama_fasilitas` varchar(100) NOT NULL,
+  `deskripsi_fasilitas` text NOT NULL,
+  `by_fasilitas` varchar(100) NOT NULL,
+  `foto_fasilitas` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tb_fasilitas`
+--
+
+INSERT INTO `tb_fasilitas` (`id_fasilitas`, `nama_fasilitas`, `deskripsi_fasilitas`, `by_fasilitas`, `foto_fasilitas`) VALUES
+(1, 'Perpustakaan', 'Ruangan Untuk Tempat Siswa Belajar', 'Operator', 'logo_ristek.jpg'),
+(2, 'Lab', 'Untuk Praktikum Jurusan MM', 'Operator', '89404946_1698431253632836_7672029093625331712_o.jpg');
 
 -- --------------------------------------------------------
 
@@ -83,10 +106,10 @@ CREATE TABLE `tb_guru` (
 --
 
 INSERT INTO `tb_guru` (`id_guru`, `nama_guru`, `ttl_guru`, `nuptk_guru`, `jk_guru`, `email_guru`, `tmt_guru`, `ijazah_guru`, `mapel_guru`, `alamat_guru`, `foto_guru`) VALUES
-(18, 'kastuti', 'indramayu 05 mei 1999', 1234567, 'perempuan', 'kastuti@gmail.com', '2016-2017', 'D3', 'Programming', 'bangkir', 'kastuti2.jpg'),
-(19, 'muhammad naufal hariz', 'Jakarta 21 Mei 1999', 12345, 'Laki-laki', 'naufalharizxtkj1@gmail.com', '2019-2020', 'S1', 'PRODUKTIF', 'bangkir', 'naufal2.jpg'),
-(36, 'Soni', 'Indramayu 01 Juli 1998', 12314, 'Laki-laki', 'Soni@gmail.com', '2017-2018', 'SMA', 'B.Inggris', 'Losarang', '268-2680926_xxx-return-of-xander-cage-ruby-rose.jpg'),
-(37, 'Juan', 'Indramayu 01 Juli 1998', 1231, 'Laki-laki', 'juan@gmail.com', '2016-2017', 'S1', 'PRODUKTIF', 'Kalensari', '4f0cc45269abcc9031aa733b16ddb6f0.jpg');
+(18, 'kastuti', '0000-00-00', 1234567, 'perempuan', 'kastuti@gmail.com', '2016-2017', 'D3', 'Programming', 'bangkir', 'kastuti2.jpg'),
+(19, 'muhammad naufal hariz', '0000-00-00', 12345, 'Laki-laki', 'naufalharizxtkj1@gmail.com', '2019-2020', 'S1', 'PRODUKTIF', 'bangkir', 'naufal2.jpg'),
+(37, 'Juan', '0000-00-00', 1231, 'Laki-laki', 'juan@gmail.com', '2016-2017', 'S1', 'PRODUKTIF', 'Kalensari', '4f0cc45269abcc9031aa733b16ddb6f0.jpg'),
+(38, 'Fiqi', 'Cirebon 05 Desember 199', 11231, 'Laki-laki', 'Fiqi@gmail.com', '2016-2017', 'D3', 'FISIKA', 'Lohbener', '3A06D5A900000578-0-image-m-57_14781821150171.jpg');
 
 -- --------------------------------------------------------
 
@@ -213,7 +236,7 @@ CREATE TABLE `tb_perbank` (
 --
 
 INSERT INTO `tb_perbank` (`id_perbank`, `nama_perbank`, `jml_siswa_perbank`, `motto_perbank`, `acara_perbank`, `ketua_perbank`, `logo_perbank`) VALUES
-(1, 'Perbankan', 0, '-', 'Mohon maaf untuk jurusan Perbankan belum dibuka. Mohon bersabar ini ujian bagi kita semua semoga bisa disecapatnya diwujudkan', '-', 'logo_ristek4.jpg');
+(1, 'Perbankan', 0, '--', 'Mohon maaf untuk jurusan Perbankan belum dibuka. Mohon bersabar ini ujian bagi kita semua semoga bisa disecapatnya diwujudkan V2', '--', 'logo_ristek5.jpg');
 
 -- --------------------------------------------------------
 
@@ -340,6 +363,12 @@ ALTER TABLE `tb_daftar_ulang`
   ADD PRIMARY KEY (`id_daftar_ulang`);
 
 --
+-- Indeks untuk tabel `tb_fasilitas`
+--
+ALTER TABLE `tb_fasilitas`
+  ADD PRIMARY KEY (`id_fasilitas`);
+
+--
 -- Indeks untuk tabel `tb_guru`
 --
 ALTER TABLE `tb_guru`
@@ -401,7 +430,7 @@ ALTER TABLE `tb_users`
 -- AUTO_INCREMENT untuk tabel `tb_berita`
 --
 ALTER TABLE `tb_berita`
-  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_daftar_ulang`
@@ -410,10 +439,16 @@ ALTER TABLE `tb_daftar_ulang`
   MODIFY `id_daftar_ulang` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT untuk tabel `tb_fasilitas`
+--
+ALTER TABLE `tb_fasilitas`
+  MODIFY `id_fasilitas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT untuk tabel `tb_guru`
 --
 ALTER TABLE `tb_guru`
-  MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_multimedia`

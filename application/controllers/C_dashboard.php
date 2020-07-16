@@ -24,6 +24,7 @@ class C_dashboard extends CI_Controller
 			'multimedia'=>$this->M_dashboard->tampilMultimedia(),
 			'berita' =>$this->M_dashboard->tampilBerita(),
 			'perbank' =>$this->M_dashboard->tampilPerbank(),
+			'fasilitas' =>$this->M_dashboard->tampilFasilitas(),
 		];
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/navbar', $data);

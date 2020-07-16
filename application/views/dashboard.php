@@ -107,10 +107,18 @@
                 <i class="fas fa-university"></i>
               </div>
         </div>
-        <!-- /.row -->
-        <!-- Main row -->
-        <!-- /.row (main row) -->
       </div><!-- /.container-fluid -->
+      <div class="col-lg-3 col-6">
+            <div class="small-box bg-danger">
+              <div class="inner">
+                <h3><?php echo count($dashboard['fasilitas']); ?></h3>
+                <p>Jumlah Fasilitas</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-building"></i>
+              </div>
+            </div>
+          </div>
     </section>
     <!-- /.content -->
   </div>
