@@ -36,7 +36,7 @@
             <a href="<?php echo site_url('pendaftar/C_fasilitas'); ?>" class="nav-link"><i class="fa fa-users"></i> Fasilitas</a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo site_url('pendaftar/download_pendaftar'); ?>" class="nav-link"><i class="fa fa-download"></i> Download Formulir</a>
+            <a href="<?php echo site_url('pendaftar/C_download'); ?>" class="nav-link"><i class="fa fa-download"></i> Download Formulir</a>
           </li>
           <!-- <li class="nav-item dropdown">
             <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fa fa-cogs"></i>Pengaturan</a>

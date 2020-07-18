@@ -32,7 +32,7 @@ class C_login extends CI_Controller
 	{
 		$username_register = $this->input->post('username_register');
 		$password_register = $this->input->post('password_register');
-
+		
 		$tb_register = $this->M_login->get($username_register);
 
 		if(empty($tb_register)){

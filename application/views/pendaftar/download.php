@@ -61,41 +61,23 @@
     <!-- Input Mask Plugin -->
     <script src="<?php echo base_url(); ?>assets/template/front/theme/assets/plugins/input-mask/plugin.js"></script>
   </head>
-<body>
-  <center>
-  <div class="col-md-3 col-sm-10">
-      <div class="panel panel-primary">
-     <form action="<?php echo base_url('pendaftar/C_register/register'); ?>" method="POST">  
-        <div class="panel-heading"><h3 style="color:#000000;"><b><center> Registrasi Akun</center></b></h3></div>
-        <div class="panel-body">
-          <style>
-            body {
-              background: -webkit-linear-gradient(bottom, #2dbd6e, #a6f77b);
-              background-repeat: no-repeat;
-            }
-          </style>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Nama" name="nama_register">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Username" name="username_register">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Email Anda" name="email_register" value=""
-              size="100">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Nomor HP" name="telp_register">
-            </div>
-            <div class="form-group">
-              <input type="password" class="form-control" placeholder="Password" name="password_register">
-            </div>
-        </div>
-      <div class="panel-footer" style="text-align: right;"><input type="submit" class="btn btn-primary btn-lg"  value="Register" name="submit"></div>
-      </form>
-      </div><!--panel-->
-    </div>
-    </center>
 
+
+  <body>
+	<div class="card-header">
+         <h3 class="card-title">DOWNLOAD FORMULIR PENDAFTARAN DI BAWAH INI</h3>
+                
+    </div>
+    <div class="card-header">
+    	<a href="<?php echo base_url().'pendaftar/C_download/lakukan_download' ?>">Download Formulir</a>
+    </div>        
+		
 </body>
-</html> 
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>Formulir Pendaftaran</title>
+</head>
+
+</html> -->

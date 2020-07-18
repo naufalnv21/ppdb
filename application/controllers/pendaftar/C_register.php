@@ -31,12 +31,14 @@ class C_register extends CI_Controller
 		$nama_register = $this->input->post('nama_register');
 		$username_register = $this->input->post('username_register');
 		$telp_register = $this->input->post('telp_register');
+		$email_register = $this->input->post('email_register');
 		$password_register = $this->input->post('password_register');
 
 		$data = array(
 			'nama_register' => $nama_register,
 			'username_register' => $username_register,
 			'telp_register' => $telp_register,
+			'email_register' => $email_register,
 			'password_register' => $password_register
 		);
 		$this->M_register->input($data);

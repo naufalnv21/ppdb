@@ -68,6 +68,12 @@
      <form action="<?php echo base_url('pendaftar/C_login/login'); ?>" method="post">  
         <div class="panel-heading"><h3 style="color:#000000;"><b><center> Login Akun</center></b></h3></div>
         <div class="panel-body">
+          <style>
+            body {
+              background: -webkit-linear-gradient(bottom, #2dbd6e, #a6f77b);
+              background-repeat: no-repeat;
+            }
+          </style>
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Username" name="username_register">
             </div>
@@ -76,7 +82,16 @@
             </div>
         </div>
       <div class="panel-footer" style="text-align: right;"><input type="submit" class="btn btn-primary btn-lg"  value="login" name="submit"></div>
+
+      <div class="panel-footer" style="text-align: right;"><a href="<?php echo base_url('pendaftar/C_reset_password'); ?>" class="btn btn-primary btn-lg">Lupa Password</a></div>
       </form>
+      <!-- <div>
+        <a href="<?php echo base_url('pendaftar/C_reset_password'); ?>"></a>
+          <div class="panel-body">
+            <button  class="btn btn-primary btn-lg" style="text-align: right;"  type="submit">Lupa Password</button>
+            <div class="panel-footer" style="text-align: right;"><input type="submit" class="btn btn-primary btn-lg"  value="lupa password" name=""></div>    
+          </div>
+      </div> -->
       </div><!--panel-->
     </div>
     </center>
