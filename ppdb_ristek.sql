@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 16 Jul 2020 pada 15.14
+-- Waktu pembuatan: 20 Jul 2020 pada 14.49
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.2.28
 
@@ -269,7 +269,8 @@ CREATE TABLE `tb_register` (
   `id_register` int(11) NOT NULL,
   `nama_register` varchar(100) NOT NULL,
   `username_register` text NOT NULL,
-  `telp_register` int(15) NOT NULL,
+  `email_register` varchar(100) NOT NULL,
+  `telp_register` varchar(15) NOT NULL,
   `password_register` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -277,12 +278,13 @@ CREATE TABLE `tb_register` (
 -- Dumping data untuk tabel `tb_register`
 --
 
-INSERT INTO `tb_register` (`id_register`, `nama_register`, `username_register`, `telp_register`, `password_register`) VALUES
-(1, 'Rey', 'Rey123', 85412145, '12345'),
-(2, 'juan julianto', 'juan', 123456, 'juan'),
-(4, 'ade diana', 'diana', 123456789, 'diana'),
-(5, 'acak', 'acak', 123456789, 'acak'),
-(6, 'iwan', 'iwan', 123456789, 'iwan');
+INSERT INTO `tb_register` (`id_register`, `nama_register`, `username_register`, `email_register`, `telp_register`, `password_register`) VALUES
+(1, 'Rey', 'Rey123', 'rey@gmail.com', '85412145', 'ggnaufal21@gmail.com'),
+(2, 'juan julianto', 'juan', '', '123456', 'ggnaufal21@gmail.com'),
+(4, 'ade diana', 'diana', '', '123456789', 'ggnaufal21@gmail.com'),
+(5, 'acak', 'acak', '', '123456789', 'ggnaufal21@gmail.com'),
+(6, 'iwan', 'iwan', '', '123456789', 'ggnaufal21@gmail.com'),
+(9, 'naufal', 'naufalnv21', 'ggnaufal21@gmail.com', '085412145', 'terbaru5');
 
 -- --------------------------------------------------------
 
@@ -484,7 +486,7 @@ ALTER TABLE `tb_profile`
 -- AUTO_INCREMENT untuk tabel `tb_register`
 --
 ALTER TABLE `tb_register`
-  MODIFY `id_register` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_register` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_siswa`

@@ -67,7 +67,7 @@
   <div class="col-md-3 col-sm-10">
       <div class="panel panel-primary">
        <form action="<?php echo base_url('pendaftar/C_reset_password/email_reset_password_validation'); ?>" method="post">  
-        <div class="panel-heading"><h3 style="color:#000000;"><b><center> Lupa Password</center></b></h3></div>
+        <div class="panel-heading"><h3 style="color:#000000;"><b><center> Reset Password</center></b></h3></div>
         <div class="panel-body">
           <style>
             body {

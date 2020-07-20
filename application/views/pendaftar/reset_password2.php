@@ -61,12 +61,13 @@
     <!-- Input Mask Plugin -->
     <script src="<?php echo base_url(); ?>assets/template/front/theme/assets/plugins/input-mask/plugin.js"></script>
   </head>
-<body>
-  <center>
+
+  <body>    
+    <center>
   <div class="col-md-3 col-sm-10">
       <div class="panel panel-primary">
-     <form action="<?php echo base_url('pendaftar/C_login/login'); ?>" method="post">  
-        <div class="panel-heading"><h3 style="color:#000000;"><b><center> Login Akun</center></b></h3></div>
+       <form action="<?php echo base_url('pendaftar/C_reset_password/reset_password_validation'); ?>" method="post">  
+        <div class="panel-heading"><h3 style="color:#000000;"><b><center> Lupa Password</center></b></h3></div>
         <div class="panel-body">
           <style>
             body {
@@ -74,21 +75,17 @@
               background-repeat: no-repeat;
             }
           </style>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Username" name="username_register">
+          <div class="form-group">
+              <input type="text" class="form-control" placeholder="Email Anda" name="email_register">
             </div>
             <div class="form-group">
-              <input type="password" class="form-control" placeholder="Password" name="password_register">
+              <input type="text" class="form-control" placeholder="Password Baru" name="password_register">
             </div>
+          <div class="panel-footer" style="text-align: right;"><input type="submit" name="" value="reset password" class="btn btn-primary btn-lg"></div>
         </div>
-      <div class="panel-footer" style="text-align: right;"><input type="submit" class="btn btn-primary btn-lg"  value="login" name="submit"></div>
-
-      <div class="panel-footer" style="text-align: right;"><a href="<?php echo base_url('pendaftar/C_reset_password'); ?>" class="btn btn-primary btn-lg">Reset Password</a></div>
       </form>
-      
       </div><!--panel-->
     </div>
     </center>
-
-</body>
-</html> 
+    
+  </body>

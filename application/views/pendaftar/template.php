@@ -9,9 +9,6 @@
           <div class="page-options">
             <p class="text-right"><a href="<?php echo site_url('pendaftar/C_formulir'); ?>"><?php echo $title; ?></a> / <?php echo $subtitle; ?> </p>
           </div>
-          <!-- <div>
-            <p class="text-right"><a href="<?php echo site_url('pendaftar/C_berita'); ?>"><?php echo $title; ?></a> / <?php echo $berita; ?> </p>
-          </div> -->
         </div>
         <?php $this->load->view($content); ?>
     </div>

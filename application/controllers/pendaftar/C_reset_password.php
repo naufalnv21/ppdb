@@ -28,21 +28,16 @@ class C_reset_password extends CI_Controller
 	public function reset_password_validation()
 	{
 		$this->form_validation->set_rules('email_register','Email','required|valid_email|trim');
-		$this->form_validation->set_rules('password_register',)
+		$this->form_validation->set_rules('password_register','Retype Password', 'required|min_length[6]|matches[password_register]');
+		$id = $this->uri->segment(4);
 		if($this->form_validation->run())
 		{
 			$email_register = $this->input->post('email_register');
 			$reset_key = random_string('alnum', 50);
-
-			if($this->M_reset->update_reset_key($email_register,$reset_key))
-			{
-				var_dump("Email ada");
-			}else{
-				var_dump("error");
-			}
+			$this->M_reset->gantiPassword($this->input->post('email_register'), $this->input->post('password_register'));
+			return redirect('pendaftar/C_calon_siswa');
 		} else{
-			echo 0;
-			$this->load->view('pendaftar/reset_password');
+			$this->load->view('pendaftar/reset_password2');
 		}
 	}
 	public function email_reset_password_validation()
@@ -52,7 +47,7 @@ class C_reset_password extends CI_Controller
 		{
 			$email_register = $this->input->post('email_register');
 			$reset_key =  random_string('alnum', 50);
-
+			$getID = $this->M_reset->getId($email_register);
 			if($this->M_reset->update_reset_key($email_register,$reset_key))
 			{
 				$this->load->library('email');
@@ -64,8 +59,8 @@ class C_reset_password extends CI_Controller
 				$config['smtp_host'] = "ssl://smtp.gmail.com";
 				$config['smtp_port'] = "465";
 				$config['smtp_timeout'] = "5";
-				$config['smtp_user'] = "smkristekindramayu@gmail.com";
-				$config['smtp_pass'] = "indramayu123";
+				$config['smtp_user'] = "naufalharizxtkj1@gmail.com";
+				$config['smtp_pass'] = "figcuqadvcjdxapz";
 				$config['crlf'] = "\r\n";
 				$config['newline'] = "\r\n";
 				$config['wordwrap'] = TRUE;
@@ -77,7 +72,7 @@ class C_reset_password extends CI_Controller
 				$this->email->subject("Reset Your Password");
 
 				$message = "<p>Anda melakukan permintaan reset password</p>";
-				$message = "<a href='".site_url('pendaftar/C_reset_password/reset_password_validation'.$reset_key)."'>klik reset password</a>";
+				$message = "<a href='".site_url('pendaftar/C_reset_password/reset_password_validation/'.$getID->id_register)."'>klik reset password</a>";
 				$this->email->message($message);
 
 				if($this->email->send())
@@ -87,12 +82,28 @@ class C_reset_password extends CI_Controller
 				{
 					echo "Berhasil melakukan registrasi, gagal mengirim verifikasi email";
 				}
-				echo "<br><br><a href='".site_url("pendaftar/C_register/index")."'>Kembali ke Menu Login</a>";
+				echo "<br><br><a href='".site_url("pendaftar/C_login/index")."'>Kembali ke Menu Login</a>";
 			}else {
 				die("Email yang anda masukan belum terdaftar");
 			}
 		} else{
 			$this->load->view('pendaftar/login_pendaftaran');
+		}
+	}
+
+	public function reset_password()
+	{
+		$reset_key = $this->uri->segment(3);
+
+		if(!$reset_key){
+			die('Jangan dihapus');
+		}
+
+		if($this->M_reset->check_reset_key($reset_key) == 1)
+		{
+			$this->load->view('pendaftar/reset_password2');
+		}else{
+			die("reset key salah");
 		}
 	}
 }
