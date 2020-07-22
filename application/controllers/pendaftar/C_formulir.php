@@ -28,6 +28,15 @@ class C_formulir extends CI_Controller
 	}
 	public function insertFormulir()
 	{
+        if(empty($this->session->userdata('username_register'))){
+                echo "<script type='text/javascript'>";
+                echo "alert('anda harus login');";
+                echo "window.location.href='".site_url('pendaftar/C_login')."'";
+                echo "</script>";
+
+        }else{
+            
+            
 	
 		$id_jurusan = $this->input->post('id_jurusan');
 		$nik_pendaftar = $this->input->post('nik_pendaftar');
@@ -61,7 +70,11 @@ class C_formulir extends CI_Controller
     		// echo ' alert("Anda Harus Register & Login Terlebih Dahulu!")'; 
     		// echo '</script>';
     		// echo '<script Type="javascript">alert("Anda Harus Register & Login Terlebih Dahulu!")</script>';
-    		redirect('pendaftar/C_formulir');    	
+            echo "<script type='text/javascript'>";
+                echo "alert('anda harus login');";
+                echo "window.location.href='".site_url('pendaftar/C_login')."'";
+                echo "</script>";
+    		    	
     	} else {
     		$config['upload_path'] = './upload/pendaftar/kk/';
 		$config['allowed_types'] = 'pdf|img|doc|docx|jpg|png';
@@ -202,7 +215,7 @@ class C_formulir extends CI_Controller
             }
     		
     	}
-
+}
     }
 
 }
