@@ -40,7 +40,17 @@ class C_formulir extends CI_Controller
 	
 		$id_jurusan = $this->input->post('id_jurusan');
 		$nik_pendaftar = $this->input->post('nik_pendaftar');
+        $check =  $this->db->get_where('tb_pendaftar',['nik_pendaftar' => $nik_pendaftar])->num_rows();
+        if(!empty($check))
+        {
+            redirect("pendaftar/C_formulir");
+        }
 		$skhun_pendaftar = $this->input->post('skhun_pendaftar');
+        $check_skhun = $this->db->get_where('tb_pendaftar',['skhun_pendaftar' => $skhun_pendaftar])->num_rows();
+        if(!empty($check_skhun))
+        {
+            redirect("pendaftar/C_formulir");
+        }
 		$nama_pendaftar = $this->input->post('nama_pendaftar');
 		$jk_pendaftar = $this->input->post('jk_pendaftar');
 		$ttl_pendaftar = $this->input->post('ttl_pendaftar');
@@ -52,6 +62,11 @@ class C_formulir extends CI_Controller
 		$telp_hp_pendaftar = $this->input->post('telp_hp_pendaftar');
 		$asal_sekolah_pendaftar = $this->input->post('asal_sekolah_pendaftar');
 		$no_ijazah_pendaftar = $this->input->post('no_ijazah_pendaftar');
+        $check_ijazah = $this->db->get_where('tb_pendaftar',['no_ijazah_pendaftar']);
+        if(!empty($check_ijazah))
+        {
+            redirect("pendaftar/C_formulir");
+        }
 		$thn_lulus_pendaftar = $this->input->post('thn_lulus_pendaftar');
 		$nama_ayah_pendaftar = $this->input->post('nama_ayah_pendaftar');
 		$nama_ibu_pendaftar = $this->input->post('nama_ibu_pendaftar');

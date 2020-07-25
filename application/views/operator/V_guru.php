@@ -53,6 +53,9 @@
               <td><?php echo anchor('operator/O_guru/edit/'.$guru->id_guru,'<div class="btn btn-primary btn-sm" ><i class="fa fa-edit"></i></div>')?></td>
               <td onclick="javascript: return confirm('Anda yakin hapus?')"><?php echo anchor('operator/O_guru/hapus/'.$guru->id_guru, '<div class="btn btn-danger btn-sm" ><i class="fa fa-trash"></i></div>' ) ?>
               </td>
+              <!-- <td><?php echo anchor('operator/O_guru/export/' .$guru->id_guru, '<div class="btn btn-primary btn-sm" ><i class="fa fa-file-excel-o"></i></div>')?>
+                
+              </td> -->
             </tr>
           <?php } ?>
         </table>

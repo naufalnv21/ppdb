@@ -7,6 +7,7 @@
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0 text-dark">Pendaftar</h1>
+
           </div><!-- /.col -->
 
           <div class="col-sm-6">
@@ -20,6 +21,8 @@
       <div class="container-fluid">
         <div class="row">
           <div class="card-body">
+            <a href="<?php echo base_url('operator/O_pendaftar/export'); ?>">Export Data</a>
+                <table border="1" cellspacing="0"></table>
           <table id="example2" class="table table-bordered table-striped">
           <tr>
               <th>no</th>
@@ -54,6 +57,7 @@
               <th>Foto KTP Orang Tua</th>
               <th>File Ijazah</th>
               <th>File SKHUN</th>
+              <th>File SKTM</th>
               
               <th colspan="2">Aksi</th>
           </tr>
@@ -99,6 +103,8 @@
               <td><img src="<?php echo base_url('upload/pendaftar/ijazah/'.$pendaftar->file_ijazah_pendaftar) ?>" height="100px">
               </td>
               <td><img src="<?php echo base_url('upload/pendaftar/skhun/'.$pendaftar->file_skhun_pendaftar) ?>" height="100px">
+              </td>
+              <td><img src="<?php echo base_url('upload/pendaftar/sktm/'.$pendaftar->file_sktm_pendaftar) ?>" height="100px">
               </td>
             </tr>
 
