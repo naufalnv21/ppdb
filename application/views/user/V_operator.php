@@ -31,8 +31,8 @@
               <th>level</th>
               <th>alamat</th>
               <th>email</th>
-              <th>created</th>
-              <th>updated</th>
+              <!-- <th>created</th>
+              <th>updated</th> -->
               <!-- <th colspan="2">Aksi</th> -->
           </tr>
           <?php
@@ -54,8 +54,8 @@
               <td><?php echo $operator->level_users?> </td>
               <td><?php echo $operator->alamat_users?> </td>
               <td><?php echo $operator->email_users?> </td>
-              <td><?php echo $operator->created_at?> </td>
-              <td><?php echo $operator->updated_at?> </td>
+              <!-- <td><?php echo $operator->created_at?> </td>
+              <td><?php echo $operator->updated_at?> </td> -->
               <!-- <td><?php echo anchor('admin/Operator/edit/'.$operator->id_users,'<div class="btn btn-primary btn-sm" ><i class="fa fa-edit"></i></div>')?></td>
               <td onclick="javascript: return confirm('Anda yakin hapus?')"><?php echo anchor('admin/operator/hapus/'.$operator->id_users, '<div class="btn btn-danger btn-sm" ><i class="fa fa-trash"></i></div>' ) ?>
               </td> -->

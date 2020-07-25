@@ -29,7 +29,7 @@
               <div class="icon">
                 <i class="fas fa-users"></i>
               </div>
-              <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
+              <a href="<?php echo base_url('operator/O_guru'); ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -44,6 +44,7 @@
               <div class="icon">
                 <i class="ion ion-person-add"></i>
               </div>
+              <a href="<?php echo base_url('operator/O_pendaftar'); ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
               <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
             </div>
           </div>
@@ -59,6 +60,7 @@
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
               </div>
+              <a href="<?php echo base_url('operator/O_siswa'); ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
               <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
             </div>
           </div>
@@ -74,13 +76,13 @@
               <div class="icon">
                 <i class="fa fa-bullhorn"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?php echo base_url('operator/O_berita');?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-danger">
+            <div class="small-box bg-info">
               <div class="inner">
                 <h3><?php echo count($dashboard['multimedia']); ?></h3>
 
@@ -89,12 +91,12 @@
               <div class="icon">
                 <i class="fas fa-university"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?php echo base_url('operator/O_multimedia'); ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
           <div class="col-lg-3 col-6">
-            <div class="small-box bg-danger">
+            <div class="small-box bg-success">
               <div class="inner">
                 <h3><?php echo count($dashboard['perbank']);?></h3>
                 <p>Jurusan Perbankan</p>
@@ -102,11 +104,12 @@
               <div class="icon">
                 <i class="fas fa-university"></i>
               </div>
+              <a href="<?php echo base_url('operator/O_perbank'); ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
           <div class="col-lg-3 col-6">
-            <div class="small-box bg-danger">
+            <div class="small-box bg-warning">
               <div class="inner">
                 <h3><?php echo count($dashboard['fasilitas']); ?></h3>
                 <p>Jumlah Fasilitas</p>
@@ -114,6 +117,20 @@
               <div class="icon">
                 <i class="fas fa-building"></i>
               </div>
+              <a href="<?php echo base_url('operator/O_fasilitas'); ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <div class="small-box bg-danger">
+              <div class="inner">
+                <h3><?php echo count($dashboard['smk']); ?></h3>
+                <p>SMK RISTEK INDRAMAYU</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-school"></i>
+              </div>
+              <a href="<?php echo base_url('operator/O_profile'); ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->

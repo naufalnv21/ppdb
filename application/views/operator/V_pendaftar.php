@@ -21,7 +21,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="card-body">
-            <a href="<?php echo base_url('operator/O_pendaftar/export'); ?>">Export Data</a>
+            <a href="<?php echo base_url('operator/O_pendaftar/export'); ?>" class="btn btn-success">Export Excel</a>
                 <table border="1" cellspacing="0"></table>
           <table id="example2" class="table table-bordered table-striped">
           <tr>
@@ -59,7 +59,7 @@
               <th>File SKHUN</th>
               <th>File SKTM</th>
               
-              <th colspan="2">Aksi</th>
+              <!-- <th colspan="2">Aksi</th> -->
           </tr>
           <?php
           $no = 1;

@@ -84,7 +84,18 @@ class O_pendaftar extends CI_Controller
 					 ->setCellValue('M1','Nomor Telephon')
 					 ->setCellValue('N1','Asal Sekolah')
 					 ->setCellValue('O1','No Ijazah')
-					 ->setCellValue('P1','Tahun Lulus');
+					 ->setCellValue('P1','Tahun Lulus')
+					 ->setCellValue('Q1','Nama Ayah')
+					 ->setCellValue('R1','Nama Ibu')
+					 ->setCellValue('S1','Pekerjaan Orang Tua')
+					 ->setCellValue('T1','Pendapatan Perbulan')
+					 ->setCellValue('U1','Pendidikan Terakhir Orang Tua')
+					 ->setCellValue('V1','Alamat Orang Tua')
+					 ->setCellValue('W1','Desa Orang Tua')
+					 ->setCellValue('X1','RT/RW Orang Tua')
+					 ->setCellValue('Y1','Kecamatan Orang Tua')
+					 ->setCellValue('Z1','Kabupaten Orang Tua')
+					 ->setCellValue('AA1','Telp/Hp Orang Tua');
 					 // ->setCellValue('J1','RT/RW')
 		$kolom = 2;
 		$no = 1;
@@ -105,7 +116,18 @@ class O_pendaftar extends CI_Controller
 						 ->setCellValue('M' . $kolom, $pendaftar->telp_hp_pendaftar)
 						 ->setCellValue('N' . $kolom, $pendaftar->asal_sekolah_pendaftar)
 						 ->setCellValue('O' . $kolom, $pendaftar->no_ijazah_pendaftar)
-						 ->setCellValue('p' . $kolom, $pendaftar->thn_lulus_pendaftar);
+						 ->setCellValue('p' . $kolom, $pendaftar->thn_lulus_pendaftar)
+						 ->setCellValue('Q' . $kolom, $pendaftar->nama_ayah_pendaftar)
+						 ->setCellValue('R' . $kolom, $pendaftar->nama_ibu_pendaftar)
+						 ->setCellValue('S' . $kolom, $pendaftar->prj_orang_tua_pendaftar)
+						 ->setCellValue('T' . $kolom, $pendaftar->ppn_orang_tua_pendaftar)
+						 ->setCellValue('U' . $kolom, $pendaftar->pendidikan_orang_tua_pendaftar)
+						 ->setCellValue('V' . $kolom, $pendaftar->almt_jl_orang_tua_pendaftar)
+						 ->setCellValue('W' . $kolom, $pendaftar->almt_desa_orang_tua_pendaftar)
+						 ->setCellValue('X' . $kolom, $pendaftar->almt_rt_rw_orang_tua_pendaftar)
+						 ->setCellValue('Y' . $kolom, $pendaftar->almt_kec_orang_tua_pendaftar)
+						 ->setCellValue('Z' . $kolom, $pendaftar->almt_kab_orang_tua_pendaftar)
+						 ->setCellValue('AA' . $kolom, $pendaftar->telp_hp_orang_tua_pendaftar);
 
 			$kolom++;
 			$no++;		

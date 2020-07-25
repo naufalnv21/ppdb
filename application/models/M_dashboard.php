@@ -68,4 +68,28 @@ class M_dashboard extends CI_Model
 		$result = $this->db->get();
 		return $result->result();
 	}
+
+	public function tampilSmk()
+	{
+		$this->db->select('*');
+		$this->db->from('tb_profile');
+		$result = $this->db->get();
+		return $result->result();
+	}
+
+	public function tampilOperator()
+	{
+		$this->db->select('*');
+		$this->db->from('tb_users');
+		$result = $this->db->get();
+		return $result->result();
+	}
+
+	public function tampilPengguna()
+	{
+		$this->db->select('*');
+		$this->db->from('tb_users');
+		$result = $this->db->get();
+		return $result->result();
+	}
 }

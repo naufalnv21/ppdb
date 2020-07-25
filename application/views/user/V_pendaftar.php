@@ -20,6 +20,8 @@
       <div class="container-fluid">
         <div class="row">
           <div class="card-body">
+            <a href="<?php echo base_url('admin/Pendaftar/export'); ?>" class="btn btn-success">Export Excel</a>
+                <table border="1" cellspacing="0"></table>
           <table id="example2" class="table table-bordered table-striped">
           <tr>
               <th>no</th>
