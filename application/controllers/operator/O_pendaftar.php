@@ -24,35 +24,6 @@ class O_pendaftar extends CI_Controller
 		$data['user'] = $this->db->get_where('tb_users', ['username' => $this->session->userdata('username')])->row_array();
 		$data['data_pendaftar'] = $this->db->get('tb_pendaftar')->result();
 
-		// $pdf = new FPDF('l','mm','A5');
-  //       // membuat halaman baru
-  //       $pdf->AddPage();
-  //       // setting jenis font yang akan digunakan
-  //       $pdf->SetFont('Arial','B',16);
-  //       // mencetak string 
-  //       $pdf->Cell(190,7,'SEKOLAH MENENGAH KEJURUAN RISTEK INDRAMAYU',0,1,'C');
-  //       $pdf->SetFont('Arial','B',12);
-  //       $pdf->Cell(190,7,'DAFTAR PENDAFTAR',0,1,'C');
-  //       // Memberikan space kebawah agar tidak terlalu rapat
-  //       $pdf->Cell(10,7,'',0,1);
-  //       $pdf->SetFont('Arial','B',10);
-  //       $pdf->Cell(20,6,'JURUSAN',1,0);
-  //       $pdf->Cell(85,6,'NIK',1,0);
-  //       $pdf->Cell(27,6,'SKHUN',1,0);
-  //       $pdf->Cell(25,6,'NAMA LENGKAP',1,1);
-  //       $pdf->Cell(25,6,'JENIS KELAMIN',1,1);
-  //       $pdf->Cell(25,6, 'TEMPAT TANGGIL LAHIR',1,1);
-  //       $pdf->SetFont('Arial','',10);
-  //       $pendaftar = $this->db->get('tb_pendaftar')->result();
-  //       foreach ($pendaftar as $row){
-  //           $pdf->Cell(20,6,$row->id_jurusan,1,0);
-  //           $pdf->Cell(85,6,$row->nik_pendaftar,1,0);
-  //           $pdf->Cell(27,6,$row->skhun_pendaftar,1,0);
-  //           $pdf->Cell(25,6,$row->nama_pendaftar,1,1);
-  //           $pdf->Cell(25,6,$row->jk_pendaftar,1,1);
-  //           $pdf->Cell(25,6,$row->ttl_pendaftar,1,1); 
-  //       }
-  //       $pdf->Output();
 
 		$this->load->view('operator/header', $data);
 		$this->load->view('operator/navbar', $data);

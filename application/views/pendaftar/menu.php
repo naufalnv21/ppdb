@@ -38,6 +38,18 @@
           <li class="nav-item">
             <a href="<?php echo site_url('pendaftar/C_download'); ?>" class="nav-link"><i class="fa fa-download"></i> Download Formulir</a>
           </li>
+          <?php
+
+          $username=$this->session->userdata('username_register');
+          // var_dump($username);
+          if(!empty($username)){
+            ?>
+            <li class="nav-item">
+            <a href="<?php echo site_url('pendaftar/C_download/downloadBukti'); ?>" class="nav-link"><i class="fa fa-download"></i> Cetak Bukti. Pendf</a>
+          </li>
+            <?php
+          }
+          ?>
           <!-- <li class="nav-item dropdown">
             <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fa fa-cogs"></i>Pengaturan</a>
             <div class="dropdown-menu dropdown-menu-arrow">

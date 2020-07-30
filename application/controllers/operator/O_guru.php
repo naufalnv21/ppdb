@@ -23,7 +23,7 @@ class O_guru extends CI_Controller
 	{
 		$data['user'] = $this->db->get_where('tb_users', ['username' => $this->session->userdata('username')])->row_array();
 		$data['data_guru'] = $this->db->get('tb_guru')->result();
-		// $data['data_guru'] = $this->M_excel->tampil()->result();
+		$data['data_guru'] = $this->M_excel->tampilGuru()->result();
 		$this->load->view('operator/header', $data);
 		$this->load->view('operator/navbar', $data);
 		$this->load->view('operator/sidebar', $data);
@@ -178,47 +178,47 @@ class O_guru extends CI_Controller
 		$this->load->view('operator/V_edit_guru', $data);
 	}
 
-	// public function export()
-	// {
-	// 	$data['data_guru'] = $this->db->get('tb_guru')->result();
-	// 	$data_guru = $this->M_excel->tampil()->result();
+	public function export()
+	{
+		$data['data_guru'] = $this->db->get('tb_guru')->result();
+		$data_guru = $this->M_excel->tampilGuru()->result();
 
-	// 	$spreadsheet = new Spreadsheet;
-	// 	$spreadsheet->setActiveSheetIndex(0)
-	// 				 ->setCellValue('A1','No')
-	// 				 ->setCellValue('B1','Nama')
-	// 				 ->setCellValue('C1','Tempat Tanggal Lahir')
-	// 				 ->setCellValue('D1','Nuptk')
-	// 				 ->setCellValue('E1','Jenis Kelamin')
-	// 				 ->setCellValue('F1','Email Guru')
-	// 				 ->setCellValue('G1','Tamatan')
-	// 				 ->setCellValue('H1','Ijazah')
-	// 				 ->setCellValue('I1','Mata Pelajaran')
-	// 				 ->setCellValue('J1','Alamat');
-	// 	$kolom = 2;
-	// 	$no = 1;
-	// 	foreach ($data_guru as $guru) {
-	// 		$spreadsheet->setActiveSheetIndex(0)
-	// 					 ->setCellValue('A' . $kolom, $no)
-	// 					 ->setCellValue('B' . $kolom, $guru->nama_guru)
-	// 					 ->setCellValue('C' . $kolom, $guru->ttl_guru)
-	// 					 ->setCellValue('D' . $kolom, $guru->nuptk_guru)
-	// 					 ->setCellValue('E' . $kolom, $guru->jk_guru)
-	// 					 ->setCellValue('F' . $kolom, $guru->email_guru)
-	// 					 ->setCellValue('G' . $kolom, $guru->tmt_guru)
-	// 					 ->setCellValue('H' . $kolom, $guru->ijazah_guru)
-	// 					 ->setCellValue('I' . $Kolom, $guru->mapel_guru)
-	// 					 ->setCellValue('J' . $kolom, $guru->alamat_guru);
-	// 		$kolom++;
-	// 		$no++;		
-	// 	}
+		$spreadsheet = new Spreadsheet;
+		$spreadsheet->setActiveSheetIndex(0)
+					 ->setCellValue('A1','No')
+					 ->setCellValue('B1','Nama')
+					 ->setCellValue('C1','Tempat Tanggal Lahir')
+					 ->setCellValue('D1','Nuptk')
+					 ->setCellValue('E1','Jenis Kelamin')
+					 ->setCellValue('F1','Email Guru')
+					 ->setCellValue('G1','Tamatan')
+					 ->setCellValue('H1','Ijazah')
+					 ->setCellValue('I1','Mata Pelajaran')
+					 ->setCellValue('J1','Alamat');
+		$kolom = 2;
+		$no = 1;
+		foreach ($data_guru as $guru) {
+			$spreadsheet->setActiveSheetIndex(0)
+						 ->setCellValue('A' . $kolom, $no)
+						 ->setCellValue('B' . $kolom, $guru->nama_guru)
+						 ->setCellValue('C' . $kolom, $guru->ttl_guru)
+						 ->setCellValue('D' . $kolom, $guru->nuptk_guru)
+						 ->setCellValue('E' . $kolom, $guru->jk_guru)
+						 ->setCellValue('F' . $kolom, $guru->email_guru)
+						 ->setCellValue('G' . $kolom, $guru->tmt_guru)
+						 ->setCellValue('H' . $kolom, $guru->ijazah_guru)
+						 ->setCellValue('I' . $kolom, $guru->mapel_guru)
+						 ->setCellValue('J' . $kolom, $guru->alamat_guru);
+			$kolom++;
+			$no++;		
+		}
 
-	// 	$writer = new Xlsx($spreadsheet);
+		$writer = new Xlsx($spreadsheet);
 
-	// 	header('Content-Type: application/vnd.ms-excel');
-	// 	header('Content-Disposition: attachment;filename="Latihan.xlsx"');
-	// 	header('Cache-Control: max-age=0');
+		header('Content-Type: application/vnd.ms-excel');
+		header('Content-Disposition: attachment;filename="Data Guru.xlsx"');
+		header('Cache-Control: max-age=0');
 
-	// 	$writer->save('php://output');
-	// }
+		$writer->save('php://output');
+	}
 }

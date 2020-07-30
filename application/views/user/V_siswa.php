@@ -9,6 +9,8 @@
 
           <div class="col-sm-6">
             <h1 class="m-0 text-dark">Siswa</h1>
+            <a href="<?php echo base_url('operator/O_siswa/export'); ?>" class="btn btn-success">Export Excel</a>
+                <table border="1" cellspacing="0"></table>
             
           </div><!-- /.col -->
 

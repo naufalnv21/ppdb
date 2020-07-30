@@ -14,7 +14,7 @@
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Silahkan Login</p>
+      <p class="login-box-msg">Form Lupa Password</p>
 
 <!-- <?php
 /**
@@ -39,11 +39,11 @@ echo password_hash("smkristek", PASSWORD_DEFAULT);
 echo password_hash("operator", PASSWORD_DEFAULT);
 ?> -->
 
-      <?php 
+      <!-- <?php 
       if($this->session->flashdata('message')){
         echo $this->session->flashdata('message');
       }
-      ?>
+      ?> -->
 
       <form action="<?php echo base_url('auth/login') ?>" method="post">
         <div class="input-group mb-3">
@@ -62,25 +62,6 @@ echo password_hash("operator", PASSWORD_DEFAULT);
             </div>
           </div>
         </div>
-        <div> 
-          </div> 
-        <div class="row">
-          <div class="col-8">
-            
-          </div>
-          <!-- /.col -->
-          <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Login</button>
-            
-          </div>
-          <!-- /.col -->
-        </div>
-        <div>
-            <p class="mb-1">
-              <a href="<?php echo base_url('Auth/lupaPassword'); ?>">Lupa Password</a>
-            </p>
-          </div>
-        
       </form>
       
       

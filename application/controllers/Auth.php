@@ -120,4 +120,11 @@ class Auth extends CI_Controller
 		$this->load->view('operator/O_dashboard');
 		$this->load->view('operator/footer', $data);
 	}
+
+	public function lupaPassword()
+	{
+		$this->load->view('templates/auth_header');
+		$this->load->view('auth/lupa_password');
+		$this->load->view('templates/auth_footer');
+	}
 }

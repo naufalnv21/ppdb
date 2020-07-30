@@ -31,4 +31,15 @@ class C_download extends CI_Controller
 	{
 		force_download('./upload/formulir/logo_ristek.jpg',NULL);
 	}
+	public function downloadBukti()
+	{
+		$id_register=$this->session->userdata('id_register');
+		$cekdata=$this->db->query("SELECT * FROM tb_pendaftar WHERE id_register='$id_register'")->num_rows();
+		if($cekdata>0){
+			echo "sudah daftar";
+		}else{
+			echo "belum daftar";
+		}
+
+	}
 }

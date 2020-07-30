@@ -1,53 +1,60 @@
-
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-
-    <div class="content-header">
-
-        <div class="row mb-2">
-
-          <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Berita</h1>
-            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"></a><i class="fa fa-plus"></i> Tambah Berita</button></a>
-          </div><!-- /.col -->
-
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-            </ol>
-          </div><!-- /.col -->
-          <div class="container-fluid">
-          <table id="example2" class="table table-bordered table-striped">
-          <tr>
+<div class="content-wrapper">
+  <div class="content-header">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0 text-dark">Berita</h1>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+          <a>
+            <i class="fa fa-plus">Tambah Data</i>
+          </a>
+        </button>
+        <!-- <a href="<?php echo base_url('operator/O_multimedia/export'); ?>" class="btn btn-success">Export Excel</a>
+        <table border="1" cellspacing="0"></table> -->
+      </div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right"></ol>
+      </div>
+      <div class="container-fluid">
+        <table id="example2" class="table table-bordered table-striped">
+          <thead>
+            <tr>
               <th>no</th>
               <th>Tanggal</th>
               <th>Berita</th>
               <th>Penulis</th>
               <th>Foto</th>
-              <th colspan="2">Aksi</th>
-          </tr>
-           <?php
-          $no = 1;
-          foreach ($data_berita as $berita) {
-            ?>
-            <tr>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
+            $no =1;
+            foreach ($data_berita as $berita) {
+              ?>
+              
+              <tr>
               <td><?php echo $no++?> </td>
               <td><?php echo $berita->tgl_berita ?></td>
               <td><?php echo $berita->isi_berita?> </td>
-              <td><?php echo $berita->penulis_berita?> </td>              
-              <td>
-                <img src="<?php echo base_url('upload/berita/'.$berita->foto_berita) ?>"class ="img img-responsive img-thumbnail " width = "60">
-              </td>
-              <td><?php echo anchor('operator/O_berita/edit/'.$berita->id_berita,'<div class="btn btn-primary btn-sm" ><i class="fa fa-edit"></i></div>')?></td>
-              <td onclick="javascript: return confirm('Anda yakin hapus?')"><?php echo anchor('operator/O_berita/hapus/'.$berita->id_berita, '<div class="btn btn-danger btn-sm" ><i class="fa fa-trash"></i></div>' ) ?>
-              </td>
-            </tr>
-          <?php } ?>
-        </table>
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
+              <td><?php echo $berita->penulis_berita?> </td> 
+                <td>
+                  <img src="<?php echo base_url('upload/berita/'.$berita->foto_berita) ?>" class="img img-responsive img-thumbnail" width="60">
+                </td>
+                <td>
+                  <a href="<?php echo base_url() .'operator/O_berita/hapus/'. $berita->id_berita; ?>" class="btn btn-danger btn-sm" onClick="return confirm('Apakah anda yakin ingin menghapus?');"><i class="fa fa-trash"></i></a>&nbsp;&nbsp;
+                  <?php echo anchor('operator/O_berita/edit/'.$berita->id_berita,'<div class="btn btn-primary btn-sm" ><i class="fa fa-edit"></i></div>')?></td>
+          </tr>
+        <?php } ?>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</div>
+</div>
+
+
+ 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">

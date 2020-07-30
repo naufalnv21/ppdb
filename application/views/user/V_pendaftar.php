@@ -1,27 +1,24 @@
-<!-- Content Wrapper. Contains page content -->
+
+  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
 
-    <section class="content-header">
-       <div class="container-fluid">
+    <div class="content-header">
+
         <div class="row mb-2">
+
           <div class="col-sm-6">
             <h1 class="m-0 text-dark">Pendaftar</h1>
+            <a href="<?php echo base_url('operator/O_pendaftar/export'); ?>" class="btn btn-success">Export Excel</a>
+                <table border="1" cellspacing="0"></table>
           </div><!-- /.col -->
 
           <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right"></ol>
+            <ol class="breadcrumb float-sm-right">
+            </ol>
           </div><!-- /.col -->
-        </div>
-      </div>
-    </section>
 
-    <section  class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="card-body">
-            <a href="<?php echo base_url('admin/Pendaftar/export'); ?>" class="btn btn-success">Export Excel</a>
-                <table border="1" cellspacing="0"></table>
+          <div class="container-fluid">
           <table id="example2" class="table table-bordered table-striped">
           <tr>
               <th>no</th>
@@ -56,15 +53,14 @@
               <th>Foto KTP Orang Tua</th>
               <th>File Ijazah</th>
               <th>File SKHUN</th>
-              
-              <th colspan="2">Aksi</th>
+              <th>File SKTM</th>
           </tr>
           <?php
           $no = 1;
           foreach ($data_pendaftar  as $pendaftar) {
             
-            ?> 
-            <tr>
+            ?>
+          <tr>
               <td><?php echo $no++?> </td>
               <td><?php echo $pendaftar->id_jurusan ?></td>
               <td><?php echo $pendaftar->nik_pendaftar ?></td>
@@ -102,14 +98,14 @@
               </td>
               <td><img src="<?php echo base_url('upload/pendaftar/skhun/'.$pendaftar->file_skhun_pendaftar) ?>" height="100px">
               </td>
+              <td><img src="<?php echo base_url('upload/pendaftar/sktm/'.$pendaftar->file_sktm_pendaftar) ?>" height="100px">
+              </td>
             </tr>
-
           <?php } ?>
-
-        
         </table>
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
-      </section>
-    </div>
+    <!-- /.content-header -->
+    <!-- /.content -->
+  </div>

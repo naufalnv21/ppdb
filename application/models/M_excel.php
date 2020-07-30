@@ -21,4 +21,19 @@ class M_excel extends CI_Model
 
 		return $this->db->get();
 	}
+
+	public function tampilSiswa()
+	{
+		$this->db->select('*');
+		$this->db->from('tb_siswa');
+
+		return $this->db->get();
+	}
+
+	public function tampilGuru()
+	{
+		$this->db->select('*');
+		$this->db->from('tb_guru');
+		return $this->db->get();
+	}
 }

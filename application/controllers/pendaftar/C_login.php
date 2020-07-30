@@ -43,7 +43,8 @@ class C_login extends CI_Controller
 				$session = array(
 					
 					'username_register'=>$tb_register->username_register,
-					'nama_register'=>$tb_register->nama_register
+					'nama_register'=>$tb_register->nama_register,
+					'id_register' => $tb_register->id_register
 				);
 
 				$this->session->set_userdata($session);
