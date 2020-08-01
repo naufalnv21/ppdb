@@ -2,12 +2,18 @@
 defined('BASEPATH') OR exit ('No direct script access allowed');
 
 
+require('./application/third_party/phpoffice/vendor/autoload.php');
+
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+
 class Admin extends CI_Controller
 {
 	function __construct()
 	{
 		parent::__construct();
 		$this->load->model('M_admin');
+		$this->load->model('M_excel');
 		$this->load->helper('url');
 	}
 	
@@ -83,5 +89,51 @@ class Admin extends CI_Controller
 	public function logout(){
 		$this->session->session_destroy();
 		redirect('Auth');
+	}
+
+	public function export()
+	{
+		$data['data_admin'] = $this->db->get('tb_users')->result();
+		$data_admin = $this->M_excel->tampilPengguna()->result();
+
+		$spreadsheet = new Spreadsheet;
+		$spreadsheet->setActiveSheetIndex(0)
+					 ->setCellValue('A1','No')
+					 ->setCellValue('B1','Nama')
+					 ->setCellValue('C1','Tempat Tanggal Lahir')
+					 ->setCellValue('D1','Nuptk')
+					 ->setCellValue('E1','Jenis Kelamin')
+					 ->setCellValue('F1','Tamatan')
+					 ->setCellValue('G1','Ijazah')
+					 ->setCellValue('H1','Jabatan / Mapel')
+					 ->setCellValue('I1','Telepon')
+					 ->setCellValue('J1','Alamat')
+					 ->setCellValue('K1','Email');
+		$kolom = 2;
+		$no = 1;
+		foreach ($data_admin as $admin) {
+			$spreadsheet->setActiveSheetIndex(0)
+						 ->setCellValue('A' . $kolom, $no)
+						 ->setCellValue('B' . $kolom, $admin->username)
+						 ->setCellValue('C' . $kolom, $admin->ttl_users)
+						 ->setCellValue('D' . $kolom, $admin->nuptk_users)
+						 ->setCellValue('E' . $kolom, $admin->jk_users)
+						 ->setCellValue('F' . $kolom, $admin->tmt_users)
+						 ->setCellValue('G' . $kolom, $admin->ijazah_users)
+						 ->setCellValue('H' . $kolom, $admin->mapel_users)
+						 ->setCellValue('I' . $kolom, $admin->telp_users)
+						 ->setCellValue('J' . $kolom, $admin->alamat_users)
+						 ->setCellValue('K' . $kolom, $admin->email_users);
+			$kolom++;
+			$no++;		
+		}
+
+		$writer = new Xlsx($spreadsheet);
+
+		header('Content-Type: application/vnd.ms-excel');
+		header('Content-Disposition: attachment;filename="Data Pengguna.xlsx"');
+		header('Cache-Control: max-age=0');
+
+		$writer->save('php://output');
 	}
 }

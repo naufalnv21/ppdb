@@ -1,6 +1,13 @@
 <?php
 defined('BASEPATH') OR exit ('No direct script access allowed');
 
+
+require('./application/third_party/phpoffice/vendor/autoload.php');
+
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+
+
 /**
  * 
  */
@@ -10,6 +17,7 @@ class O_multimedia extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('M_multimedia');
+		$this->load->model('M_excel');
 		$this->load->helper('url');
 	}
 	public function index()
@@ -133,5 +141,47 @@ class O_multimedia extends CI_Controller
 		$id_jurusan = $this->input->post('id_multimedia');
 		$data['data_multimedia'] = $this->M_multimedia->multimediaId($id_multimedia);
 		$this->load->view('operator/V_edit_multimedia', $data);
+	}
+
+	public function export()
+	{
+		$data['data_multimedia'] = $this->db->get('tb_multimedia')->result();
+		$data_multimedia = $this->M_excel->tampilMultimedia()->result();
+
+		$spreadsheet = new Spreadsheet;
+		$spreadsheet->setActiveSheetIndex(0)
+					 ->setCellValue('A1','No')
+					 ->setCellValue('B1','Nama')
+					 ->setCellValue('C1','Jumlah Siswa')
+					 ->setCellValue('D1','Motto Jurusan')
+					 ->setCellValue('E1','Acara Multimedia')
+					 ->setCellValue('F1','Ketua Jurusan');
+					 
+					 
+		$kolom = 2;
+		$no = 1;
+		foreach ($data_multimedia as $multimedia) {
+			$spreadsheet->setActiveSheetIndex(0)
+						 ->setCellValue('A' . $kolom, $no)
+						 ->setCellValue('B' . $kolom, $id_multimedia)
+						 ->setCellValue('C' . $kolom, $multimedia->id_multimedia)
+						 ->setCellValue('D' . $kolom, $multimedia->nama_multimedia)
+						 ->setCellValue('E' . $kolom, $multimedia->jml_siswa_multimedia)
+						 ->setCellValue('F' . $kolom, $multimedia->motto_multimedia)
+						 ->setCellValue('G' . $kolom, $multimedia->acara_multimedia)
+						 ->setCellValue('H' . $kolom, $multimedia->ketua_multimedia);
+						 
+
+			$kolom++;
+			$no++;		
+		}
+
+		$writer = new Xlsx($spreadsheet);
+
+		header('Content-Type: application/vnd.ms-excel');
+		header('Content-Disposition: attachment;filename="Multimedia.xlsx"');
+		header('Cache-Control: max-age=0');
+
+		$writer->save('php://output');
 	}
 }

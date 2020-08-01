@@ -36,4 +36,46 @@ class M_excel extends CI_Model
 		$this->db->from('tb_guru');
 		return $this->db->get();
 	}
+
+	public function tampilMultimedia()
+	{
+		$this->db->select('*');
+		$this->db->from('tb_multimedia');
+		return $this->db->get();
+	}
+
+	public function tampilPerbank()
+	{
+		$this->db->select('*');
+		$this->db->from('tb_perbank');
+		return $this->db->get();
+	}
+
+	public function tampilFasilitas()
+	{
+		$this->db->select('*');
+		$this->db->from('tb_fasilitas');
+		return $this->db->get();
+	}
+
+	public function tampilBerita()
+	{
+		$this->db->select('*');
+		$this->db->from('tb_berita');
+		return $this->db->get();
+	}
+
+	public function tampilProfile()
+	{
+		$this->db->select('*');
+		$this->db->from('tb_profile');
+		return $this->db->get();
+	}
+
+	public function tampilPengguna()
+	{
+		$this->db->select('*');
+		$this->db->from('tb_users');
+		return $this->db->get();
+	}
 }

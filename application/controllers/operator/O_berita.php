@@ -2,12 +2,18 @@
 defined('BASEPATH') OR exit ('No direct script access allowed');
 
 
+require('./application/third_party/phpoffice/vendor/autoload.php');
+
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+
 class O_berita extends CI_Controller
 {
 	function __construct()
 	{
 		parent::__construct();
 		$this->load->model('M_berita');
+		$thos->load->model('M_excel');
 		$this->load->helper('url');
 	}
 	
@@ -140,5 +146,43 @@ class O_berita extends CI_Controller
 		$id_berita = $this->input->post('id_berita');
 		$data['data_berita'] = $this->M_berita->beritaId($id_berita);
 		$this->load->view('operator/V_edit_berita', $data);
+	}
+
+	public function export()
+	{
+		$data['data_berita'] = $this->db->get('tb_berita')->result();
+		$data_berita = $this->M_excel->tampilBerita()->result();
+
+		$spreadsheet = new Spreadsheet;
+		$spreadsheet->setActiveSheetIndex(0)
+		->setCellValue('A1','No')
+		->setCellValue('B1','Tanggal')
+		->setCellValue('C1','Isi Berita')
+		->setCellValue('D1','Penulis');
+		
+
+
+		$kolom = 2;
+		$no = 1;
+		foreach ($data_berita as $berita) {
+			$spreadsheet->setActiveSheetIndex(0)
+			->setCellValue('A' . $kolom, $no)
+			->setCellValue('B' . $kolom, $berita->tgl_berita)
+			->setCellValue('C' . $kolom, $berita->isi_berita)
+			->setCellValue('D' . $kolom, $berita->penulis_berita);
+			
+
+
+			$kolom++;
+			$no++;    
+		}
+
+		$writer = new Xlsx($spreadsheet);
+
+		header('Content-Type: application/vnd.ms-excel');
+		header('Content-Disposition: attachment;filename="Berita.xlsx"');
+		header('Cache-Control: max-age=0');
+
+		$writer->save('php://output');
 	}
 }
