@@ -1,11 +1,75 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#4188c9">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <link rel="icon" href="<?php echo base_url(); ?>assets/template/front/theme/logo_ristek.jpg " type="image/png"/>
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url(); ?>assets/template/front/theme/logo_ristek.jpg" />
+    <!-- Generated: 2018-04-16 09:29:05 +0200 -->
+    <title><?php echo $title ?> | <?php echo $subtitle ?>  </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
+    <script src="<?php echo base_url(); ?>assets/template/front/theme/assets/js/require.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
+    <script>
+      requirejs.config({
+          baseUrl: '<?php echo base_url();?>assets/template/front/theme/',
+
+          paths: {
+            'jquery': 'https://code.jquery.com/jquery-3.3.1',
+            'bootstrap': 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min',
+            'datatables': 'https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min',
+            'datatables.bootstrap': 'https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min',
+          },
+
+          shim: {
+            'bootstrap': {
+              deps: ['jquery']
+            },
+          },
+
+          map: {
+            '*': {
+              'datatables.net': 'datatables',
+            }
+          },
+      });
+      require(['jquery', 'datatables.bootstrap'], function($) {
+        'use strict';
+       
+        $('#example').dataTable();
+      });
+    </script>
+    <!-- Dashboard Core -->
+    <link href="<?php echo base_url(); ?>assets/template/front/theme/assets/css/dashboard.css" rel="stylesheet" />
+    <script src="<?php echo base_url(); ?>assets/template/front/theme/assets/js/dashboard.js"></script>
+    <!-- c3.js Charts Plugin -->
+    <link href="<?php echo base_url(); ?>assets/template/front/theme/assets/plugins/charts-c3/plugin.css" rel="stylesheet" />
+    <script src="<?php echo base_url(); ?>assets/template/front/theme/assets/plugins/charts-c3/plugin.js"></script>
+    <!-- Google Maps Plugin -->
+    <link href="<?php echo base_url(); ?>assets/template/front/theme/assets/plugins/maps-google/plugin.css" rel="stylesheet" />
+    <script src="<?php echo base_url(); ?>assets/template/front/theme/assets/plugins/maps-google/plugin.js"></script>
+    <!-- Input Mask Plugin -->
+    <script src="<?php echo base_url(); ?>assets/template/front/theme/assets/plugins/input-mask/plugin.js"></script>
+  </head>
+
 <div class="card">
 	<div class="card-header">
       <h3 class="card-title">SELAMAT ANDA BERHASIL MELAKUKAN PENDAFTARAN BARU!</h3>
       <div class="card-options">
-            <a href="<?php echo site_url('welcome') ?>" class="btn btn-primary btn-sm"><i class="fa fa-reply"></i> Kembali</a>
+            <a href="<?php echo site_url('pendaftar/C_formulir'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-reply"></i> Kembali</a>
         </div>
     </div>
     <div class="card-body">
-    	<p class="text-center">Halo <?php echo $this->session->userdata('nama_lengkap'); ?> , Selamat kamu berhasil melakukan pendaftaran baru! Ini nomor pendaftaran kamu <bold><?php echo $this->session->userdata('no_daftar'); ?></bold> harap simpan dengan baik no tersebut karena nomor akan terus digunakan sampai proses seleksi selesai.</p>
+    	<p class="text-center">Halo <?php echo $this->session->userdata('username_register'); ?> , Selamat kamu berhasil melakukan pendaftaran baru! <bold> Download lalu Cetak bukti pendaftaran sebagai bukti anda telah melakukan pendaftaran di SMK RISTEK Indramayu.<!-- <?php echo $this->session->userdata('no_daftar'); ?> --></bold> <!-- harap simpan dengan baik no tersebut karena nomor akan terus digunakan sampai proses seleksi selesai. --></p>
     </div>
 </div>

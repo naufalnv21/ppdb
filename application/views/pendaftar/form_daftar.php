@@ -3,6 +3,9 @@
     <div class="card-header">
       <h3 class="card-title">FORMULIR PENDAFATRAN SISWA BARU</h3>
     </div>
+    <div class="card-header">
+      <h3 class="card-title"><bold>HARUS LOGIN TERLEBIH DAHULU!</bold></h3>
+    </div>
     <div class="card-body">
         <br>
         <h4 style="border-bottom: 1px dotted #212121">Data Siswa</h4>
