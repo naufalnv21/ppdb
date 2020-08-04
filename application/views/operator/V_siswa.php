@@ -15,7 +15,7 @@
         <ol class="breadcrumb float-sm-right"></ol>
       </div>
       <div class="container-fluid">
-        <table id="example2" class="table table-bordered table-striped">
+        <table id="example2" class="table  table-bordered table-striped">
           <thead>
             <tr>
               <th>no</th>

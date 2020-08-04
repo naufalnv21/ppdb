@@ -6,7 +6,7 @@
           <div class="form-group">
             <label>Nama</label>
             <input type="hidden" name="id_siswa" value="<?= $siswa['id_siswa'];?>">
-            <input type="text" name="nama_siswa" placeholder="Nama" class="form-control" required="required" value="<?= $siswa['nama_siswa']; ?>" readonly>
+            <input type="text" name="nama_siswa" placeholder="Nama" class="form-control" required="required" value="<?= $siswa['nama_siswa']; ?>" >
           </div>
           <div class="form-group">
             <label>Jenis Kelamin </label>

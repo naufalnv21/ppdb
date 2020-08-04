@@ -80,13 +80,30 @@
               <?php if ($this->session->userdata('username_register')) { ?>
                 <div class="d-flex order-lg-2 ml-auto">
                 <div class="pull-right">
+
                   <a class="d-block" style="color:#000000;">HAI, <?= $user['nama_register']; ?></a>
+                  <!-- <i class="fa fa-bell" aria-hidden="true"></i> -->
+                            <div class="dropdown show">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fa fa-bell" aria-hidden="true"></i>
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <?php foreach ($notif as $notif) { ?>
+     <?php if ($notif->id_register == $user['id_register']) { ?>
+       <a class="dropdown-item" href="#"><?=$notif->message?></a>
+     <?php } ?>
+    <?php } ?>
+    
+  
+  </div>
+</div>
                   <a href="<?php echo base_url('pendaftar/C_login/logout'); ?>" class="btn btn-default btn-flat">Logout</a>
                     <!-- <span class="avatar" style="background-image: url(<?php echo base_url(); ?>assets/template/front/theme/demo/faces/female/25.jpg)"></span> -->
                       
                     
                       <!-- <small class="text-muted d-block mt-1">Administrator</small> -->
-                    </span>
+         
                   </a>
                 </div>
               </div>

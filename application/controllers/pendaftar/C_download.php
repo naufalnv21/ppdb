@@ -2,6 +2,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
+use PhpOffice\PhpWord\PhpWord;
+use PhpOffice\PhpWord\Writer\Word2007;
 /**
  * 
  */
@@ -11,7 +13,9 @@ class C_download extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->helper(array('url','download'));
+		// $this->load->helper(array('url','download'));
+		$this->load->helper('url');
+		$this->load->helper('download');
 	}
 	public function index()
 	{
@@ -29,7 +33,13 @@ class C_download extends CI_Controller
 
 	public function lakukan_download()
 	{
-		force_download('./upload/formulir/logo_ristek.jpg',NULL);
+
+		$name = 'Formulir Pendaftaran Ristek.docx';
+		$data = file_get_contents('./upload/formulir/formulir_ristek.docx');
+		// var_dump($data); die();
+		force_download($name, $data);
+		// var_dump(force_download($name, $data)); die();
+		// force_download('./upload/formulir/formulir_ristek.docx',NULL);
 	}
 	public function downloadBukti()
 	{

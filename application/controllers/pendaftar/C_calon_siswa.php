@@ -8,6 +8,7 @@ class C_calon_siswa extends CI_Controller {
 		$data['title'] = 'Dashboard';
 		$data['subtitle'] = 'SMK RISTEK INDRAMAYU';
 		$data['content'] = 'pendaftar/home';
+		$data['notif'] = $this->db->get('tb_notif')->result();
 
 		$data['user'] = $this->db->get_where('tb_register', ['nama_register' => $this->session->userdata('nama_register')])->row_array();
 

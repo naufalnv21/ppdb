@@ -47,6 +47,7 @@
               <th>File Ijazah</th>
               <th>File SKHUN</th>
               <th>File SKTM</th>
+              <th>Aksi</th>
             </tr>
           </thead>
           <tbody>

@@ -23,7 +23,6 @@
           <li class="nav-item">
             <a href="<?php echo site_url('pendaftar/C_pegawai'); ?>" class="nav-link"><i class="fa fa-users"></i>Pegawai</a>
           </li>
- 
           <li class="nav-item dropdown">
             <a  class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-users"></i> Profile </a>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">

@@ -69,7 +69,8 @@
                 
     </div>
     <div class="card-header">
-    	<a href="<?php echo base_url().'pendaftar/C_download/lakukan_download' ?>">Download Formulir</a>
+    	<!-- <a href="<?php echo base_url().'pendaftar/C_download/lakukan_download' ?>">Download Formulir</a> -->
+       <p>DOWNLOAD FORMULIR <?php echo anchor('pendaftar/C_download/lakukan_download','DI SINI.'); ?>.</p>  
     </div>        
 		
 </body>

@@ -33,6 +33,35 @@ class O_pendaftar extends CI_Controller
 		
 	}
 
+	public function status($id_pendaftar)
+	{
+		$date_created = time();
+        $data = array(
+          'id_pendaftar' => $id_pendaftar,
+          'status_pendaftar' => 1,
+          'date_created' => $date_created,
+        );
+
+        $this->db->where('id_pendaftar', $data['id_pendaftar']);
+        $this->db->update('tb_pendaftar', $data);
+
+        $id_register = $this->db->get_where('tb_pendaftar', ['date_created'  => $date_created])->row()->id_register;
+
+        $datas = array(
+        	'id_register' =>  $id_register,
+        	'id_users' =>  2,
+        	'flag' =>  0,
+        	'message' =>  "Selamat Anda Sudah Menjadi Siswa Di SMK RISTEK Indramayu",
+        	'date_created' =>  $date_created,
+
+         );
+
+        $this->db->insert('tb_notif', $datas);
+
+        redirect('operator/O_pendaftar');
+
+	}
+
 	public function export()
 	{
 		$data['data_pendaftar'] = $this->db->get('tb_pendaftar')->result();

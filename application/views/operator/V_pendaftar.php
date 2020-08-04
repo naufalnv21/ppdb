@@ -3,7 +3,6 @@
     <div class="row mb-2">
       <div class="col-sm-6">
         <h1 class="m-0 text-dark">Pendaftar</h1>
-        
         <a href="<?php echo base_url('operator/O_pendaftar/export'); ?>" class="btn btn-success">Export Excel</a>
         <table border="1" cellspacing="0"></table>
       </div>
@@ -11,7 +10,7 @@
         <ol class="breadcrumb float-sm-right"></ol>
       </div>
       <div class="container-fluid">
-        <table id="example2" class="table table-bordered table-striped">
+        <table id="example2" class="table table-responsive table-bordered table-striped">
           <thead>
             <tr>
               <th>no</th>
@@ -47,13 +46,14 @@
               <th>File Ijazah</th>
               <th>File SKHUN</th>
               <th>File SKTM</th>
+              <th>Status Siswa</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
             <?php
             $no =1;
-            foreach ($data_pendaftar  as $pendaftar) {
-
+            foreach ($data_pendaftar as $pendaftar) {
               ?>
               
               <tr>
@@ -96,15 +96,22 @@
                 </td>
                 <td><img src="<?php echo base_url('upload/pendaftar/sktm/'.$pendaftar->file_sktm_pendaftar) ?>" height="100px">
                 </td>
-
-              </tr>
-
-            <?php } ?>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
+                 <td>
+                  <?php if ($pendaftar->status_pendaftar == 0) { ?>
+                   Belum Dikonfirmasi
+                  <?php } else { ?>
+                    Diterima
+                  <?php } ?>
+                  
+                <td>
+                  <?php echo anchor('operator/O_pendaftar/status/'.$pendaftar->id_pendaftar,'<div class="btn btn-primary btn-sm" ><i class="fa fa-edit"></i>Terima</div>')?>
+                </td>
+          </tr>
+        <?php } ?>
+      </tbody>
+    </table>
   </div>
 </div>
 
+</div>
+</div>
