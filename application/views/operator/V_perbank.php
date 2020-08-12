@@ -8,8 +8,8 @@
             <i class="fa fa-plus">Tambah Data</i>
           </a>
         </button>
-        <a href="<?php echo base_url('operator/O_multimedia/export'); ?>" class="btn btn-success">Export Excel</a>
-        <table border="1" cellspacing="0"></table>
+        <!-- <a href="<?php echo base_url('operator/O_multimedia/export'); ?>" class="btn btn-success">Export Excel</a>
+        <table border="1" cellspacing="0"></table> -->
       </div>
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right"></ol>
@@ -80,11 +80,11 @@
             <input type="text" name="jml_siswa_perbank" placeholder="Jumlah Siswa" class="form-control" required="required">
           </div>
           <div class="form-group">
-            <label>Motto Multimedia</label>
+            <label>Motto </label>
             <input type="text" name="motto_perbank" placeholder="Mott Perbank" class="form-control" required="required">
           </div>
           <div class="form-group">
-          <label class="form-label">Acara Perbank</label>
+          <label class="form-label">Acara </label>
           <textarea name="acara_perbank" rows="2" class="form-control" required></textarea>
         </div>
           <div class="form-group">

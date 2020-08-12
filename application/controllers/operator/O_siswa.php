@@ -38,6 +38,7 @@ class O_siswa extends CI_Controller
 		$kelas_siswa = $this->input->post('kelas_siswa');
 		$jurusan_siswa = $this->input->post('jurusan_siswa');
 		$alamat_siswa = $this->input->post('alamat_siswa');
+		$telp_siswa = $this->input->post('telp_siswa');
 		$id_siswa = $this->input->post('id_siswa');
 		// $foto_guru = $this->input->post('foto_guru');
 		$config['upload_path'] = './upload/siswa/';
@@ -57,6 +58,7 @@ class O_siswa extends CI_Controller
 			'kelas_siswa' => $kelas_siswa,
 			'jurusan_siswa' => $jurusan_siswa,
 			'alamat_siswa' => $alamat_siswa,
+			'telp_siswa' => $telp_siswa,
 			'id_siswa' => $id_siswa,
 			'foto_siswa' => $result1
 		);	
@@ -99,6 +101,7 @@ class O_siswa extends CI_Controller
 		$kelas_siswa = $this->input->post('kelas_siswa');
 		$jurusan_siswa = $this->input->post('jurusan_siswa');
 		$alamat_siswa = $this->input->post('alamat_siswa');
+		$telp_siswa = $this->input->post('telp_siswa');
 		$id_siswa = $this->input->post('id_siswa');
 		$config['upload_path'] = './upload/siswa/';
         $config['allowed_types'] = 'gif|jpg|png';
@@ -111,6 +114,7 @@ class O_siswa extends CI_Controller
 			'kelas_siswa' => $kelas_siswa,
 			'jurusan_siswa' => $jurusan_siswa,
 			'alamat_siswa' => $alamat_siswa,
+			'telp_siswa' => $telp_siswa,
 			
 		);
         	$this->db->where('id_siswa', $id_siswa);
@@ -127,6 +131,7 @@ class O_siswa extends CI_Controller
 			'kelas_siswa' => $kelas_siswa,
 			'jurusan_siswa' => $jurusan_siswa,
 			'alamat_siswa' => $alamat_siswa,
+			'telp_siswa' => $telp_siswa,
 			'foto_siswa' => $result1
 		);
 		$this->db->where('id_siswa', $id_siswa);

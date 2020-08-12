@@ -13,7 +13,7 @@ class O_berita extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('M_berita');
-		$thos->load->model('M_excel');
+		$this->load->model('M_excel');
 		$this->load->helper('url');
 	}
 	

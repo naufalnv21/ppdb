@@ -16,12 +16,17 @@ class C_download extends CI_Controller
 		// $this->load->helper(array('url','download'));
 		$this->load->helper('url');
 		$this->load->helper('download');
+		$this->load->model('M_register');
 	}
 	public function index()
 	{
 		$data['title'] = 'Dashboard';
 		$data['subtitle'] = 'SMK RISTEK INDRAMAYU';
 		$data['content'] = 'pendaftar/home';
+
+		$id_register = $this->session->userdata('id_register');
+    $data['notif'] = $this->db->get('tb_notif')->result();
+    $data['count'] = $this->M_register->getCountNotif($id_register);
 
 		$data['user'] = $this->db->get_where('tb_register', ['nama_register' => $this->session->userdata('nama_register')])->row_array();
 		

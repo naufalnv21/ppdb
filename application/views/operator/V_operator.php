@@ -23,10 +23,10 @@
               <th>Ijazah</th>
               <th>Jabatan</th>
               <th>telepon</th>
-              <th>level</th>
+              <!-- <th>level</th> -->
               <th>alamat</th>
               <th>email</th>
-              <th>aksi</th>
+              <!-- <th>aksi</th> -->
             </tr>
           </thead>
           <tbody>
@@ -46,16 +46,16 @@
               <td><?php echo $operator->ijazah_users ?></td>
               <td><?php echo $operator->mapel_users ?></td>
               <td><?php echo $operator->telp_users?> </td>
-              <td><?php echo $operator->level_users?> </td>
+             <!--  <td><?php echo $operator->level_users?> </td> -->
               <td><?php echo $operator->alamat_users?> </td>
               <td><?php echo $operator->email_users?> </td>
               <!-- <td><?php echo $operator->created_at?> </td>
               <td><?php echo $operator->updated_at?> </td> -->
 
-              <td>
+              <!-- <td>
                   <a href="<?php echo base_url() .'operator/O_operator/hapus/'. $operator->id_users; ?>" class="btn btn-danger btn-sm" onClick="return confirm('Apakah anda yakin ingin menghapus?');"><i class="fa fa-trash"></i></a>&nbsp;&nbsp;
                   <?php echo anchor('operator/O_operator/edit/'.$operator->id_users,'<div class="btn btn-primary btn-sm" ><i class="fa fa-edit"></i></div>')?>
-              </td>
+              </td> -->
 
               
             </tr>

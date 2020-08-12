@@ -11,6 +11,7 @@ class C_multimedia extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('M_multimedia');
+		$this->load->model('M_register');
 		$this->load->helper('url');
 	}
 
@@ -19,6 +20,10 @@ class C_multimedia extends CI_Controller
 		$data['title'] = 'Dashboard';
 		$data['subtitle'] = 'SMK RISTEK INDRAMAYU';
 		$data['content'] = 'pendaftar/home';
+
+		$id_register = $this->session->userdata('id_register');
+    $data['notif'] = $this->db->get('tb_notif')->result();
+    $data['count'] = $this->M_register->getCountNotif($id_register);
 
 		$data['user'] = $this->db->get_where('tb_register', ['nama_register' => $this->session->userdata('nama_register')])->row_array();
 		$data['data_multimedia'] = $this->M_multimedia->tampil();

@@ -99,7 +99,7 @@
                   <label class="form-label">Jurusan<span class="form-required">*</span></label>
                     <div class="custom-controls-stacked">
                       <label class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" name="id_jurusan" value="Multimedia">
+                        <input type="radio" class="custom-control-input" name="jurusan_pendaftar" value="Multimedia">
                         <span class="custom-control-label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Multimedia</span>
                       </label>
                     </div>

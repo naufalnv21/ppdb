@@ -4,8 +4,8 @@
       <div class="col-sm-6">
         <h1 class="m-0 text-dark">Berita</h1>
         
-        <a href="<?php echo base_url('admin/Berita/export'); ?>" class="btn btn-success">Export Excel</a>
-        <table border="1" cellspacing="0"></table>
+        <!-- <a href="<?php echo base_url('admin/Berita/export'); ?>" class="btn btn-success">Export Excel</a>
+        <table border="1" cellspacing="0"></table> -->
       </div>
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right"></ol>

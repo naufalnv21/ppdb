@@ -18,4 +18,9 @@ class M_register extends CI_Model
 	{
 		$this->db->insert('tb_register', $data);
 	}
+
+	public function getCountNotif($id_register)
+	{
+		return $this->db->get_where('tb_notif', ['flag' => 0, 'id_register' => $id_register])->num_rows();
+	}
 }

@@ -58,7 +58,7 @@
               
               <tr>
                 <td><?php echo $no++?> </td>
-                <td><?php echo $pendaftar->id_jurusan ?></td>
+                <td><?php echo $pendaftar->jurusan_pendaftar ?></td>
                 <td><?php echo $pendaftar->nik_pendaftar ?></td>
                 <td><?php echo $pendaftar->skhun_pendaftar ?></td>
                 <td><?php echo $pendaftar->nama_pendaftar ?></td>
@@ -99,13 +99,19 @@
                  <td>
                   <?php if ($pendaftar->status_pendaftar == 0) { ?>
                    Belum Dikonfirmasi
-                  <?php } else { ?>
+                  <?php } elseif ($pendaftar->status_pendaftar == 1) { ?>
                     Diterima
+                 <?php  } else { ?>
+                    Ditolak
                   <?php } ?>
+                </td>
                   
                 <td>
                   <?php echo anchor('operator/O_pendaftar/status/'.$pendaftar->id_pendaftar,'<div class="btn btn-primary btn-sm" ><i class="fa fa-edit"></i>Terima</div>')?>
+                  <?php echo anchor('operator/O_pendaftar/StatusTolak/'.$pendaftar->id_pendaftar,'<div class="btn btn-primary btn-sm" ><i class="fa fa-edit"></i>Tolak</div>')?>
                 </td>
+
+                
           </tr>
         <?php } ?>
       </tbody>

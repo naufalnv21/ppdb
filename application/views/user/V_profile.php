@@ -4,8 +4,8 @@
       <div class="col-sm-6">
         <h1 class="m-0 text-dark">Profile SMK RISTEK INDRAMAYU</h1>
         
-        <a href="<?php echo base_url('admin/Profile/export'); ?>" class="btn btn-success">Export Excel</a>
-        <table border="1" cellspacing="0"></table>
+        <!-- <a href="<?php echo base_url('admin/Profile/export'); ?>" class="btn btn-success">Export Excel</a>
+        <table border="1" cellspacing="0"></table> -->
       </div>
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right"></ol>

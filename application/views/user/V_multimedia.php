@@ -5,8 +5,8 @@
         <h1 class="m-0 text-dark">Multimedia</h1>
         
       </button>
-      <a href="<?php echo base_url('admin/Multimedia/export'); ?>" class="btn btn-success">Export Excel</a>
-      <table border="1" cellspacing="0"></table>
+      <!-- <a href="<?php echo base_url('admin/Multimedia/export'); ?>" class="btn btn-success">Export Excel</a>
+      <table border="1" cellspacing="0"></table> -->
     </div>
     <div class="col-sm-6">
       <ol class="breadcrumb float-sm-right"></ol>

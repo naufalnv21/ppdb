@@ -11,7 +11,7 @@
         <ol class="breadcrumb float-sm-right"></ol>
       </div>
       <div class="container-fluid">
-        <table id="example2" class="table table-bordered table-striped">
+        <table id="example2" class="table table-responsive table-bordered table-striped">
           <thead>
             <tr>
               <th>no</th>
@@ -47,7 +47,8 @@
               <th>File Ijazah</th>
               <th>File SKHUN</th>
               <th>File SKTM</th>
-              <th>Aksi</th>
+              <th>Status Siswa</th>
+              
             </tr>
           </thead>
           <tbody>
@@ -59,7 +60,7 @@
               
               <tr>
                 <td><?php echo $no++?> </td>
-                <td><?php echo $pendaftar->id_jurusan ?></td>
+                <td><?php echo $pendaftar->jurusan_pendaftar ?></td>
                 <td><?php echo $pendaftar->nik_pendaftar ?></td>
                 <td><?php echo $pendaftar->skhun_pendaftar ?></td>
                 <td><?php echo $pendaftar->nama_pendaftar ?></td>
@@ -97,7 +98,13 @@
                 </td>
                 <td><img src="<?php echo base_url('upload/pendaftar/sktm/'.$pendaftar->file_sktm_pendaftar) ?>" height="100px">
                 </td>
-
+                <td>
+                  <?php if ($pendaftar->status_pendaftar == 0) { ?>
+                   Belum Dikonfirmasi
+                  <?php } else { ?>
+                    Diterima
+                  <?php } ?>
+                </td>
               </tr>
 
             <?php } ?>

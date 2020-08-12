@@ -64,6 +64,7 @@
 
 <div class="card">
 	<div class="card-header">
+    <img src="<?php echo base_url(); ?>assets/template/front/theme/demo/brand/logo_ristek.jpg" class="header-brand-img" alt="ristek">
       <h3 class="card-title">SELAMAT ANDA BERHASIL MELAKUKAN PENDAFTARAN BARU!</h3>
       <div class="card-options">
             <a href="<?php echo site_url('pendaftar/C_formulir'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-reply"></i> Kembali</a>

@@ -8,6 +8,7 @@ class C_formulir extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('M_formulir');
+    $this->load->model('M_register');
 		$this->load->helper('url');
 	}
 	
@@ -17,6 +18,9 @@ class C_formulir extends CI_Controller
 		$data['subtitle'] = 'Pendaftaran SMK RISTEK INDRAMAYU';
 		$data['content'] = 'pendaftar/form_daftar';
 
+    $id_register = $this->session->userdata('id_register');
+    $data['notif'] = $this->db->get('tb_notif')->result();
+    $data['count'] = $this->M_register->getCountNotif($id_register);
 
 		$data['user'] = $this->db->get_where('tb_register', ['nama_register' => $this->session->userdata('nama_register')])->row_array();
 
@@ -31,7 +35,7 @@ class C_formulir extends CI_Controller
         if(!empty($this->session->userdata('username_register'))){
 
 
-        $id_jurusan = $this->input->post('id_jurusan');
+        $jurusan_pendaftar = $this->input->post('jurusan_pendaftar');
         $nik_pendaftar = $this->input->post('nik_pendaftar');
         $skhun_pendaftar = $this->input->post('skhun_pendaftar');
         $nama_pendaftar = $this->input->post('nama_pendaftar');
@@ -149,7 +153,8 @@ class C_formulir extends CI_Controller
         $result6 = $this->sktmupload->data();
 
         $data = array(
-          'id_jurusan' => $id_jurusan,
+          'id_register' => $this->session->userdata('id_register'),
+          'jurusan_pendaftar' => $jurusan_pendaftar,
           'nik_pendaftar' => $nik_pendaftar,
           'skhun_pendaftar' => $skhun_pendaftar,
           'nama_pendaftar' => $nama_pendaftar,

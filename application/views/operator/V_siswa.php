@@ -8,8 +8,8 @@
             <i class="fa fa-plus">Tambah Data Siswa</i>
           </a>
         </button>
-        <a href="<?php echo base_url('operator/O_siswa/export'); ?>" class="btn btn-success">Export Excel</a>
-        <table border="1" cellspacing="0"></table>
+        <!-- <a href="<?php echo base_url('operator/O_siswa/export'); ?>" class="btn btn-success">Export Excel</a>
+        <table border="1" cellspacing="0"></table> -->
       </div>
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right"></ol>
@@ -24,6 +24,7 @@
               <th>Kelas</th>
               <th>Jurusan</th>
               <th>Alamat</th>
+              <th>Telephon</th>
               <th>Foto</th>
               <th>Aksi</th>
             </tr>
@@ -41,6 +42,7 @@
                 <td><?php echo $siswa->kelas_siswa ?></td>
                 <td><?php echo $siswa->jurusan_siswa ?></td>
                 <td><?php echo $siswa->alamat_siswa ?></td>
+                <td><?php echo $siswa->telp_siswa ?> </td>
                 <td>
                   <img src="<?php echo base_url('upload/siswa/'.$siswa->foto_siswa) ?>" class="img img-responsive img-thumbnail" width="60">
                 </td>

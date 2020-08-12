@@ -4,14 +4,14 @@
       <div class="col-sm-6">
         <h1 class="m-0 text-dark">Data Pengguna</h1>
         
-        <a href="<?php echo base_url('admin/Admin/export'); ?>" class="btn btn-success">Export Excel</a>
-        <table border="1" cellspacing="0"></table>
+        <!-- <a href="<?php echo base_url('admin/Admin/export'); ?>" class="btn btn-success">Export Excel</a>
+        <table border="1" cellspacing="0"></table> -->
       </div>
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right"></ol>
       </div>
       <div class="container-fluid">
-        <table id="example2" class="table table-bordered table-striped">
+        <table id="example2" class="table table-responsive table-bordered table-striped">
           <thead>
             <tr>
               <th>no</th>

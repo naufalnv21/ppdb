@@ -1,10 +1,12 @@
 <div id="carousel-indicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carousel-indicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-indicators" data-slide-to="1" class=""></li>
-    <li data-target="#carousel-indicators" data-slide-to="2" class=""></li>
-    <li data-target="#carousel-indicators" data-slide-to="3" class=""></li>
-    <li data-target="#carousel-indicators" data-slide-to="4" class=""></li>
+    <li data-target="#carousel-indicators" data-slide-to="1" class="active"></li>
+    <li data-target="#carousel-indicators" data-slide-to="2" class="active"></li>
+    <li data-target="#carousel-indicators" data-slide-to="3" class="active"></li>
+    <li data-target="#carousel-indicators" data-slide-to="4" class="active"></li>
+    <li data-target="#carousel-indicators" data-slide-to="5" class="active"></li>
+    <li data-target="#carousel-indicators" data-slide-to="6" class="active"></li>
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -18,6 +20,12 @@
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" alt="" height="450" src="<?php echo base_url() ?>assets/template/front/theme/demo/photos/praktikum.jpg" data-holder-rendered="true">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" alt="" height="450" src="<?php echo base_url() ?>assets/template/front/theme/demo/photos/pramuka.jpg" data-holder-rendered="true">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" alt="" height="450" src="<?php echo base_url() ?>assets/template/front/theme/demo/photos/sindang.jpg" data-holder-rendered="true">
     </div>
     <div class="carousel-item">
       <center>
@@ -54,17 +62,20 @@
       </div>
       <div class="card-body">
         <p>
-          <img style="float: left;" src="<?php echo base_url() ?>assets/template/front/theme/assets/images/download.jpeg">
+          <img style="float: left;" src="<?php echo base_url() ?>assets/template/front/theme/assets/images/bpk.Rachamtilah.jpg">
           <i>Assalamu’alaikum Wr. Wb.</i> 
-
-          <p>Konsisten memberikan pelayanan publik terbaik di seluruh lini kehidupan masyarakat telah, sedang dan terus kita lakukan di Jawa Tengah. Termasuk bagaimana kita dapat terus menjaga kualitas layanan Penerimaan Peserta Didik Baru (PPDB), khususnya untuk SMA dan SMK Negeri yang dilakukan secara online.
+          <p>
+            SMK RISTEK Indramayu merupakan sekolah menengah kejuruan swasta yang ada di Indramayu tepatnya di Jl. Balai Desa, Pamayahan, Kec. Lohbener, Kabupaten Indramayu. Jika anda masyarakat Indramayu atau luar Indramayu boleh mendaftarkan anaknya untuk melanjutkan jenjang pendidikan di kejuaran kami. Sayan ucapkan Terima Kasih atas peran aktif masyarakat membantu memajukan mutu pendidikan di jawa barat khususnya di Indramayu.
+            Saya juga merasakan bahwa dukungan masyarakat telah mampu menjadi sumber inspirasi dan peningkatan motivasi bagi segenap insan pendidikan untuk meningkatkan kualitas layanan menuju mutu pendidikan yang makin baik. Dengan pendidikan yang maju dan kualitas SDM yang unggul, maka hari depan kita akan makin cerah menuju terwujudnya kehidupan masyarakat yang makin maju dan sejahtera.
+          </p>
+          <!-- <p>Konsisten memberikan pelayanan publik terbaik di seluruh lini kehidupan masyarakat telah, sedang dan terus kita lakukan di Jawa Tengah. Termasuk bagaimana kita dapat terus menjaga kualitas layanan Penerimaan Peserta Didik Baru (PPDB), khususnya untuk SMA dan SMK Negeri yang dilakukan secara online.
 
           Alhamdulillah, tahun lalu secara umum layanan PPDB online ini sudah berjalan dengan baik. Meski demikian, penyempurnaan juga terus dilakukan agar tahun ini makin baik. Kita telah membuktikan dan meyakinkan bahwa melalui layanan ini akan memudahkan calon peserta didik baru melakukan pendaftaran, serta memberikan kepastian dan jaminan bahwa proses PPDB berjalan secara objektif, transparan, akuntabel dan tidak diskriminatif.
 
           Saya pastikan, Jateng akan terus memberikan layanan penyelenggaraan PPDB online sebaik-baiknya. Namun demikian, masyarakat pun hendaknya juga dapat ikut mendukung keberhasilan penyelenggaraan PPDB tersebut sebagai bentuk partisipasi untuk kemajuan pendidikan di Jawa tengah.
           "Terima kasih" saya sampaikan atas peran aktif masyarakat membantu memajukan mutu pendidikan di Jateng selama ini.
 
-          Saya juga merasakan bahwa dukungan masyarakat telah mampu menjadi sumber inspirasi dan peningkatan motivasi bagi segenap insan pendidikan untuk meningkatkan kualitas layanan menuju mutu pendidikan yang makin baik. Dan saya yakin, dengan pendidikan yang maju, dan kualitas SDM yang unggul, maka hari depan kita akan makin cerah menuju terwujudnya kehidupan masyarakat Jawa Tengah yang makin maju dan sejahtera.</p>
+          Saya juga merasakan bahwa dukungan masyarakat telah mampu menjadi sumber inspirasi dan peningkatan motivasi bagi segenap insan pendidikan untuk meningkatkan kualitas layanan menuju mutu pendidikan yang makin baik. Dan saya yakin, dengan pendidikan yang maju, dan kualitas SDM yang unggul, maka hari depan kita akan makin cerah menuju terwujudnya kehidupan masyarakat Jawa Tengah yang makin maju dan sejahtera.</p> -->
           <br><br>
           <i>Wassalamu’alaikum Wr.Wb</i>
         </p>

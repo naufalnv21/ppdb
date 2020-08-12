@@ -72,7 +72,7 @@
               foreach($data_berita as $key => $value){
                 echo "<div class='col-md-4'>
               <div class='card mb-4 box-shadow'>
-                <img class='card-img-top' src='".base_url('upload/berita/').$value->foto_berita."' alt='Card image cap' width='200px' height='200px'>
+                <img class='card-img-top' src='".base_url('upload/berita/').$value->foto_berita."' alt='Card image cap' width='600px' height='400px'>
                 <div class='card-body'>
                   <p class='card-text'>$value->tgl_berita</p>
                   <p class='card-text'>$value->isi_berita</p>
@@ -91,5 +91,6 @@
  
             
         </div>
+      </div>
 
   </body>

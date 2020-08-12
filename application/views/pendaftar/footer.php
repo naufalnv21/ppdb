@@ -9,11 +9,7 @@
                     
                   </ul>
                 </div>
-                <div class="col-6 col-md-3">
-                  <ul class="list-unstyled mb-0">
-                    <li><a class="fa fa-whatsapp">  +62</a></li>
-                  </ul>
-                </div>
+                
               </div>
             </div>
           </div>

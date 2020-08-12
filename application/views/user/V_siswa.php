@@ -4,13 +4,13 @@
     <div class="row mb-2">
       <div class="col-sm-6">
         <h1 class="m-0 text-dark">Siswa</h1>
-        <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        <!-- <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
           <a>
             <i class="fa fa-plus">Tambah Data Siswa</i>
           </a>
         </button>
         <a href="<?php echo base_url('admin/Siswa/export'); ?>" class="btn btn-success">Export Excel</a>
-        <table border="1" cellspacing="0"></table>
+        <table border="1" cellspacing="0"></table> -->
       </div>
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right"></ol>
@@ -25,6 +25,7 @@
               <th>Kelas</th>
               <th>Jurusan</th>
               <th>Alamat</th>
+              <th>Telephon</th>
               <th>Foto</th>
              
             </tr>
@@ -42,6 +43,7 @@
                 <td><?php echo $siswa->kelas_siswa ?></td>
                 <td><?php echo $siswa->jurusan_siswa ?></td>
                 <td><?php echo $siswa->alamat_siswa ?></td>
+                <td><?php echo $siswa->telp_siswa ?></td>
                 <td>
                   <img src="<?php echo base_url('upload/siswa/'.$siswa->foto_siswa) ?>" class="img img-responsive img-thumbnail" width="60">
                 </td>

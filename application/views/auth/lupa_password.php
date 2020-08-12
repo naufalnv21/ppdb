@@ -47,21 +47,31 @@ echo password_hash("operator", PASSWORD_DEFAULT);
 
       <form action="<?php echo base_url('auth/login') ?>" method="post">
         <div class="input-group mb-3">
-          <input type="text" name="username" placeholder="Username">
+          <input type="text" name="username" placeholder="Masukan Email Anda">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
             </div>
           </div>
         </div>
-        <div class="input-group mb-3">
+        <div>
+          <p class="mb-1">
+            <a href="#">RESET PASSWORD</a>
+          </p>
+        </div>
+        <!-- <div class="input-group mb-3">
           <input type="password" name="password_users" placeholder="Password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
             </div>
           </div>
-        </div>
+        </div> -->
+        <div>
+            <p class="mb-1">
+              <a href="<?php echo base_url('Auth/login'); ?>">Kembali Ke Menu Login</a>
+            </p>
+          </div>
       </form>
       
       
