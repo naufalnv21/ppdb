@@ -23,4 +23,9 @@ class M_register extends CI_Model
 	{
 		return $this->db->get_where('tb_notif', ['flag' => 0, 'id_register' => $id_register])->num_rows();
 	}
+
+	public function getForPDF($id_register,$table){
+		return $this->db->get_where($table,$id_register);
+		
+	}
 }

@@ -77,9 +77,8 @@ class C_reset_password extends CI_Controller
 
 				if($this->email->send())
 				{
-					echo "silahkan cek email <b>".$this->input->post('email_register').'</b> untuk melakukan reset password';
-				}else
-				{
+					echo "<script>alert('Silahkan cek email ".$this->input->post('email_register')." untuk melakukan reset passwrod'); window.history.go(-1);</script>";
+				}else{
 					echo "Berhasil melakukan registrasi, gagal mengirim verifikasi email";
 				}
 				echo "<br><br><a href='".site_url("pendaftar/C_login/index")."'>Kembali ke Menu Login</a>";

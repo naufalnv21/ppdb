@@ -126,6 +126,15 @@
               </p>
             </a>
           </li>
+           <li class="nav-item">
+            <a href="<?php echo base_url('admin/Admin/Gantipassword');?>" class="nav-link ">
+              <i class="nav-icon fa fa-user-circle"></i>
+              <p>
+                Ganti Profile
+                <!-- <i class="right fas fa-angle-left"></i> -->
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>    
       <!-- /.sidebar-menu -->

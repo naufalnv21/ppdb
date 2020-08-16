@@ -31,7 +31,16 @@
               </p>
             </a>
           </li>
-
+           <li class="nav-header">PROFILE</li>
+          <li class="nav-item">
+            <a href="<?php echo base_url('operator/O_operator/Gantipassword');?>" class="nav-link ">
+              <i class="nav-icon fa fa-user-circle"></i>
+              <p>
+                Ganti Password
+                <!-- <i class="right fas fa-angle-left"></i> -->
+              </p>
+            </a>
+          </li>
           <li class="nav-header">DATA</li>
           <li class="nav-item">
             <a href="<?php echo base_url('operator/O_operator');?>" class="nav-link ">

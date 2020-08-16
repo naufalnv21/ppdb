@@ -130,7 +130,7 @@ class O_pendaftar extends CI_Controller
 		foreach ($data_pendaftar as $pendaftar) {
 			$spreadsheet->setActiveSheetIndex(0)
 						 ->setCellValue('A' . $kolom, $no)
-						 ->setCellValue('B' . $kolom, $pendaftar->id_jurusan)
+						 ->setCellValue('B' . $kolom, $pendaftar->jurusan_pendaftar)
 						 ->setCellValue('C' . $kolom, $pendaftar->nik_pendaftar)
 						 ->setCellValue('D' . $kolom, $pendaftar->skhun_pendaftar)
 						 ->setCellValue('E' . $kolom, $pendaftar->nama_pendaftar)

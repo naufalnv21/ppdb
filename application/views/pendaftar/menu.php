@@ -40,11 +40,12 @@
           <?php
 
           $username=$this->session->userdata('username_register');
+          $id_register=$this->session->userdata('id_register');
           // var_dump($username);
           if(!empty($username)){
             ?>
             <li class="nav-item">
-            <a href="<?php echo site_url('pendaftar/C_download/downloadBukti'); ?>" class="nav-link"><i class="fa fa-download"></i> Cetak Bukti. Pendf</a>
+            <a href="<?php echo site_url('pendaftar/C_download/downloadBukti/'.$id_register); ?>" class="nav-link"><i class="fa fa-download"></i> Cetak Bukti. Pendf</a>
           </li>
             <?php
           }
