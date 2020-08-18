@@ -24,4 +24,11 @@ class M_formulir extends CI_Model
 		$result = $this->db->get();
 		return $result->result();
 	}
+
+	public function getData($id_register,$table)
+	{
+		return $this->db->get_where($table,$id_register);
+		// $data_formulir = $this->db->get('tb_pendaftar');
+		// return $data_formulir->result();
+	}
 }

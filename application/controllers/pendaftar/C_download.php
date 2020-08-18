@@ -16,7 +16,9 @@ class C_download extends CI_Controller
 		// $this->load->helper(array('url','download'));
 		$this->load->helper('url');
 		$this->load->helper('download');
+		$this->load->helper('form');
 		$this->load->model('M_register');
+		$this->load->model('M_formulir');
 	}
 	public function index()
 	{
@@ -60,36 +62,41 @@ class C_download extends CI_Controller
 
 	public function downloadBukti($id_register) {
 		$id_register = array('id_register' => $id_register);
-        $orders = $this->M_register->getForPDF($id_register,'tb_pendaftar');
-        $tanggal = date('d-m-Y');
+		$data['data_formulir'] = $this->M_register->getForPDF($id_register,'tb_pendaftar')->result();
+		$this->load->library('pdf');
+		$this->pdf->setPaper('A4','potrait');
+		$this->pdf->filename = "Bukti Pendaftaran.pdf";
+		$this->pdf->load_view('pendaftar/pdf', $data);
+    //     $orders = $this->M_register->getForPDF($id_register,'tb_pendaftar');
+    //     $tanggal = date('d-m-Y');
  
-        $pdf = new \TCPDF();
-        $pdf->AddPage();
-        $pdf->SetFont('', 'B', 20);
-        $pdf->Cell(115, 0, "Laporan Order - ".$tanggal, 0, 1, 'L');
-        $pdf->SetAutoPageBreak(true, 0);
+    //     $pdf = new \TCPDF();
+    //     $pdf->AddPage();
+    //     $pdf->SetFont('', 'B', 20);
+    //     $pdf->Cell(115, 0, "Laporan Order - ".$tanggal, 0, 1, 'L');
+    //     $pdf->SetAutoPageBreak(true, 0);
  
-        // Add Header
-        $pdf->Ln(10);
-        $pdf->SetFont('', 'B', 12);
-        $pdf->Cell(10, 8, "No", 1, 0, 'C');
-        $pdf->Cell(55, 8, "Nama", 1, 0, 'C');
-        $pdf->Cell(35, 8, "NIK", 1, 0, 'C');
-        $pdf->Cell(35, 8, "SKHUN", 1, 0, 'C');
-        $pdf->Cell(50, 8, "Jurusan", 1, 1, 'C');
-        $pdf->SetFont('', '', 12);
-        foreach($orders->result_array() as $k => $order) {
-            $this->addRow($pdf, $k+1, $order);
-        }
-        $tanggal = date('d-m-Y');
-        $pdf->Output('Laporan Order - '.$tanggal.'.pdf'); 
-    }
+    //     // Add Header
+    //     $pdf->Ln(10);
+    //     $pdf->SetFont('', 'B', 12);
+    //     $pdf->Cell(10, 8, "No", 1, 0, 'C');
+    //     $pdf->Cell(55, 8, "Nama", 1, 0, 'C');
+    //     $pdf->Cell(35, 8, "NIK", 1, 0, 'C');
+    //     $pdf->Cell(35, 8, "SKHUN", 1, 0, 'C');
+    //     $pdf->Cell(50, 8, "Jurusan", 1, 1, 'C');
+    //     $pdf->SetFont('', '', 12);
+    //     foreach($orders->result_array() as $k => $order) {
+    //         $this->addRow($pdf, $k+1, $order);
+    //     }
+    //     $tanggal = date('d-m-Y');
+    //     $pdf->Output('Laporan Order - '.$tanggal.'.pdf'); 
+     }
 
-    private function addRow($pdf, $no, $order) {
-        $pdf->Cell(10, 8, $no, 1, 0, 'C');
-        $pdf->Cell(55, 8, $order['nama_pendaftar'], 1, 0, '');
-        $pdf->Cell(35, 8, $order['nik_pendaftar'], 1, 0, 'C');
-        $pdf->Cell(35, 8, $order['skhun_pendaftar'], 1, 0, 'C');
-        $pdf->Cell(50, 8, $order['jurusan_pendaftar'], 1, 0, '');
-    }
+    // private function addRow($pdf, $no, $order) {
+    //     $pdf->Cell(10, 8, $no, 1, 0, 'C');
+    //     $pdf->Cell(55, 8, $order['nama_pendaftar'], 1, 0, '');
+    //     $pdf->Cell(35, 8, $order['nik_pendaftar'], 1, 0, 'C');
+    //     $pdf->Cell(35, 8, $order['skhun_pendaftar'], 1, 0, 'C');
+    //     $pdf->Cell(50, 8, $order['jurusan_pendaftar'], 1, 0, '');
+    // }
 }
