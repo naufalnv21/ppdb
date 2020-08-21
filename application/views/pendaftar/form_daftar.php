@@ -103,6 +103,13 @@
                         <span class="custom-control-label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Multimedia</span>
                       </label>
                     </div>
+                    <div class="custom-controls-stacked">
+                      <label class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" name="jurusan_pendaftar" value="Perbank">
+                        <span class="custom-control-label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Perbank</span>
+                      </label>
+                    </div>
+
                 </div>
             </div>
             <!-- <div class="col-md-6">

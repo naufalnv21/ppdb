@@ -79,7 +79,7 @@
               <input type="text" class="form-control" placeholder="Email Anda" name="email_register">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Password Baru" name="password_register">
+              <input type="password" class="form-control" placeholder="Password Baru" name="password_register">
             </div>
           <div class="panel-footer" style="text-align: right;"><input type="submit" name="" value="reset password" class="btn btn-primary btn-lg"></div>
         </div>

@@ -15,6 +15,7 @@ class O_siswa extends CI_Controller
 		parent::__construct();
 		$this->load->model('M_siswa');
 		$this->load->model('M_excel');
+		$this->load->model('M_broadcast');
 		$this->load->helper('url');
 	}
 	
@@ -185,5 +186,65 @@ class O_siswa extends CI_Controller
 		header('Cache-Control: max-age=0');
 
 		$writer->save('php://output');
+	}
+
+	public function broadcast()
+	{
+		$data['user'] = $this->db->get_where('tb_users', ['username' => $this->session->userdata('username')])->row_array();
+		$data['data_broadcast'] = $this->db->get('tb_broadcast')->result();
+		$this->load->view('operator/header', $data);
+		$this->load->view('operator/navbar', $data);
+		$this->load->view('operator/sidebar', $data);
+		$this->load->view('operator/V_broadcast', $data);
+		$this->load->view('operator/footer', $data);
+	}
+
+	public function tambahBroadcast()
+	{
+		$tele_id = $this->input->post('tele_id');
+		$judul_broadcast = $this->input->post('judul_broadcast');
+		$isi_broadcast = $this->input->post('isi_broadcast');
+		$data = array(
+			'tele_id' => $tele_id,
+			'judul_broadcast' => $judul_broadcast,
+			'isi_broadcast' => $isi_broadcast
+		);
+		$this->M_broadcast->input($data);
+		redirect('operator/O_siswa');
+	}
+
+	public function hapusBroadcast($id)
+	{
+		$this->M_broadcast->hapus($id);
+		redirect('operator/O_siswa');
+
+	}
+
+	public function sendMessage($tele_id)
+	{
+		// $tele_id = $this->uri->segment(3);
+		// $isi_broadcast = $this->uri->segment(4);
+
+		$data=$this->db->query("SELECT * FROM tb_broadcast WHERE tele_id='$tele_id'")->result();
+		$isi=$data[0]->isi_broadcast;
+		// $tele_id=tele_id;
+		
+		// $telegram_id= "-409298905";
+		$message_text= $isi;
+		// var_dump($messa/ge_text);exit();
+		$secret_token= "1302362078:AAE-6lCIk019_3zlAFRA4wqCGMs8G9zgeqA";
+		$url= "https://api.telegram.org/bot".$secret_token."/sendMessage?parse_mode=markdown&chat_id=".$tele_id;
+    	$url= $url."&text=" . urlencode($message_text);
+    	$ch=curl_init();
+   	$optArray=array(
+        CURLOPT_URL => $url,
+        CURLOPT_RETURNTRANSFER => true
+    );
+    curl_setopt_array($ch,$optArray);
+    $result=curl_exec($ch);
+    curl_close($ch);
+
+
+	echo "<script>alert('Pesan berhasil terkirim!'); window.history.go(-1);</script>";
 	}
 }

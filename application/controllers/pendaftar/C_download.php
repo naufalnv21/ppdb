@@ -62,10 +62,11 @@ class C_download extends CI_Controller
 
 	public function downloadBukti($id_register) {
 		$id_register = array('id_register' => $id_register);
+		$tanggal = date('d-m-Y');
 		$data['data_formulir'] = $this->M_register->getForPDF($id_register,'tb_pendaftar')->result();
 		$this->load->library('pdf');
 		$this->pdf->setPaper('A4','potrait');
-		$this->pdf->filename = "Bukti Pendaftaran.pdf";
+		$this->pdf->filename = "Bukti Pendaftaran tanggal ".$tanggal.".pdf";
 		$this->pdf->load_view('pendaftar/pdf', $data);
     //     $orders = $this->M_register->getForPDF($id_register,'tb_pendaftar');
     //     $tanggal = date('d-m-Y');
@@ -91,12 +92,4 @@ class C_download extends CI_Controller
     //     $tanggal = date('d-m-Y');
     //     $pdf->Output('Laporan Order - '.$tanggal.'.pdf'); 
      }
-
-    // private function addRow($pdf, $no, $order) {
-    //     $pdf->Cell(10, 8, $no, 1, 0, 'C');
-    //     $pdf->Cell(55, 8, $order['nama_pendaftar'], 1, 0, '');
-    //     $pdf->Cell(35, 8, $order['nik_pendaftar'], 1, 0, 'C');
-    //     $pdf->Cell(35, 8, $order['skhun_pendaftar'], 1, 0, 'C');
-    //     $pdf->Cell(50, 8, $order['jurusan_pendaftar'], 1, 0, '');
-    // }
 }

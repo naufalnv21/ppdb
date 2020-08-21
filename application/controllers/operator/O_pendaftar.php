@@ -51,7 +51,7 @@ class O_pendaftar extends CI_Controller
         	'id_register' =>  $id_register,
         	'id_users' =>  2,
         	'flag' =>  0,
-        	'message' =>  "Selamat Anda Sudah Menjadi Siswa Di SMK RISTEK Indramayu, Cetak Bukti Pendaftaran",
+        	'message' =>  "Selamat Anda Sudah Menjadi Siswa Di SMK RISTEK Indramayu, Cetak Bukti Pendaftaran Anda dan Serahkan ke Petugas PPDB Sebagai Bukti Bahwa Anda Telah Melakukan Pendaftaran Online",
         	'date_created' =>  $date_created,
 
          );

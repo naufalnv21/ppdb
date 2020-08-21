@@ -27,7 +27,7 @@
               <th>Telephon</th>
               <th>Foto</th>
               <th>Aksi</th>
-              <th>Pesan</th>
+              <!-- <th>Pesan</th> -->
             </tr>
           </thead>
           <tbody>
@@ -50,12 +50,26 @@
                 <td>
                   <a href="<?php echo base_url() .'operator/O_siswa/hapus/'. $siswa->id_siswa; ?>" class="btn btn-danger btn-sm" onClick="return confirm('Apakah anda yakin ingin menghapus?');"><i class="fa fa-trash"></i></a>&nbsp;&nbsp;
                   <?php echo anchor('operator/O_siswa/edit/'.$siswa->id_siswa,'<div class="btn btn-primary btn-sm" ><i class="fa fa-edit"></i></div>')?></td>
-                  <td>
+                  <!-- <td>
+                    <a href="<?php echo base_url('operator/O_siswa/sendMessage') ?>">Send Telegram</a>
+                  </td> -->
+                 <!--  <td>
                   <a href="https://api.whatsapp.com/send?phone=<?php echo $siswa->telp_siswa ?>&text=Coba
-                " target="_blank">WhatsApp</a></td>
+                " target="_blank">WhatsApp</a></td> -->
                 <!-- <td>
                   <a href="https://wa.me/whatsappphonenumber/?text=urlencodedtext">WhatApp</a>
                 </td> -->
+                <!-- <div class="box-body">
+                  <form method="post" action="sendMessage.php">
+                    <div class="form-group row">
+                      <label class="col-md-4 col-form-label">Message</label>
+                      <div class="col-md-8">
+                        <input type="text" class="form-control" name="message_text" placeholder="Masukan Text">
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary pull-right">Kirim <i class="fa fa-send"></i></button>
+                  </form>
+                </div> -->
           </tr>
         <?php } ?>
       </tbody>
