@@ -92,4 +92,12 @@ class M_dashboard extends CI_Model
 		$result = $this->db->get();
 		return $result->result();
 	}
+
+	public function tampilBroadcast()
+	{
+		$this->db->select('*');
+		$this->db->from('tb_broadcast');
+		$result = $this->db->get();
+		return $result->result();
+	}
 }

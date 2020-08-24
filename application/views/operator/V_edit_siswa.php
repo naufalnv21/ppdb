@@ -48,10 +48,6 @@
             <label>Alamat</label>
             <input type="text" name="alamat_siswa" placeholder="Alamat" class="form-control" required="required">
           </div>
-          <div class="form-group">
-            <label>Telephon</label>
-            <input type="text" name="telp_siswa" placeholder="08xxxxxxx" class=" form-control" required="required">
-          </div>
           <div>
             <label>Foto</label>
             <input type="file" name="foto_siswa" placeholder="Pilih foto" class="form-control" value="<?= $siswa['foto_siswa']; ?>" >

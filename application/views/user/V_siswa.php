@@ -25,7 +25,7 @@
               <th>Kelas</th>
               <th>Jurusan</th>
               <th>Alamat</th>
-              <th>Telephon</th>
+              
               <th>Foto</th>
              
             </tr>
@@ -43,7 +43,7 @@
                 <td><?php echo $siswa->kelas_siswa ?></td>
                 <td><?php echo $siswa->jurusan_siswa ?></td>
                 <td><?php echo $siswa->alamat_siswa ?></td>
-                <td><?php echo $siswa->telp_siswa ?></td>
+                
                 <td>
                   <img src="<?php echo base_url('upload/siswa/'.$siswa->foto_siswa) ?>" class="img img-responsive img-thumbnail" width="60">
                 </td>

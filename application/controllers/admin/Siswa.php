@@ -68,4 +68,15 @@ class Siswa extends CI_Controller
 
 		$writer->save('php://output');
 	}
+
+	public function broadcast()
+	{
+		$data['user'] = $this->db->get_where('tb_users', ['username' => $this->session->userdata('username')])->row_array();
+		$data['data_broadcast'] = $this->db->get('tb_broadcast')->result();
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/navbar', $data);
+		$this->load->view('templates/sidebar', $data);
+		$this->load->view('user/V_broadcast', $data);
+		$this->load->view('templates/footer', $data);
+	}
 }

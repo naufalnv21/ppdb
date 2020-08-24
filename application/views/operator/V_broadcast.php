@@ -39,6 +39,7 @@
                 <td><?php echo $broadcast->isi_broadcast ?></td>
                  <td>
                   <a href="<?php echo base_url("operator/O_siswa/sendMessage/". $broadcast->tele_id) ; ?>" class="btn btn-primary btn-sm" ><i class="fa fa-send-o"></i></a>&nbsp;&nbsp;
+                  <?php echo anchor('operator/O_siswa/editBroadcast/'.$broadcast->id_broadcast,'<div class="btn btn-primary btn-sm" ><i class="fa fa-edit"></i></div>')?>
                   </td>
                   <!-- <td>
                     <a href="<?php echo base_url('operator/O_siswa/sendMessage') ?>">Send Telegram</a>

@@ -134,10 +134,21 @@
               <a href="<?php echo base_url('admin/Profile'); ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-
+          <div class="col-lg-3 col-6">
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3><?php echo count($dashboard['broadcast']); ?></h3>
+                <p>Jumlah Broadcast</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-send-o"></i>
+              </div>
+              <a href="<?php echo base_url('admin/Siswa/broadcast'); ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
            <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-info">
+            <div class="small-box bg-success">
               <div class="inner">
                 <h3><?php echo count($dashboard['pengguna']); ?></h3>
 

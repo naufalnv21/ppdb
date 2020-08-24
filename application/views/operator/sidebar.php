@@ -25,7 +25,7 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item">
             <a href="<?php echo base_url('operator/O_dashboard'); ?>" class="nav-link">
-              <i class="nav-icon fa fa-tachometer-alt"></i>
+              <i class="nav-icon fa fa-tachometer"></i>
               <p>
                 Dashboard
               </p>
@@ -97,6 +97,15 @@
               </p>
             </a>
           </li>
+          <li class="nav-item has-treeview">
+            <a href="<?php echo base_url('operator/O_jurusan'); ?>" class="nav-link">
+              <i class="fas fa-folder"></i>
+              <p>
+                Jumlah Jurusan
+              </p>
+            </a>
+          </li>
+
           <li class="nav-header">EVENT</li>
           <li class="nav-item has-treeview">
             <a href="<?php echo base_url('operator/O_berita');?>" class="nav-link">
@@ -116,7 +125,7 @@
           </li>
           <li class="nav-item has-treeview">
             <a href="<?php echo base_url('operator/O_siswa/broadcast'); ?>" class="nav-link">
-              <i class="far  fas fa-university nav-icon"></i>
+              <i class="fa fa-send-o"></i>
               <p>
                 Broadcast 
               </p>

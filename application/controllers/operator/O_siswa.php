@@ -39,7 +39,6 @@ class O_siswa extends CI_Controller
 		$kelas_siswa = $this->input->post('kelas_siswa');
 		$jurusan_siswa = $this->input->post('jurusan_siswa');
 		$alamat_siswa = $this->input->post('alamat_siswa');
-		$telp_siswa = $this->input->post('telp_siswa');
 		$id_siswa = $this->input->post('id_siswa');
 		// $foto_guru = $this->input->post('foto_guru');
 		$config['upload_path'] = './upload/siswa/';
@@ -59,7 +58,6 @@ class O_siswa extends CI_Controller
 			'kelas_siswa' => $kelas_siswa,
 			'jurusan_siswa' => $jurusan_siswa,
 			'alamat_siswa' => $alamat_siswa,
-			'telp_siswa' => $telp_siswa,
 			'id_siswa' => $id_siswa,
 			'foto_siswa' => $result1
 		);	
@@ -137,7 +135,7 @@ class O_siswa extends CI_Controller
 		);
 		$this->db->where('id_siswa', $id_siswa);
         $this->db->update('tb_siswa', $data);
-	redirect('operator/O_siswa');
+		redirect('operator/O_siswa');
 		}
 	}
 
@@ -210,7 +208,7 @@ class O_siswa extends CI_Controller
 			'isi_broadcast' => $isi_broadcast
 		);
 		$this->M_broadcast->input($data);
-		redirect('operator/O_siswa');
+		redirect('operator/O_siswa/broadcast');
 	}
 
 	public function hapusBroadcast($id)
@@ -218,6 +216,33 @@ class O_siswa extends CI_Controller
 		$this->M_broadcast->hapus($id);
 		redirect('operator/O_siswa');
 
+	}
+
+	public function editBroadcast($id_broadcast)
+	{
+		$data['broadcast'] = $this->db->get_where('tb_broadcast', ['id_broadcast' => $id_broadcast])->row_array();
+		$data['user'] = $this->db->get_where('tb_users', ['username' => $this->session->userdata('username')])->row_array();
+		$this->load->view('operator/V_edit_broadcast', $data);
+		$this->load->view('operator/header', $data);
+		$this->load->view('operator/footer', $data);
+		$this->load->view('operator/sidebar', $data);
+		
+	}
+
+	public function proseseditBroadcast()
+	{
+		$tele_id = $this->input->post('tele_id');
+		$judul_broadcast = $this->input->post('judul_broadcast');
+		$isi_broadcast = $this->input->post('isi_broadcast');
+		$id_broadcast = $this->input->post('id_broadcast');
+		$data = array(
+			'tele_id' => $tele_id,
+			'judul_broadcast' => $judul_broadcast,
+			'isi_broadcast' => $isi_broadcast
+		);
+		$this->db->where('id_broadcast', $id_broadcast);
+        $this->db->update('tb_broadcast', $data);
+		redirect('operator/O_siswa/broadcast');
 	}
 
 	public function sendMessage($tele_id)

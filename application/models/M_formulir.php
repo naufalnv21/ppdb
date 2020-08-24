@@ -31,4 +31,24 @@ class M_formulir extends CI_Model
 		// $data_formulir = $this->db->get('tb_pendaftar');
 		// return $data_formulir->result();
 	}
+
+	public function jurusan()
+	{
+		$this->db->select('*');
+		$this->db->from('tb_jurusan');
+		$result = $this->db->get();
+		return $result->result();
+	}
+
+	public function inputJurusan($data)
+	{
+		$this->db->insert('tb_jurusan', $data);
+	}
+
+	public function hapus($id)
+	{
+		$this->db->where('id_jurusan', $id);
+		$this->db->delete('tb_jurusan');	
+	}
+
 }

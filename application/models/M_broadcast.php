@@ -31,4 +31,10 @@ class M_broadcast extends CI_Model
 		$this->db->where('id_broadcast', $id);
 		$this->db->delete('tb_broadcast');	
 	}
+
+	public function update($data)
+	{
+		$this->db->where('id_broadcast', $id_broadcast);
+		$this->db->update('tb_broadcast', $data);
+	}
 }

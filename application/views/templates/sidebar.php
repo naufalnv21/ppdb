@@ -25,7 +25,7 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item">
             <a href="<?php echo base_url('C_dashboard'); ?>" class="nav-link">
-              <i class="nav-icon fa fa-tachometer-alt"></i>
+              <i class="nav-icon fa fa-tachometer"></i>
               <p>
                 Dashboard
               </p>
@@ -111,6 +111,14 @@
               <i class="far  fas fa-university nav-icon"></i>
               <p>
                 Profile SMK RISTEK
+              </p>
+            </a>
+          </li>
+           <li class="nav-item has-treeview">
+            <a href="<?php echo base_url('admin/Siswa/broadcast'); ?>" class="nav-link">
+              <i class="fa fa-send-o"></i>
+              <p>
+                Broadcast 
               </p>
             </a>
           </li>

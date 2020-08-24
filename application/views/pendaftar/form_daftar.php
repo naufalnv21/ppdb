@@ -98,18 +98,16 @@
                 <div class="form-group">
                   <label class="form-label">Jurusan<span class="form-required">*</span></label>
                     <div class="custom-controls-stacked">
-                      <label class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" name="jurusan_pendaftar" value="Multimedia">
-                        <span class="custom-control-label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Multimedia</span>
-                      </label>
+                        <select class="form-control" name="jurusan">
+                           <?php 
+                             foreach ($formulir as $value) {                    
+                           ?>
+                            <option value="<?php echo $value->id_jurusan?>"><?php 
+                             echo $value->nama_jurusan
+                            ?></option>
+                          <?php } ?>
+                        </select>
                     </div>
-                    <div class="custom-controls-stacked">
-                      <label class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" name="jurusan_pendaftar" value="Perbank">
-                        <span class="custom-control-label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Perbank</span>
-                      </label>
-                    </div>
-
                 </div>
             </div>
             <!-- <div class="col-md-6">

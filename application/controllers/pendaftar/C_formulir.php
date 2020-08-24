@@ -23,6 +23,7 @@ class C_formulir extends CI_Controller
     $data['count'] = $this->M_register->getCountNotif($id_register);
 
 		$data['user'] = $this->db->get_where('tb_register', ['nama_register' => $this->session->userdata('nama_register')])->row_array();
+    $data['formulir'] = $this->M_formulir->jurusan();
 
 		$this->load->view('pendaftar/header', $data); 
 		$this->load->view('pendaftar/menu', $data); 
@@ -35,7 +36,7 @@ class C_formulir extends CI_Controller
         if(!empty($this->session->userdata('username_register'))){
 
 
-        $jurusan_pendaftar = $this->input->post('jurusan_pendaftar');
+        $id_jurusan = $this->input->post('id_jurusan');
         $nik_pendaftar = $this->input->post('nik_pendaftar');
         $skhun_pendaftar = $this->input->post('skhun_pendaftar');
         $nama_pendaftar = $this->input->post('nama_pendaftar');
@@ -61,6 +62,7 @@ class C_formulir extends CI_Controller
         $almt_kec_orang_tua_pendaftar = $this->input->post('almt_kec_orang_tua_pendaftar');
         $almt_kab_orang_tua_pendaftar = $this->input->post('almt_kab_orang_tua_pendaftar');
         $telp_hp_orang_tua_pendaftar = $this->input->post('telp_hp_orang_tua_pendaftar');
+        $check = $this->db->query("select * from tb_pendaftar where nik_pendaftar='$nik_pendaftar'")->num_rows();
         $config['upload_path'] = './upload/pendaftar/kk/';
           $config['allowed_types'] = 'pdf|img|doc|docx|jpg|png';
           $config['file_name']            = $this->input->post('nik_pendaftar');
@@ -154,7 +156,7 @@ class C_formulir extends CI_Controller
 
         $data = array(
           'id_register' => $this->session->userdata('id_register'),
-          'jurusan_pendaftar' => $jurusan_pendaftar,
+          'id_jurusan' => $id_jurusan,
           'nik_pendaftar' => $nik_pendaftar,
           'skhun_pendaftar' => $skhun_pendaftar,
           'nama_pendaftar' => $nama_pendaftar,
