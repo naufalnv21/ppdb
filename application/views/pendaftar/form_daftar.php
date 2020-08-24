@@ -11,7 +11,8 @@
         <h4 style="border-bottom: 1px dotted #212121">Data Siswa</h4>
         <div class="form-group">
           <label class="form-label">Nomor Induk Kependudukan (NIK)<span class="form-required">*</span></label>
-          <input type="text" name="nik_pendaftar" class="form-control" required />
+          <input id="nik" type="text" name="nik_pendaftar" class="form-control" required />
+          <button type="button" id="cekNik">Check</button>
         </div>
         <div class="form-group">
           <label class="form-label">Nomor SKHUN<span class="form-required">*</span></label>
@@ -98,7 +99,7 @@
                 <div class="form-group">
                   <label class="form-label">Jurusan<span class="form-required">*</span></label>
                     <div class="custom-controls-stacked">
-                        <select class="form-control" name="jurusan">
+                        <select class="form-control" name="id_jurusan">
                            <?php 
                              foreach ($formulir as $value) {                    
                            ?>
@@ -225,3 +226,40 @@
         </div>
   </form>
 </div>
+<script>
+    $(document).ready(function () {
+         $('#cekNik').click(function(){
+
+          var nik = $("#nik").val();
+
+          $(this).html("Mengecek...");
+
+          $.ajax({
+
+          url:"<?php echo site_url('pendaftar/C_formulir/cekNik/')?>"+nik,
+
+          type: "GET",
+
+          success: function (data) {
+
+            $('#cekNik').html('Check'); 
+
+            if (data=="kosong") {
+              alert("Data Dapat DiGunakan");
+            }else{
+              alert("Silahkan Masukan Data Anda");
+            }
+          },
+
+          error: function (data) {
+
+              console.log('Error:', data);
+
+              $('#cekNik').html('Check');
+
+          }
+
+      });
+         });
+    });
+</script>

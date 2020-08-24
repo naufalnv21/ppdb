@@ -197,4 +197,22 @@ class C_formulir extends CI_Controller
             echo "<script> alert('Harus Login Terlebih Dahulu!');window.history.go(-1)</script> ";
         }
     }
+
+    public function cekNik($nik)
+    {
+      $this->db->select('*');
+            $this->db->from('tb_pendaftar');
+            $this->db->where('nik_pendaftar', $nik); // Cek berdasarkan nis
+          
+
+            $exist = $this->db->get()->row();
+
+            // Jika kosong isi data
+            if (empty($exist)){
+              echo "kosong";
+            }else{
+              echo "ada";
+            }
+    }
+
 }

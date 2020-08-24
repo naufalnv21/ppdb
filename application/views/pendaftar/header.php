@@ -66,7 +66,7 @@
   </script>
   <!-- Dashboard Core -->
   <link href="<?php echo base_url(); ?>assets/template/front/theme/assets/css/dashboard.css" rel="stylesheet" />
-  <script src="<?php echo base_url(); ?>assets/template/front/theme/assets/js/dashboard.js"></script>
+  <script src="<?php echo base_url(); ?>assets/template/front/theme/assets/js/dashboard.js"></script><script src="<?php echo base_url(); ?>assets/template/front/theme/assets/js/jquery.min.js"></script>
   <!-- c3.js Charts Plugin -->
   <link href="<?php echo base_url(); ?>assets/template/front/theme/assets/plugins/charts-c3/plugin.css" rel="stylesheet" />
   <script src="<?php echo base_url(); ?>assets/template/front/theme/assets/plugins/charts-c3/plugin.js"></script>

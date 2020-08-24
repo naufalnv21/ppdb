@@ -58,7 +58,7 @@
               
               <tr>
                 <td><?php echo $no++?> </td>
-                <td><?php echo $pendaftar->jurusan_pendaftar ?></td>
+                <td><?php echo $pendaftar->nama_jurusan ?></td>
                 <td><?php echo $pendaftar->nik_pendaftar ?></td>
                 <td><?php echo $pendaftar->skhun_pendaftar ?></td>
                 <td><?php echo $pendaftar->nama_pendaftar ?></td>

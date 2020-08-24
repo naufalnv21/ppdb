@@ -22,7 +22,7 @@ class O_pendaftar extends CI_Controller
 	public function index()
 	{
 		$data['user'] = $this->db->get_where('tb_users', ['username' => $this->session->userdata('username')])->row_array();
-		$data['data_pendaftar'] = $this->db->get('tb_pendaftar')->result();
+		$data['data_pendaftar'] = $this->M_formulir->getpendaftarOperator();
 
 
 		$this->load->view('operator/header', $data);
@@ -93,7 +93,9 @@ class O_pendaftar extends CI_Controller
 	public function export()
 	{
 		$data['data_pendaftar'] = $this->db->get('tb_pendaftar')->result();
-		$data_pendaftar = $this->M_excel->tampil()->result();
+		// $data_pendaftar = $this->M_excel->tampil()->result();
+		$data_pendaftar = $this->M_excel->getExcel();
+		// $data['data_pendaftar'] = $this->M_excel->getExcel();
 
 		$spreadsheet = new Spreadsheet;
 		$spreadsheet->setActiveSheetIndex(0)
@@ -130,7 +132,7 @@ class O_pendaftar extends CI_Controller
 		foreach ($data_pendaftar as $pendaftar) {
 			$spreadsheet->setActiveSheetIndex(0)
 						 ->setCellValue('A' . $kolom, $no)
-						 ->setCellValue('B' . $kolom, $pendaftar->jurusan_pendaftar)
+						 ->setCellValue('B' . $kolom, $pendaftar->nama_jurusan)
 						 ->setCellValue('C' . $kolom, $pendaftar->nik_pendaftar)
 						 ->setCellValue('D' . $kolom, $pendaftar->skhun_pendaftar)
 						 ->setCellValue('E' . $kolom, $pendaftar->nama_pendaftar)

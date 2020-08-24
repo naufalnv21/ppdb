@@ -27,6 +27,7 @@ class O_dashboard extends CI_Controller
 			'fasilitas' =>$this->M_dashboard->tampilFasilitas(),
 			'smk' =>$this->M_dashboard->tampilSmk(),
 			'broadcast' =>$this->M_dashboard->tampilBroadcast(),
+			'jurusan' =>$this->M_dashboard->tampilJurusan(),
 		];
 		$this->load->view('operator/header', $data);
 		$this->load->view('operator/navbar', $data);

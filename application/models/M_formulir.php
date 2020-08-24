@@ -51,4 +51,13 @@ class M_formulir extends CI_Model
 		$this->db->delete('tb_jurusan');	
 	}
 
+	public function getpendaftarOperator()
+	{
+		$this->db->select('*');
+		$this->db->from('tb_pendaftar');
+		$this->db->join('tb_jurusan', 'tb_jurusan.id_jurusan = tb_pendaftar.id_jurusan');
+		$result = $this->db->get();
+		return $result->result();
+	}
+
 }

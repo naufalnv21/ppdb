@@ -29,6 +29,7 @@ class C_dashboard extends CI_Controller
 			'operator' =>$this->M_dashboard->tampilOperator(),
 			'pengguna' =>$this->M_dashboard->tampilPengguna(),
 			'broadcast' =>$this->M_dashboard->tampilBroadcast(),
+			'jurusan' =>$this->M_dashboard->tampilJurusan(),
 		];
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/navbar', $data);

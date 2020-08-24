@@ -16,10 +16,24 @@ class M_excel extends CI_Model
 
 	public function tampil()
 	{
+		// $this->db->select('*');
+		// $this->db->from('tb_pendaftar');
+		// $this->db->join('tb_jurusan', 'tb_jurusan.id_jurusan = tb_pendaftar.id_jurusan');
+		// $result = $this->db->get();
+		// return $result->result();
 		$this->db->select('*');
 		$this->db->from('tb_pendaftar');
 
 		return $this->db->get();
+	}
+
+	public function getExcel()
+	{
+		$this->db->select('*');
+		$this->db->from('tb_pendaftar');
+		$this->db->join('tb_jurusan', 'tb_jurusan.id_jurusan = tb_pendaftar.id_jurusan');
+		$result = $this->db->get();
+		return $result->result();
 	}
 
 	public function tampilSiswa()

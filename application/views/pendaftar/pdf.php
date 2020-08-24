@@ -38,7 +38,7 @@
 					<h5><?php echo $formulir->nik_pendaftar;?></h5>  </br>
 					<h5><?php echo $formulir->skhun_pendaftar;?></h5> </br>
 					<h5><?php echo $formulir->no_ijazah_pendaftar;?></h5> </br>
-					<h5><?php echo $formulir->jurusan_pendaftar;?></h5> </br>
+					<h5><?php echo $formulir->nama_pendaftar;?></h5> </br>
 					<h5><?php echo $formulir->asal_sekolah_pendaftar;?></h5> </br>
 					<h5><?php echo $formulir->jk_pendaftar;?></h5> </br>
 					<h5><?php echo $formulir->ttl_pendaftar;?></h5> </br>
