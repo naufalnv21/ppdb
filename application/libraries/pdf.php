@@ -1,4 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
+
+// require_once("assets/dompdf/autoload.inc.php");
 /**
  * CodeIgniter DomPDF Library
  *

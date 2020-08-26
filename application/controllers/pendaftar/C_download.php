@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 use PhpOffice\PhpWord\PhpWord;
 use PhpOffice\PhpWord\Writer\Word2007;
+// require_once("dompdf/autoload.inc.php");
 /**
  * 
  */
@@ -27,8 +28,8 @@ class C_download extends CI_Controller
 		$data['content'] = 'pendaftar/home';
 
 		$id_register = $this->session->userdata('id_register');
-    $data['notif'] = $this->db->get('tb_notif')->result();
-    $data['count'] = $this->M_register->getCountNotif($id_register);
+    	$data['notif'] = $this->db->get('tb_notif')->result();
+    	$data['count'] = $this->M_register->getCountNotif($id_register);
 
 		$data['user'] = $this->db->get_where('tb_register', ['nama_register' => $this->session->userdata('nama_register')])->row_array();
 		
@@ -66,6 +67,7 @@ class C_download extends CI_Controller
 		$data['data_formulir'] = $this->M_register->getForPDF($id_register,'tb_pendaftar')->result();
 		$this->load->library('pdf');
 		$this->pdf->setPaper('A4','potrait');
+		// $dompdf->render();
 		$this->pdf->filename = "Bukti Pendaftaran tanggal ".$tanggal.".pdf";
 		$this->pdf->load_view('pendaftar/pdf', $data);
     //     $orders = $this->M_register->getForPDF($id_register,'tb_pendaftar');

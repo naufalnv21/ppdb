@@ -25,7 +25,16 @@ class M_register extends CI_Model
 	}
 
 	public function getForPDF($id_register,$table){
+		$this->db->join('tb_jurusan', 'tb_jurusan.id_jurusan = tb_pendaftar.id_jurusan');
 		return $this->db->get_where($table,$id_register);
 		
+	}
+	public function getPdf()
+	{
+		$this->db->select('*');
+		$this->db->from('tb_pendaftar');
+		$this->db->join('tb_jurusan', 'tb_jurusan.id_jurusan = tb_pendaftar.id_jurusan');
+		$result = $this->db->get();
+		return $result->result();
 	}
 }

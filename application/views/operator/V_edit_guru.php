@@ -6,20 +6,20 @@
           <div class="form-group">
             <label>Nama </label>
             <input type="hidden" name="id_guru" value="<?= $guru['id_guru'];?>">
-            <input type="text" name="nama_guru" placeholder="isikan nama" class="form-control"  value="<?= $guru['nama_guru']; ?>"  readonly>
+            <input type="text" name="nama_guru" placeholder="isikan nama" class="form-control"  value="<?= $guru['nama_guru']; ?>"  >
           </div>
           <div class="form-group">
             <label>Tempat Tanggal Lahir </label>
-            <input type="text" name="ttl_guru" placeholder="Indramayu 21 Mei 1999" class="form-control" required="required" value="<?= $guru['ttl_guru']; ?>" readonly>
+            <input type="text" name="ttl_guru" placeholder="Indramayu 21 Mei 1999" class="form-control" required="required" value="<?= $guru['ttl_guru']; ?>" >
           </div>
           <div class="form-group">
             <label>NUPTK </label>
-            <input type="text" name="nuptk_guru" placeholder="123456789" class="form-control" required="required" value="<?= $guru['nuptk_guru']; ?>" readonly>
+            <input type="text" name="nuptk_guru" placeholder="123456789" class="form-control" required="required" value="<?= $guru['nuptk_guru']; ?>" >
           </div>
           <div class="form-group">
             <label>Jenis Kelamin </label>
             <!-- <input type="text" name="jk_guru" placeholder="P/L" class="form-control" required="required"> -->
-            <select class="form-control" name="jk_guru" value="<?= $guru['jk_guru']; ?>" readonly>
+            <select class="form-control" name="jk_guru" value="<?= $guru['jk_guru']; ?>" >
               <option <?php if ($guru['jk_guru'] == 'Laki-laki') {
                 ?> selected <?php 
               } ?> value="Laki-laki">Laki-Laki</option>

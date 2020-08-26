@@ -12,7 +12,7 @@
             <label>Jenis Kelamin </label>
             <!-- <input type="hidden" name="id_siswa" value="<?= $siswa['id_siswa'];?>"> -->
             <!-- <input type="text" name="isi_berita" placeholder="Isi Berita" class="form-control" required="required" value="<?= $berita['isi_berita']; ?>"> -->
-            <select class="form-control" name="jk_siswa" value="<?= $siswa['jk_siswa']; ?>" readonly>
+            <select class="form-control" name="jk_siswa" value="<?= $siswa['jk_siswa']; ?>" >
               <option <?php if ($siswa['jk_siswa'] == 'Laki-laki') {
                 ?> selected <?php 
               } ?> value="Laki-laki">Laki-Laki</option>

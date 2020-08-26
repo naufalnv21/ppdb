@@ -194,27 +194,27 @@
             </div>
         </div>
         <div class="form-group">
-          <label class="form-label">Foto/Scan Kartu Keluarga <span class="form-required">*</span></label>
+          <label class="form-label">Foto Kartu Keluarga <span class="form-required">*</span></label>
           <input type="file" name="file_kk_pendaftar" class="form-control"  required multiple />
         </div>
         <div class="form-group">
-          <label class="form-label">Foto/Scan Akte <span class="form-required">*</span></label>
+          <label class="form-label">Foto Akte <span class="form-required">*</span></label>
           <input type="file" name="file_akte_pendaftar" class="form-control" required multiple />
         </div>
         <div class="form-group">
-          <label class="form-label">Foto/Scan KTP Orang Tua <span class="form-required">*</span></label>
+          <label class="form-label">Foto KTP Orang Tua <span class="form-required">*</span></label>
           <input type="file" name="file_ktp_orang_tua_pendaftar" class="form-control" required multiple />
         </div>
         <div class="form-group">
-          <label class="form-label">Foto/Scan Ijazah <span class="form-required">*</span></label>
+          <label class="form-label">Foto Ijazah <span class="form-required">*</span></label>
           <input type="file" name="file_ijazah_pendaftar" class="form-control" required multiple />
         </div>
         <div class="form-group">
-          <label class="form-label">Foto/Scan SKHUN <span class="form-required">*</span></label>
+          <label class="form-label">Foto SKHUN <span class="form-required">*</span></label>
           <input type="file" name="file_skhun_pendaftar" class="form-control"  required multiple />
         </div>
         <div class="form-group">
-          <label class="form-label">Foto/Scan SKTM <span class="form-required">*</label>
+          <label class="form-label">Foto SKTM <span class="form-required">*</label>
             <input type="file" name="file_sktm_pendaftar" class="form-control" required multiple />
         </div>
     </div>
@@ -247,7 +247,7 @@
             if (data=="kosong") {
               alert("Data Dapat DiGunakan");
             }else{
-              alert("Silahkan Masukan Data Anda");
+              alert("Data Sudah DiGunakan");
             }
           },
 

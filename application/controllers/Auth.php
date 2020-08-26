@@ -57,7 +57,7 @@ class Auth extends CI_Controller
 					if ($user['level_users'] == 1){
 						redirect('admin/admin');
 					}else{
-						redirect('operator/O_operator');
+						redirect('operator/O_dashboard');
 					}
 				}else{
 					$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Wrong Passwrod!<button type="button" class="close" data-dismiss="alert" aria-label="Close">
