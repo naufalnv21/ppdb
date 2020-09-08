@@ -128,4 +128,86 @@ class Auth extends CI_Controller
 		$this->load->view('auth/lupa_password');
 		$this->load->view('templates/auth_footer');
 	}
+
+	public function reset_password_validation()
+	{
+		$this->form_validation->set_rules('email_users','Email','required|valid_email|trim');
+		$this->form_validation->set_rules('password_users','Retype Password', 'required|min_length[6]|matches[password_users');
+		$id = $this->uri->segment(4);
+		if($this->form_validation->run())
+		{
+			$email_users = $this->input->post('email_users');
+			$reset_key = random_string('alnum', 50);
+			$this->M_reset->gantiPassword($this->input->post('email_users'), $this->input->post('password_users'));
+			return redirect('auth');
+		} else{
+			$this->load->view('auth/konfir_password');
+		}
+	}
+
+	public function email_reset_password_validation()
+	{
+		$this->form_validation->set_rules('email_users','Email','required|valid_email|trim');
+		if($this->form_validation->run())
+		{
+			$email_users = $this->input->post('email_users');
+			$reset_key =  random_string('alnum', 50);
+			$getID = $this->M_reset->getId($email_users);
+			if($this->M_reset->update_reset_key($email_users,$reset_key))
+			{
+				$this->load->library('email');
+				$config = array();
+				$config['charset'] = 'utf-8';
+				$config['useragent'] = 'Codeigniter';
+				$config['protocol'] = "smtp";
+				$config['mailtype'] = "html";
+				$config['smtp_host'] = "ssl://smtp.gmail.com";
+				$config['smtp_port'] = "465";
+				$config['smtp_timeout'] = "5";
+				$config['smtp_user'] = "naufalharizxtkj1@gmail.com";
+				$config['smtp_pass'] = "figcuqadvcjdxapz";
+				$config['crlf'] = "\r\n";
+				$config['newline'] = "\r\n";
+				$config['wordwrap'] = TRUE;
+
+				$this->email->initialize($config);
+				//konfigurasi pengiriman
+				$this->email->from($config['smtp_user']);
+				$this->email->to($this->input->post('email_users'));
+				$this->email->subject("Reset Your Password");
+
+				$message = "<p>Anda melakukan permintaan reset password</p>";
+				$message = "<a href='".site_url('Auth/reset_password_validation/'.$getID->id_users)."'>klik reset password</a>";
+				$this->email->message($message);
+
+				if($this->email->send())
+				{
+					echo "<script>alert('Silahkan cek email ".$this->input->post('email_users')." untuk melakukan reset passwrod'); window.history.go(-1);</script>";
+				}else{
+					echo "Berhasil melakukan registrasi, gagal mengirim verifikasi email";
+				}
+				echo "<br><br><a href='".site_url("Auth")."'>Kembali ke Menu Login</a>";
+			}else {
+				die("Email yang anda masukan belum terdaftar");
+			}
+		} else{
+			$this->load->view('auth/login');
+		}
+	}
+
+	public function reset_password()
+	{
+		$reset_key = $this->uri->segment(3);
+
+		if(!$reset_key){
+			die('Jangan dihapus');
+		}
+
+		if($this->M_reset->check_reset_key($reset_key) == 1)
+		{
+			$this->load->view('auth/konfir_password');
+		}else{
+			die("reset key salah");
+		}
+	}
 }

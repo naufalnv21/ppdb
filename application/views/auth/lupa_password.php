@@ -45,20 +45,22 @@ echo password_hash("operator", PASSWORD_DEFAULT);
       }
       ?> -->
 
-      <form action="<?php echo base_url('auth/login') ?>" method="post">
+      <form action="<?php echo base_url('auth/login/email_reset_password_validation') ?>" method="post">
         <div class="input-group mb-3">
-          <input type="text" name="username" placeholder="Masukan Email Anda">
+          <input type="text" name="email_users" placeholder="Masukan Email Anda">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
             </div>
           </div>
         </div>
-        <div>
+        <div class="panel-footer" style="text-align: right;"><input type="submit" name="" value="reset password" class="btn btn-primary btn-lg"></div>
+        <!-- <div>
+          <button></button>
           <p class="mb-1">
             <a href="#">RESET PASSWORD</a>
           </p>
-        </div>
+        </div> -->
         <!-- <div class="input-group mb-3">
           <input type="password" name="password_users" placeholder="Password">
           <div class="input-group-append">

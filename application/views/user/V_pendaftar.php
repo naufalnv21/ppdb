@@ -46,7 +46,7 @@
               <th>Foto KTP Orang Tua</th>
               <th>File Ijazah</th>
               <th>File SKHUN</th>
-              <th>File SKTM</th>
+              <th>File SKTM / Slip Gaji</th>
               <th>Status Siswa</th>
               
             </tr>
@@ -101,10 +101,19 @@
                 <td>
                   <?php if ($pendaftar->status_pendaftar == 0) { ?>
                    Belum Dikonfirmasi
+                  <?php } elseif ($pendaftar->status_pendaftar == 1) { ?>
+                    Diterima
+                 <?php  } else { ?>
+                    Ditolak
+                  <?php } ?>
+                </td>
+                <!-- <td>
+                  <?php if ($pendaftar->status_pendaftar == 0) { ?>
+                   Belum Dikonfirmasi
                   <?php } else { ?>
                     Diterima
                   <?php } ?>
-                </td>
+                </td> -->
               </tr>
 
             <?php } ?>

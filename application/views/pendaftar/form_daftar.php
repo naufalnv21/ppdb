@@ -214,7 +214,7 @@
           <input type="file" name="file_skhun_pendaftar" class="form-control"  required multiple />
         </div>
         <div class="form-group">
-          <label class="form-label">Foto SKTM <span class="form-required">*</label>
+          <label class="form-label">Foto SKTM / Slip Gaji <span class="form-required">*</label>
             <input type="file" name="file_sktm_pendaftar" class="form-control" required multiple />
         </div>
     </div>

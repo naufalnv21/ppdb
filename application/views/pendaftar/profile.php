@@ -72,7 +72,7 @@
               foreach($data_profile as $key => $value){
                 echo "<div class='col-md-4'>
               <div class='card mb-4 box-shadow'>
-                <img class='card-img-top' src='".base_url('upload/profile/').$value->foto_profile."' alt='Card image cap' width='200px' height='200px'>
+                <img class='card-img-top' src='".base_url('upload/profile/').$value->foto_profile."' alt='Card image cap' width='600px' height='400px'>
                 <div class='card-body'>
                   <p class='card-text'>$value->nama_profile</p>
                   <p class='card-text'>$value->tentang_profile</p>

@@ -73,7 +73,7 @@
               foreach($data_fasilitas as $key => $value){
                 echo "<div class='col-md-4'>
               <div class='card mb-4 box-shadow'>
-                <img class='card-img-top' src='".base_url('upload/fasilitas/').$value->foto_fasilitas."' alt='Card image cap' width='200px' height='200px'>
+                <img class='card-img-top' src='".base_url('upload/fasilitas/').$value->foto_fasilitas."' alt='Card image cap' width='600px' height='400px'>
                 <div class='card-body'>
                   <p class='card-text'>Nama $value->nama_fasilitas</p>
                   <p class='card-text'>Deskripsi $value->deskripsi_fasilitas</p>

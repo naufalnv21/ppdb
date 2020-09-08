@@ -47,6 +47,9 @@
             <li class="nav-item">
             <a href="<?php echo site_url('pendaftar/C_download/downloadBukti/'.$id_register); ?>" class="nav-link"><i class="fa fa-download"></i> Cetak Bukti. Pendf</a>
           </li>
+          <li class="nav-item">
+            <a href="<?php echo site_url('pendaftar/C_download/downloadKartu/'.$id_register); ?>" class="nav-link"><i class="fa fa-download"></i> Download Kartu Siswa</a>
+          </li>
             <?php
           }
           ?>

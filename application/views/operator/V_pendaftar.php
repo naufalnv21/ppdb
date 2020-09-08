@@ -45,7 +45,7 @@
               <th>Foto KTP Orang Tua</th>
               <th>File Ijazah</th>
               <th>File SKHUN</th>
-              <th>File SKTM</th>
+              <th>File SKTM / Slip Gaji</th>
               <th>Status Siswa</th>
               <th>Action</th>
             </tr>

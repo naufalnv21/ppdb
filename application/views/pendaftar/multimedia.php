@@ -72,7 +72,7 @@
               foreach($data_multimedia as $key => $value){
                 echo "<div class='col-md-4'>
               <div class='card mb-4 box-shadow'>
-                <img class='card-img-top' src='".base_url('upload/multimedia/').$value->logo_multimedia."' alt='Card image cap' width='200px' height='200px'>
+                <img class='card-img-top' src='".base_url('upload/multimedia/').$value->logo_multimedia."' alt='Card image cap' width='600px' height='400px'>
                 <div class='card-body'>
                   <p class='card-text'>Jurusan $value->nama_multimedia</p>
                   <p class='card-text'>Jumlah Siswa $value->jml_siswa_multimedia</p>
