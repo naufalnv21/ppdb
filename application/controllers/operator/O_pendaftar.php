@@ -172,5 +172,19 @@ class O_pendaftar extends CI_Controller
 		$writer->save('php://output');
 	}
 
+	public function cek()
+	{
+		$data['user'] = $this->db->get_where('tb_users', ['username' => $this->session->userdata('username')])->row_array();
+		$data['data_pendaftar'] = $this->M_formulir->getpendaftarOperatorFilter($this->input->post('tahun'));
+
+
+		$this->load->view('operator/header', $data);
+		$this->load->view('operator/navbar', $data);
+		$this->load->view('operator/sidebar', $data);
+		$this->load->view('operator/V_pendaftar', $data);
+		$this->load->view('operator/footer', $data);
+		
+	}
+
 	
 }

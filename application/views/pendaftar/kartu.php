@@ -51,17 +51,17 @@
 		?>
 		<tr>
 			<td width="20%">
-					<h5>Nama : </h5>
-					<h5>Jurusan : </h5>
-					<h5>Sekolah Asal : </h5>
-					<h5>Jenis Kelamin : </h5>
-					<h5>tempat tanggal lahir : </h5>
+					<h5>nama : </h5>
+					<h5>jurusan : </h5>
+					<h5>alamat : </h5>
+					<h5>kenis kelamin : </h5>
+					<h5>tempat tanggal tahir : </h5>
 					
 			</td>
 			<td width="80%">
 					<h5><?php echo $kartu->nama_pendaftar; ?></h5>
 					<h5><?php echo $kartu->nama_jurusan;?></h5>
-					<h5><?php echo $kartu->asal_sekolah_pendaftar;?></h5>
+					<h5><?php echo $kartu->almt_desa_pendaftar;?></h5>
 					<h5><?php echo $kartu->jk_pendaftar;?></h5> 
 					<h5><?php echo $kartu->ttl_pendaftar;?></h5> 
 					

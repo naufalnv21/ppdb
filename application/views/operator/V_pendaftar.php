@@ -4,8 +4,20 @@
       <div class="col-sm-6">
         <h1 class="m-0 text-dark">Pendaftar</h1>
         <a href="<?php echo base_url('operator/O_pendaftar/export'); ?>" class="btn btn-success">Export Excel</a>
+        <form action="<?= base_url('operator/O_pendaftar/cek');?>" method="POST">
+          <select name="tahun" class="btn">
+<option selected="selected">Tahun</option>
+<?php
+for($i=date('Y'); $i>=date('Y')-32; $i-=1){
+echo"<option value='$i'> $i </option>";
+}
+?>
+</select>
+<input type="submit" name="simpan" class="btn btn-success" value="Lulus SMP">
+        </form>
         <table border="1" cellspacing="0"></table>
       </div>
+
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right"></ol>
       </div>

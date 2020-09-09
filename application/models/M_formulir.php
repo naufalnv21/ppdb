@@ -60,4 +60,14 @@ class M_formulir extends CI_Model
 		return $result->result();
 	}
 
+	public function getpendaftarOperatorFilter($tahun)
+	{
+		$this->db->select('*');
+		$this->db->from('tb_pendaftar');
+		$this->db->join('tb_jurusan', 'tb_jurusan.id_jurusan = tb_pendaftar.id_jurusan');
+		$this->db->where(['tb_pendaftar.thn_lulus_pendaftar ' => $tahun ]);
+		$result = $this->db->get();
+		return $result->result();
+	}
+
 }
